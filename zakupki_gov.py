@@ -4,17 +4,19 @@ from openpyxl import Workbook
 from datetime import datetime
 import yagmail
 
-from config import from_email, password, to_emails2, bcc
+from config.conf_zg import from_email, password, to_emails2, bcc
 
 
 BASE_URL = 'https://zakupki.gov.ru'
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+DB_PATH = 'db\\zg.db'
+
 FILE_WITH_INNS = os.path.join(BASE_DIR, 'keywords', 'zg_inns.txt')
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36', 'accept': '*/*'}
 
 
 def create_db():
-    with sqlite3.connect('zg.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS tenders(
             number TEXT,
@@ -30,13 +32,13 @@ def create_db():
 
 
 def inDataBase(number):
-    with sqlite3.connect('zg.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute(f"SELECT * FROM tenders WHERE number=='{number}'")
         return cur.fetchone()
 
 def save_tender(number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date):
-    with sqlite3.connect('zg.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute(f"INSERT INTO tenders (number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date) VALUES('{number}', '{name}', '{url}', '{customer}', '{customer_url}', '{price}', '{release_date}', '{refreshing_date}', '{ending_date}');")
 

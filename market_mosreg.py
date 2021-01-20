@@ -12,6 +12,7 @@ from config import from_email, password, to_emails, cc, bcc
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 FILE_WITH_KEYWORDS = os.path.join(BASE_DIR, 'keywords', 'mm_keywords.txt')
+DB_PATH = 'db\\zg.db'
 BASE_URL = 'https://market.mosreg.ru/Trade'
 
 

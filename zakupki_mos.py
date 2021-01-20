@@ -7,7 +7,7 @@ from openpyxl import Workbook
 import random, os, logging, time
 from datetime import datetime
 import yagmail
-from config import from_email, password, to_emails, cc, bcc
+from config.conf_zg import from_email, password, to_emails, cc, bcc
 
 
 FILE_WITH_KEYWORDS = 'D:\\USERDATA\\Documents\\4git\\parsers\\tenders\\keywords\\zm_keywords.txt'
