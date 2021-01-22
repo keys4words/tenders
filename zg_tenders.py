@@ -21,7 +21,6 @@ FILE_WITH_INNS_129 = os.path.join(BASE_DIR, 'inn', 'zg_129.txt')
 
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36', 'accept': '*/*'}
 
-new_url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_word1}%7C{excluding_word2}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
 
 def create_db():
     with sqlite3.connect(DB_PATH) as con:
@@ -62,10 +61,15 @@ def set_logger():
 
 
 def get_inns(filename):
-    inns = []
+    inns = dict()
     with open(filename, 'r', encoding='utf-8') as f:
         for line in f:
-            inns.append(line.strip())
+            if ':' in line:
+                customer = line.split(':')[0]
+                minus_words = [el.strip() for el in (line.split(':')[1]).split(',')]
+                inns[customer] = minus_words
+            else:
+                inns[line.strip()] = []
         return inns
 
 
@@ -76,9 +80,18 @@ def get_html(url, params=None):
 
 def parsing(inns):
     root_logger = logging.getLogger('zg_tenders')
-    for inn in inns:
+    for inn, minus_words in inns.items():
         page_num = 1
-        url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1'
+        if len(minus_words) == 0:
+            url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1'
+        elif 'министерство обороны' in inn:
+            filter_by_close_tender = 'placingWayList=ZA44%2CZAP44%2CZAE44&'
+            excluding_words_list = '%7C'.join(minus_words)
+            url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&{filter_by_close_tender}contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
+        else:
+            excluding_words_list = '%7C'.join(minus_words)
+            url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
+
 
         _html = get_html(url)
         if _html.status_code == 200:
@@ -219,9 +232,9 @@ parsing(get_inns(FILE_WITH_INNS))
 sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN', to_emails=to_emails)
 
 # iteration for 104
-res = dict()
-parsing(get_inns(FILE_WITH_INNS_104))
-sending_email(save_results(res=res, fileprefix='_zg_104'), 'zakupki-gov by INN', to_emails=to_emails2)
+# res = dict()
+# parsing(get_inns(FILE_WITH_INNS_104))
+# sending_email(save_results(res=res, fileprefix='_zg_104'), 'zakupki-gov by INN', to_emails=to_emails2)
 
 # iteration for 129
 res = dict()
