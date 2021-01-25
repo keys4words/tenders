@@ -96,6 +96,10 @@ def parsing(inns):
         _html = get_html(url)
         if _html.status_code == 200:
             soup = BeautifulSoup(_html.text, 'html.parser')
+            pages = soup.find('div', class_='paginator-block').find_all('li', class_='page') 
+            if len(pages) > 0:
+                root_logger.warning(f'############ Content of {url} has {len(pages)}')
+
             if soup.find_all(
                     'div', class_='search-registry-entry-block box-shadow-search-input'):
                 elements = soup.find_all(
@@ -232,11 +236,11 @@ parsing(get_inns(FILE_WITH_INNS))
 sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN', to_emails=to_emails)
 
 # iteration for 104
-# res = dict()
-# parsing(get_inns(FILE_WITH_INNS_104))
-# sending_email(save_results(res=res, fileprefix='_zg_104'), 'zakupki-gov by INN', to_emails=to_emails2)
+res = dict()
+parsing(get_inns(FILE_WITH_INNS_104))
+sending_email(save_results(res=res, fileprefix='_zg_104'), 'zakupki-gov by INN', to_emails=to_emails2)
 
-# iteration for 129
+# # iteration for 129
 res = dict()
 parsing(get_inns(FILE_WITH_INNS_129))
 sending_email(save_results(res=res, fileprefix='_zg_129'), 'zakupki-gov by INN', to_emails=to_emails3)
