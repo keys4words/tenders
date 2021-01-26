@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# exclude xlsx file in folder 'out'
+out/
+
 # Distribution / packaging
 .Python
 build/
