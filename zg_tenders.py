@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from openpyxl import Workbook
 from datetime import datetime
 import yagmail
+import pprint
 
 from config.conf_113 import from_email, password, to_emails, bcc
 from config.conf_104 import to_emails2
@@ -93,6 +94,7 @@ def parsing(inns):
         else:
             excluding_words_list = '%7C'.join(minus_words)
             url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&priceFromGeneral=50000&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
+            print(len(url))
 
 
         _html = get_html(url)
@@ -232,9 +234,9 @@ def sending_email(filename, subject, to_emails):
 
 
 # main thread
-set_logger()
+# set_logger()
 
-# interation for 113
+# # interation for 113
 res = dict()
 parsing(get_inns(FILE_WITH_INNS))
 sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN', to_emails=to_emails)
@@ -269,3 +271,7 @@ root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
 # create_db()
 
+# transneft = dict()
+# transneft['транснефть'] = get_inns(FILE_WITH_INNS_129)['транснефть']
+# parsing(transneft)
+# pprint.pprint(res)
