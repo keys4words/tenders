@@ -12,7 +12,7 @@ from config.conf_129 import to_emails3
 
 BASE_URL = 'https://zakupki.gov.ru'
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-DB_PATH = 'db\\zg_department.db'
+DB_PATH = os.path.join(BASE_DIR, 'db', 'zg_department.db')
 
 FILE_WITH_INNS = os.path.join(BASE_DIR, 'inn', 'zg_113.txt')
 FILE_WITH_INNS_104 = os.path.join(BASE_DIR, 'inn', 'zg_104.txt')
@@ -55,7 +55,8 @@ def save_tender(number, name, url, customer, customer_url, price, release_date, 
 
 def set_logger():
     root_logger = logging.getLogger('zg_tenders')
-    handler = logging.FileHandler('logs\\zg_tenders.log', 'a', 'utf-8')
+    log_file = os.path.join(BASE_DIR, 'logs', 'zg_tenders.log')
+    handler = logging.FileHandler(log_file, 'a', 'utf-8')
     formatter = logging.Formatter(
         '%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
     handler.setFormatter(formatter)
@@ -94,7 +95,7 @@ def parsing(inns):
         else:
             excluding_words_list = '%7C'.join(minus_words)
             url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&priceFromGeneral=50000&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
-            print(len(url))
+            # print(len(url))
 
 
         _html = get_html(url)
@@ -234,7 +235,7 @@ def sending_email(filename, subject, to_emails):
 
 
 # main thread
-# set_logger()
+set_logger()
 
 # # interation for 113
 res = dict()

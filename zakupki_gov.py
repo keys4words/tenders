@@ -9,7 +9,7 @@ from config.conf_zg import from_email, password, to_emails2, bcc
 
 BASE_URL = 'https://zakupki.gov.ru'
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-DB_PATH = 'db\\zg.db'
+DB_PATH = os.path.join(BASE_DIR, 'db', 'zg.db')
 
 FILE_WITH_INNS = os.path.join(BASE_DIR, 'keywords', 'zg_inns.txt')
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36', 'accept': '*/*'}
@@ -45,7 +45,8 @@ def save_tender(number, name, url, customer, customer_url, price, release_date, 
 
 def set_logger():
     root_logger = logging.getLogger('zg')
-    handler = logging.FileHandler('logs\\zg.log', 'a', 'utf-8')
+    log_file = os.path.join(BASE_DIR, 'logs', 'zg.log')
+    handler = logging.FileHandler(log_file, 'a', 'utf-8')
     formatter = logging.Formatter(
         '%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
     handler.setFormatter(formatter)
