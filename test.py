@@ -51,16 +51,10 @@ def url_updater(page_num, inn, minus_words):
     return updated_url
 
 
-
-############################
-# FILE_WITH_INNS_TEST = os.path.join(BASE_DIR, 'inn', 'zg_104_test.txt')
-# inns = get_inns(FILE_WITH_INNS_TEST)
-# print(len(inns.items()))
-
 def parsing():
     FILE_WITH_INNS_TEST = os.path.join(BASE_DIR, 'inn', 'zg_104_test.txt')
-    page_num = 0
     for inn, minus_words in (get_inns(FILE_WITH_INNS_TEST)).items():
+        page_num = 0
         qty = 0
         url = url_updater(page_num, inn, minus_words)
         while is_next_page(url):
@@ -69,7 +63,8 @@ def parsing():
             url = url_updater(page_num, inn, minus_words)
         else:
             qty += parse_page(url)
-        return qty
+        print(inn, qty)
 
+############################
 
 print(parsing())
