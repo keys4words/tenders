@@ -42,16 +42,13 @@ def is_next_page(url):
         return soup.find('a', class_='paginator-button paginator-button-next')
 
 
-def url_updater(page_num):
-    FILE_WITH_INNS_TEST = os.path.join(BASE_DIR, 'inn', 'zg_104_test.txt')
-    inns = get_inns(FILE_WITH_INNS_TEST)
-    for inn, minus_words in inns.items():
-        # keyword = '5032292612'
-        # minus_words = ['питания', 'яйца']
-        excluding_words_list = '%7C'.join(minus_words)
-        page_num += 1
-        updated_url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceFromGeneral=50000&currencyIdGeneral=-1'
-        return updated_url
+def url_updater(page_num, inn, minus_words):
+    # keyword = '5032292612'
+    # minus_words = ['питания', 'яйца']
+    excluding_words_list = '%7C'.join(minus_words)
+    page_num += 1
+    updated_url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceFromGeneral=50000&currencyIdGeneral=-1'
+    return updated_url
 
 
 
@@ -61,17 +58,18 @@ def url_updater(page_num):
 # print(len(inns.items()))
 
 def parsing():
+    FILE_WITH_INNS_TEST = os.path.join(BASE_DIR, 'inn', 'zg_104_test.txt')
     page_num = 0
-    qty = 0
-    url = url_updater(page_num)
-
-    while is_next_page(url):
-        qty += parse_page(url)
-        page_num += 1
-        url = url_updater(page_num)
-    else:
-        qty += parse_page(url)
-    return qty
+    for inn, minus_words in (get_inns(FILE_WITH_INNS_TEST)).items():
+        qty = 0
+        url = url_updater(page_num, inn, minus_words)
+        while is_next_page(url):
+            qty += parse_page(url)
+            page_num += 1
+            url = url_updater(page_num, inn, minus_words)
+        else:
+            qty += parse_page(url)
+        return qty
 
 
 print(parsing())

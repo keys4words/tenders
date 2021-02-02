@@ -40,7 +40,7 @@ def inDataBase(number):
 def save_tender(number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date):
     with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
-        cur.execute(f"INSERT INTO tenders (number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date) VALUES('{number}', '{name}', '{url}', '{customer}', '{customer_url}', '{price}', '{release_date}', '{refreshing_date}', '{ending_date}');")
+        cur.execute(f'INSERT INTO tenders (number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date) VALUES(?,?,?,?,?,?,?,?,?)', (number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date))
 
 
 def set_logger():
@@ -117,8 +117,7 @@ def parsing(inns):
                         "Окончание подачи заявок")).parent.find_next_sibling()
                     ending_date = ending_date.text
                     if not inDataBase(number):
-                        save_tender(
-                            number=number,
+                        save_tender(number=number,
                             name=name,
                             url=tender_url,
                             customer=customer,
@@ -128,6 +127,7 @@ def parsing(inns):
                             refreshing_date=refreshing_date,
                             ending_date=ending_date
                             )
+                        
                         res[number] = {
                             'name': name,
                             'url': tender_url,
@@ -138,6 +138,7 @@ def parsing(inns):
                             'refreshing_date': refreshing_date,
                             'ending_date': ending_date
                         }
+
                     else:
                         pass
                 root_logger.info(
