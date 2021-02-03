@@ -70,6 +70,7 @@ def get_inns(filename):
         for line in f:
             if ':' in line:
                 customer = line.split(':')[0]
+                customer = (customer.strip()).replace(' ', '+')
                 minus_words = [el.strip() for el in (line.split(':')[1]).split(',')]
                 minus_words = [el.replace(' ', '+') for el in minus_words]
                 inns[customer] = minus_words
@@ -81,6 +82,102 @@ def get_inns(filename):
 def get_html(url, params=None):
     resp = requests.get(url=url, headers=HEADERS, params=params)
     return resp
+
+
+def is_next_page(url):
+    resp = requests.get(url=url, headers=HEADERS)
+    if resp.status_code == 200:
+        soup = BeautifulSoup(resp.text, 'html.parser')
+        return soup.find('a', class_='paginator-button paginator-button-next')
+
+
+def url_updater(page_num, inn, minus_words):
+    excluding_words_list = '%7C'.join(minus_words)
+    page_num += 1
+    updated_url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceFromGeneral=50000&currencyIdGeneral=-1'
+    return updated_url
+
+
+def parse_page(url):
+    res = dict()
+    resp = requests.get(url=url, headers=HEADERS)
+    if resp.status_code == 200:
+        soup = BeautifulSoup(resp.text, 'html.parser')
+        if soup.find_all('div', class_='search-registry-entry-block box-shadow-search-input'):
+            elements = soup.find_all('div', class_='search-registry-entry-block box-shadow-search-input')
+            for el in elements:
+                number = el.find(
+                    'div', class_='registry-entry__header-mid__number').a
+                tender_url = number.get('href')
+                if 'https' not in tender_url:
+                    tender_url = BASE_URL + tender_url
+                number = number.text.strip().replace('\n', '').replace('№ ', '')
+                name = el.find(text=re.compile("Объект закупки")
+                                ).parent.find_next_sibling()
+                name = name.text.strip().replace('\n', '')
+                # print(f'inn#{inn} number is {number}')
+                try:
+                    customer = el.find(text=re.compile(
+                        "Заказчик")).parent.find_next_sibling().a
+                    if customer:
+                        customer_url = customer.get('href')
+                        if 'https' not in customer_url:
+                            customer_url = BASE_URL + customer_url
+                        customer = customer.text.strip().replace('\n', '')
+                        last_customer = customer
+                        last_customer_url = customer_url
+                except AttributeError:
+                    try:
+                        customer = last_customer
+                        customer_url = last_customer_url
+                    except UnboundLocalError:
+                        customer = ''
+                        customer_url = ''
+
+                price = el.find('div', class_="price-block__value")
+                price = price.text.strip().replace('\n', '').replace('\xa0', '')
+                release_date = el.find(text=re.compile(
+                    "Размещено")).parent.find_next_sibling()
+                release_date = release_date.text
+                refreshing_date = el.find(text=re.compile(
+                    "Обновлено")).parent.find_next_sibling()
+                refreshing_date = refreshing_date.text
+                if el.find(text=re.compile("Окончание подачи заявок")):
+                    ending_date = el.find(text=re.compile(
+                    "Окончание подачи заявок")).parent.find_next_sibling()
+                    ending_date = ending_date.text
+                else:
+                    ending_date = ''
+                if not inDataBase(number):
+                    save_tender(
+                        number=number,
+                        name=name,
+                        url=tender_url,
+                        customer=customer,
+                        customer_url=customer_url,
+                        price=price,
+                        release_date=release_date,
+                        refreshing_date=refreshing_date,
+                        ending_date=ending_date
+                        )
+                    res[number] = {
+                        'name': name,
+                        'url': tender_url,
+                        'customer': customer,
+                        'customer_url': customer_url,
+                        'price': price,
+                        'release_date': release_date,
+                        'refreshing_date': refreshing_date,
+                        'ending_date': ending_date
+                    }
+                else:
+                    pass
+            root_logger.info(f'Parsed {str(len(elements))} tenders for customer with INN #{inn}')
+        else:
+            root_logger.warning(f'0 active tenders for customer with INN #{inn}')
+    else:
+        root_logger.warning(f'page {url} is not available')
+    return res
 
 
 def parsing(inns):

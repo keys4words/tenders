@@ -14,6 +14,7 @@ def get_inns(filename):
         for line in f:
             if ':' in line:
                 customer = line.split(':')[0]
+                customer = (customer.strip()).replace(' ', '+')
                 minus_words = [el.strip() for el in (line.split(':')[1]).split(',')]
                 minus_words = [el.replace(' ', '+') for el in minus_words]
                 inns[customer] = minus_words
