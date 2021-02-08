@@ -360,32 +360,32 @@ set_logger()
 # # interation for 113
 res = dict()
 parsing_new(get_inns(FILE_WITH_INNS))
-sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN', to_emails=to_emails)
+sending_email(save_results(res=res, fileprefix='_zg_113'), '113 zakupki-gov by INN', to_emails=to_emails)
 
 # iteration for 104
 res = dict()
 parsing_new(get_inns(FILE_WITH_INNS_104))
-sending_email(save_results(res=res, fileprefix='_zg_104'), 'zakupki-gov by INN', to_emails=to_emails2)
+sending_email(save_results(res=res, fileprefix='_zg_104'), '104 zakupki-gov by INN', to_emails=to_emails2)
 
 # # iteration for 129
 res = dict()
 parsing_new(get_inns(FILE_WITH_INNS_129))
-sending_email(save_results(res=res, fileprefix='_zg_129'), 'zakupki-gov by INN', to_emails=to_emails3)
+sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by INN', to_emails=to_emails3)
 
 # interation for 113
 res = dict()
 parsing_new(get_inns(FILE_WITH_KW_113))
-sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by words', to_emails=to_emails)
+sending_email(save_results(res=res, fileprefix='_zg_113'), '113 zakupki-gov by words', to_emails=to_emails)
 
 # iteration for 104
 res = dict()
 parsing_new(get_inns(FILE_WITH_KW_104))
-sending_email(save_results(res=res, fileprefix='_zg_104'), 'zakupki-gov by words', to_emails=to_emails2)
+sending_email(save_results(res=res, fileprefix='_zg_104'), '104 zakupki-gov by words', to_emails=to_emails2)
 
 # iteration for 129
 res = dict()
 parsing_new(get_inns(FILE_WITH_KW_129))
-sending_email(save_results(res=res, fileprefix='_zg_129'), 'zakupki-gov by words', to_emails=to_emails3)
+sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by words', to_emails=to_emails3)
 
 root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
