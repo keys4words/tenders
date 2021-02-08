@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException,
 from openpyxl import Workbook
 import yagmail
 import keyring
-from config import from_email, password, to_emails, cc, bcc
+from config.conf_zg import from_email, password, to_emails, cc, bcc
 
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -61,58 +61,59 @@ def get_keywords(filename):
 
 
 def parse_page(keyword, driver):
-    searchbox = driver.find_element_by_xpath('//div[@class="filter-rs"]/input')
+    delay = random.randint(8, 15)
+    WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-0-input"]')))
+    searchbox = driver.find_element_by_xpath('//input[@id="filterField-0-input"]')
     searchbox.send_keys(keyword)
 
-    searchBtn = driver.find_element_by_xpath('//button[@class="pt7 pb7 no-outline button-full block brdr-none align-center lh20 bg-cl-th-accent bg-cl-th-button-primary ripple fs14 cl-white relative mb11"]')
+    searchBtn = driver.find_element_by_xpath('//button[@id="applyFilterButton"]')
     searchBtn.click()
 
-    delay = random.randint(8, 15)
     root_logger = logging.getLogger('bz')
     try:
-        WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//div[@class="container"]//div[@class="row"]//div[contains(@class, "purchase")]')))
+        WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//article[@class="card p-grid"]')))
         # EC.element_to_be_clickable()
         # print('\t row - ok', end='')
-        elements = driver.find_elements_by_xpath('//div[@class="purchase flex between-xs wrap m0 mb10 brdr-1 brdr-cl-gray3"]')
+        elements = driver.find_elements_by_xpath('//article[@class="card p-grid"]')
         # print('\t elements - ok', end='')
         for el in elements:
-            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@class="weight-500 mb5 lh25 fs14 td-underline"]')))
-            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@id="timer"]')))
+            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/h3[@id="tradeNumber"]/a')))
+            # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@id="timer"]')))
             try:
-                number = el.find_element_by_xpath('.//div[@class="weight-500 mb5 lh25 fs14 td-underline"]')
+                number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
                 number = number.text
             except StaleElementReferenceException:
                 number = '#'
+                continue
             
-            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@class="cl-black fs12 weight-500 lh20 td-underline wwrap-bw"]')))
-            name = el.find_element_by_xpath('.//div[@class="cl-black fs12 weight-500 lh20 td-underline wwrap-bw"]')
-            name = name.text
-            timer = el.find_element_by_xpath('.//div[@id="timer"]')
-            timer = (timer.text).replace('\n', '')
-            customer = el.find_element_by_xpath('.//div[@class="cl-black fs12 weight-500 lh20 td-underline"]')
-            customer = customer.text
-            price = el.find_element_by_xpath('.//div[@class="cl-green weight-400 fs10"]/span')
-            price = price.text
-            info = el.find_element_by_xpath('.//a[@class="brdr-l-1 cl-green brdr-cl-gray3 px15 py5 flex wrap no-underline"]')
-            info = info.get_attribute('href')
+            # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@class="cl-black fs12 weight-500 lh20 td-underline wwrap-bw"]')))
+            # name = el.find_element_by_xpath('.//div[@class="cl-black fs12 weight-500 lh20 td-underline wwrap-bw"]')
+            # name = name.text
+            # timer = el.find_element_by_xpath('.//div[@id="timer"]')
+            # timer = (timer.text).replace('\n', '')
+            # customer = el.find_element_by_xpath('.//div[@class="cl-black fs12 weight-500 lh20 td-underline"]')
+            # customer = customer.text
+            # price = el.find_element_by_xpath('.//div[@class="cl-green weight-400 fs10"]/span')
+            # price = price.text
+            # info = el.find_element_by_xpath('.//a[@class="brdr-l-1 cl-green brdr-cl-gray3 px15 py5 flex wrap no-underline"]')
+            # info = info.get_attribute('href')
 
-            if not isInDataBase(number):
-                        save_tender(number=number
-                            ,name=name
-                            ,timer=timer
-                            ,customer=customer
-                            ,price=price
-                            ,info=info
-                            )
-                        res[number] = {
-                            'name': name,
-                            'timer': timer,
-                            'customer': customer,
-                            'price': price,
-                            'info': info
-                        }
-            else:
-                pass
+            # if not isInDataBase(number):
+            #             save_tender(number=number
+            #                 ,name=name
+            #                 ,timer=timer
+            #                 ,customer=customer
+            #                 ,price=price
+            #                 ,info=info
+            #                 )
+            #             res[number] = {
+            #                 'name': name,
+            #                 'timer': timer,
+            #                 'customer': customer,
+            #                 'price': price,
+            #                 'info': info
+            #             }
+            print(number)
 
         root_logger.info(f'parsing OK with keyword: {keyword}')
         searchbox.clear()
@@ -142,11 +143,11 @@ def save_results(res):
         
 
 def parsing(keywords):
-    btn_all_filters = driver.find_element_by_xpath('//button[@data-v-7755f139][2]')
-    btn_all_filters.click()
+    # btn_all_filters = driver.find_element_by_xpath('//button[@data-v-7755f139][2]')
+    # btn_all_filters.click()
 
-    WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.XPATH, '//label[contains(text(), "Субъект РФ")]/following-sibling::div')))
-    regions = get_keywords(FILE_WITH_REGIONS)
+    # WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.XPATH, '//label[contains(text(), "Субъект РФ")]/following-sibling::div')))
+    # regions = get_keywords(FILE_WITH_REGIONS)
     # print(regions)
     # for index, region in enumerate(regions):
     #     regions_dropdown = driver.find_element_by_xpath('//label[contains(text(), "Субъект РФ")]/following-sibling::div')
@@ -173,14 +174,13 @@ def parsing(keywords):
 
     for keyword in keywords:
         parse_page(keyword=keyword, driver=driver)
-        pagination = driver.find_elements_by_xpath('//div[@class="flex middle-xs center-xs align-center fs13 lh35 cl-black weight-700"]/div')
-        if len(pagination) > 1:
-            counter = 1
-            while counter < len(pagination):
-                new_url = BASE_URL + '/page/' + str(counter+1)
-                driver.get(new_url)
-                parse_page(keyword=keyword, driver=driver)
-                counter += 1
+        # if driver.find_element_by_xpath('//a[@class="ui-paginator-next ui-paginator-element ui-state-default ui-corner-all"]'):
+        #     counter = 1
+        #     while counter < len(pagination):
+        #         new_url = BASE_URL + '/page/' + str(counter+1)
+        #         driver.get(new_url)
+        #         parse_page(keyword=keyword, driver=driver)
+        #         counter += 1
     root_logger = logging.getLogger('bz')
     root_logger.info(f'Parsed ' + str(len(res)) + ' tenders')
 
@@ -219,11 +219,11 @@ set_logger()
 parsing(get_keywords(FILE_WITH_KEYWORDS))
 
 root_logger = logging.getLogger('bz')
-if len(res)>= 1:
-    sending_email(save_results(res))
-else:
-    root_logger.info('There is NO tenders')
-root_logger.info('='*36)
+# if len(res)>= 1:
+#     sending_email(save_results(res))
+# else:
+#     root_logger.info('There is NO tenders')
+# root_logger.info('='*36)
 
 
 driver.quit()
