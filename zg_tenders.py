@@ -1,4 +1,5 @@
 import requests, random, os, logging, time, re, sqlite3
+import dateutil.relativedelta
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
 from datetime import datetime
@@ -115,6 +116,15 @@ def parse_page(url):
         if soup.find_all('div', class_='search-registry-entry-block box-shadow-search-input'):
             elements = soup.find_all('div', class_='search-registry-entry-block box-shadow-search-input')
             for el in elements:
+                if el.find(text=re.compile("Окончание подачи заявок")):
+                    ending_date = el.find(text=re.compile(
+                    "Окончание подачи заявок")).parent.find_next_sibling()
+                    ending_date = ending_date.text
+                    ending_date = datetime.strptime(ending_date, '%d.%m.%Y')
+                    if ending_date < datetime.now()-dateutil.relativedelta(months=6):
+                        continue
+                else:
+                    ending_date = ''
                 number = el.find(
                     'div', class_='registry-entry__header-mid__number').a
                 tender_url = number.get('href')
@@ -151,12 +161,7 @@ def parse_page(url):
                 refreshing_date = el.find(text=re.compile(
                     "Обновлено")).parent.find_next_sibling()
                 refreshing_date = refreshing_date.text
-                if el.find(text=re.compile("Окончание подачи заявок")):
-                    ending_date = el.find(text=re.compile(
-                    "Окончание подачи заявок")).parent.find_next_sibling()
-                    ending_date = ending_date.text
-                else:
-                    ending_date = ''
+                
                 if not inDataBase(number):
                     save_tender(
                         number=number,
@@ -237,7 +242,7 @@ def parsing(inns):
                         tender_url = BASE_URL + tender_url
                     number = number.text.strip().replace('\n', '').replace('№ ', '')
                     name = el.find(text=re.compile("Объект закупки")
-                                   ).parent.find_next_sibling()
+                                ).parent.find_next_sibling()
                     name = name.text.strip().replace('\n', '')
                     # print(f'inn#{inn} number is {number}')
                     try:
