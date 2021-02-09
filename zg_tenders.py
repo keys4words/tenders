@@ -311,20 +311,17 @@ def parsing(inns):
 def save_results(res, fileprefix):
     wb = Workbook()
     ws = wb.active
-    headers = ['Размещено', 'Обновлено', 'Окончание подачи заявок', 'Номер', 'Объект закупки', 'Ссылка на тендер', 'Заказчик',
-               'Начальная цена' ]
+    headers = ['Ссылка на тендер', 'Окончание подачи заявок', 'Номер', 'Заказчик', 'Объект закупки', 'Начальная цена', 'Размещено', 'Обновлено']
     ws.append(headers)
     for tender_number, tender_info in res.items():
-        ws.append([tender_info['release_date'], tender_info['refreshing_date'], tender_info['ending_date'], tender_number, tender_info['name'], tender_info['url'], tender_info['customer'],
-                   tender_info['price'] ])
+        ws.append([tender_info['url'], tender_info['ending_date'], tender_number, tender_info['customer'], tender_info['name'], tender_info['price'], tender_info['release_date'], tender_info['refreshing_date'] ])
 
-    ws.column_dimensions['A'].width = 20
-    ws.column_dimensions['B'].width = 20
-    ws.column_dimensions['C'].width = 20
-    ws.column_dimensions['D'].width = 30
-    ws.column_dimensions['E'].width = 100
-    ws.column_dimensions['G'].width = 80
-    ws.column_dimensions['H'].width = 20
+    ws.column_dimensions['A'].width = 25
+    ws.column_dimensions['B'].width = 16
+    ws.column_dimensions['C'].width = 24
+    ws.column_dimensions['D'].width = 80
+    ws.column_dimensions['E'].width = 80
+    ws.column_dimensions['F'].width = 16
 
     name = os.path.abspath(os.path.dirname(__file__))
     name = os.path.join(name, 'out', datetime.now().strftime("%d-%m-%Y_%H-%M"))
