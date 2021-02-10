@@ -1,5 +1,5 @@
 import requests, random, os, logging, time, re, sqlite3
-import dateutil.relativedelta
+from dateutil import relativedelta as dr
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
 from datetime import datetime
@@ -116,21 +116,24 @@ def parse_page(url):
         if soup.find_all('div', class_='search-registry-entry-block box-shadow-search-input'):
             elements = soup.find_all('div', class_='search-registry-entry-block box-shadow-search-input')
             for el in elements:
-                if el.find(text=re.compile("Окончание подачи заявок")):
-                    ending_date = el.find(text=re.compile(
-                    "Окончание подачи заявок")).parent.find_next_sibling()
-                    ending_date = ending_date.text
-                    ending_date = datetime.strptime(ending_date, '%d.%m.%Y')
-                    if ending_date < datetime.now()-dateutil.relativedelta(months=6):
-                        continue
-                else:
-                    ending_date = ''
                 number = el.find(
                     'div', class_='registry-entry__header-mid__number').a
                 tender_url = number.get('href')
                 if 'https' not in tender_url:
                     tender_url = BASE_URL + tender_url
                 number = number.text.strip().replace('\n', '').replace('№ ', '')
+                if el.find(text=re.compile("Окончание подачи заявок")):
+                    ending_date = el.find(text=re.compile(
+                    "Окончание подачи заявок")).parent.find_next_sibling()
+                    ending_date = ending_date.text
+                    ending_date = datetime.strptime(ending_date, '%d.%m.%Y')
+                    if ending_date < datetime.now()-dr.relativedelta(months=6):
+                        # print(number + ' -> ' + ending_date.strftime('%d.%m.%Y'))
+                        continue
+                    else:
+                        ending_date = ending_date.strftime('%d.%m.%Y')
+                else:
+                    ending_date = ''
                 name = el.find(text=re.compile("Объект закупки")
                                 ).parent.find_next_sibling()
                 name = name.text.strip().replace('\n', '')
@@ -316,17 +319,17 @@ def parsing(inns):
 def save_results(res, fileprefix):
     wb = Workbook()
     ws = wb.active
-    headers = ['Ссылка на тендер', 'Окончание подачи заявок', 'Номер', 'Заказчик', 'Объект закупки', 'Начальная цена', 'Размещено', 'Обновлено']
+    headers = ['Ссылка на тендер', 'Окончание подачи заявок', 'Номер', '', 'Заказчик', 'Объект закупки', 'Начальная цена', 'Размещено', 'Обновлено']
     ws.append(headers)
     for tender_number, tender_info in res.items():
-        ws.append([tender_info['url'], tender_info['ending_date'], tender_number, tender_info['customer'], tender_info['name'], tender_info['price'], tender_info['release_date'], tender_info['refreshing_date'] ])
+        ws.append([tender_info['url'], tender_info['ending_date'], tender_number, '', tender_info['customer'], tender_info['name'], tender_info['price'], tender_info['release_date'], tender_info['refreshing_date'] ])
 
     ws.column_dimensions['A'].width = 25
     ws.column_dimensions['B'].width = 16
     ws.column_dimensions['C'].width = 24
-    ws.column_dimensions['D'].width = 80
     ws.column_dimensions['E'].width = 80
-    ws.column_dimensions['F'].width = 16
+    ws.column_dimensions['F'].width = 80
+    ws.column_dimensions['G'].width = 16
 
     name = os.path.abspath(os.path.dirname(__file__))
     name = os.path.join(name, 'out', datetime.now().strftime("%d-%m-%Y_%H-%M"))
