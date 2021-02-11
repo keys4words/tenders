@@ -60,6 +60,10 @@ def get_keywords(filename):
         return keywords
 
 
+def page_has_pagination(keyword=keyword, driver=driver):
+    retun driver.find_element_by_xpath('//')
+
+
 def parse_page(keyword, driver):
     delay = random.randint(8, 15)
     WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-0-input"]')))
@@ -114,7 +118,7 @@ def parse_page(keyword, driver):
             #                 'info': info
             #             }
             print(number)
-
+        
         root_logger.info(f'parsing OK with keyword: {keyword}')
         searchbox.clear()
     except TimeoutException:
@@ -174,6 +178,16 @@ def parsing(keywords):
 
     for keyword in keywords:
         parse_page(keyword=keyword, driver=driver)
+
+        # recursion parsing
+        # window_before = driver.window_handles[0]
+        # while page_has_pagination(keyword=keyword, driver=driver):
+        #     parse_page(keyword=keyword, driver=driver)
+        #     driver.find_element_by_xpath("//a[@href='http://www.cdot.in/home.htm']").click()
+        #     window_after = driver.window_handles[1]
+        #     driver.switch_to_window(window_after)
+        #     parse_page(keyword=keyword, driver=driver)
+
         # if driver.find_element_by_xpath('//a[@class="ui-paginator-next ui-paginator-element ui-state-default ui-corner-all"]'):
         #     counter = 1
         #     while counter < len(pagination):

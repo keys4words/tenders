@@ -128,7 +128,7 @@ def parse_page(url):
                     ending_date = ending_date.text
                     ending_date = datetime.strptime(ending_date, '%d.%m.%Y')
                     if ending_date < datetime.now()-dr.relativedelta(months=6):
-                        # print(number + ' -> ' + ending_date.strftime('%d.%m.%Y'))
+                        # print(number ks+ ' -> ' + ending_date.strftime('%d.%m.%Y'))
                         continue
                     else:
                         ending_date = ending_date.strftime('%d.%m.%Y')
