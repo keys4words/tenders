@@ -15,12 +15,15 @@ from config.conf_zg import from_email, password, to_emails, cc, bcc
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 FILE_WITH_KEYWORDS = os.path.join(BASE_DIR, 'keywords', 'bz_keywords.txt')
+TEST = os.path.join(BASE_DIR, 'keywords', 'test.txt')
 FILE_WITH_REGIONS = os.path.join(BASE_DIR, 'keywords', 'bz_regions.txt')
 BASE_URL = 'https://agregatoreat.ru/purchases/new'
+DB_PATH = os.path.join(BASE_DIR, 'db', 'bz.db')
+
 
 
 def create_db():
-    with sqlite3.connect('bz.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS tenders(
             number TEXT,
@@ -32,20 +35,21 @@ def create_db():
         )""")
 
 def isInDataBase(number):
-    with sqlite3.connect('bz.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute(f"SELECT * FROM tenders WHERE number=='{number}'")
         return cur.fetchone()
 
 def save_tender(number, name, timer, customer, price, info):
-    with sqlite3.connect('bz.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute(f"INSERT INTO tenders (number, name, timer, customer, price, info) VALUES('{number}', '{name}', '{timer}', '{customer}', '{price}', '{info}');")
 
 
 def set_logger():
     root_logger = logging.getLogger('bz')
-    handler = logging.FileHandler('logs\\bz.log', 'a', 'utf-8')
+    log_file = os.path.join(BASE_DIR, 'logs', 'bz.log')
+    handler = logging.FileHandler(log_file, 'a', 'utf-8')
     formatter = logging.Formatter('%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
     handler.setFormatter(formatter)
     root_logger.addHandler(handler)
@@ -60,8 +64,8 @@ def get_keywords(filename):
         return keywords
 
 
-def page_has_pagination(keyword=keyword, driver=driver):
-    retun driver.find_element_by_xpath('//')
+# def page_has_pagination(keyword=keyword, driver=driver):
+#     return driver.find_element_by_xpath('//')
 
 
 def parse_page(keyword, driver):
@@ -76,10 +80,7 @@ def parse_page(keyword, driver):
     root_logger = logging.getLogger('bz')
     try:
         WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//article[@class="card p-grid"]')))
-        # EC.element_to_be_clickable()
-        # print('\t row - ok', end='')
         elements = driver.find_elements_by_xpath('//article[@class="card p-grid"]')
-        # print('\t elements - ok', end='')
         for el in elements:
             WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/h3[@id="tradeNumber"]/a')))
             # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@id="timer"]')))
@@ -90,35 +91,33 @@ def parse_page(keyword, driver):
                 number = '#'
                 continue
             
-            # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@class="cl-black fs12 weight-500 lh20 td-underline wwrap-bw"]')))
-            # name = el.find_element_by_xpath('.//div[@class="cl-black fs12 weight-500 lh20 td-underline wwrap-bw"]')
-            # name = name.text
-            # timer = el.find_element_by_xpath('.//div[@id="timer"]')
-            # timer = (timer.text).replace('\n', '')
-            # customer = el.find_element_by_xpath('.//div[@class="cl-black fs12 weight-500 lh20 td-underline"]')
-            # customer = customer.text
-            # price = el.find_element_by_xpath('.//div[@class="cl-green weight-400 fs10"]/span')
-            # price = price.text
-            # info = el.find_element_by_xpath('.//a[@class="brdr-l-1 cl-green brdr-cl-gray3 px15 py5 flex wrap no-underline"]')
-            # info = info.get_attribute('href')
+            name = el.find_element_by_xpath('.//p[@id="subject"]')
+            name = name.text
+            timer = el.find_element_by_xpath('.//span[@id="timer"]')
+            timer = (timer.text).replace('\n', '')
+            customer = el.find_element_by_xpath('.//span[@id="organizerInfoNameLink"]')
+            customer = customer.text
+            price = el.find_element_by_xpath('.//h1[@id="purchasePrice"]')
+            price = price.text
+            info = el.find_element_by_xpath('.//a[@id="tradeInfoLink"]')
+            info = info.get_attribute('href')
 
-            # if not isInDataBase(number):
-            #             save_tender(number=number
-            #                 ,name=name
-            #                 ,timer=timer
-            #                 ,customer=customer
-            #                 ,price=price
-            #                 ,info=info
-            #                 )
-            #             res[number] = {
-            #                 'name': name,
-            #                 'timer': timer,
-            #                 'customer': customer,
-            #                 'price': price,
-            #                 'info': info
-            #             }
-            print(number)
-        
+            if not isInDataBase(number):
+                        save_tender(number=number
+                            ,name=name
+                            ,timer=timer
+                            ,customer=customer
+                            ,price=price
+                            ,info=info
+                            )
+                        res[number] = {
+                            'name': name,
+                            'timer': timer,
+                            'customer': customer,
+                            'price': price,
+                            'info': info
+                        }
+
         root_logger.info(f'parsing OK with keyword: {keyword}')
         searchbox.clear()
     except TimeoutException:
@@ -147,35 +146,6 @@ def save_results(res):
         
 
 def parsing(keywords):
-    # btn_all_filters = driver.find_element_by_xpath('//button[@data-v-7755f139][2]')
-    # btn_all_filters.click()
-
-    # WebDriverWait(driver, 2).until(EC.element_to_be_clickable((By.XPATH, '//label[contains(text(), "Субъект РФ")]/following-sibling::div')))
-    # regions = get_keywords(FILE_WITH_REGIONS)
-    # print(regions)
-    # for index, region in enumerate(regions):
-    #     regions_dropdown = driver.find_element_by_xpath('//label[contains(text(), "Субъект РФ")]/following-sibling::div')
-    #     regions_dropdown_arrow = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//label[contains(text(), "Субъект РФ")]/following-sibling::div/div[1]')))
-
-    #     # print(regions_dropdown.get_attribute('class'))
-    #     regions_dropdown.send_keys(region)
-    #     time.sleep(random.randint(2, 3))
-
-    #     if index%4 == 0:
-    #         driver.execute_script('window.scrollBy(0, 20)', '')
-        
-    #     options_elements = driver.find_elements_by_xpath('//label[contains(text(), "Субъект РФ")]/following-sibling::div/div[3]/ul/li')[:-2]
-    #     for el in options_elements:
-    #         try:
-    #             el.click()
-    #         except ElementClickInterceptedException:
-    #             driver.execute_script('window.scrollBy(0, 20)', '')
-    #             el.click()
-    #         except ElementNotInteractableException:
-    #             WebDriverWait(driver, 20).until(EC.element_to_be_clickable(
-    #                 (By.XPATH, el))).click()
-                # el.click()
-
     for keyword in keywords:
         parse_page(keyword=keyword, driver=driver)
 
@@ -188,13 +158,6 @@ def parsing(keywords):
         #     driver.switch_to_window(window_after)
         #     parse_page(keyword=keyword, driver=driver)
 
-        # if driver.find_element_by_xpath('//a[@class="ui-paginator-next ui-paginator-element ui-state-default ui-corner-all"]'):
-        #     counter = 1
-        #     while counter < len(pagination):
-        #         new_url = BASE_URL + '/page/' + str(counter+1)
-        #         driver.get(new_url)
-        #         parse_page(keyword=keyword, driver=driver)
-        #         counter += 1
     root_logger = logging.getLogger('bz')
     root_logger.info(f'Parsed ' + str(len(res)) + ' tenders')
 
@@ -230,15 +193,15 @@ driver.get(BASE_URL)
 
 set_logger()
 
+# parsing(get_keywords(TEST))
 parsing(get_keywords(FILE_WITH_KEYWORDS))
 
 root_logger = logging.getLogger('bz')
-# if len(res)>= 1:
-#     sending_email(save_results(res))
-# else:
-#     root_logger.info('There is NO tenders')
-# root_logger.info('='*36)
-
+if len(res)>= 1:
+    sending_email(save_results(res))
+else:
+    root_logger.info('There is NO tenders')
+root_logger.info('='*36)
 
 driver.quit()
 # create_db()
