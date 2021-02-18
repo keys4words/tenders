@@ -84,13 +84,8 @@ def parse_page(keyword, driver):
         for el in elements:
             WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/h3[@id="tradeNumber"]/a')))
             # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@id="timer"]')))
-            try:
-                number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
-                number = number.text
-            except StaleElementReferenceException:
-                number = '#'
-                continue
-            
+            number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
+            number = number.text
             name = el.find_element_by_xpath('.//p[@id="subject"]')
             name = name.text
             timer = el.find_element_by_xpath('.//span[@id="timer"]')
