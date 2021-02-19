@@ -63,16 +63,30 @@ def save_results(res):
 
 
 def parse_page(driver):
+    root_logger = logging.getLogger('zm')
     WebDriverWait(driver, 2).until(EC.presence_of_element_located(
         (By.XPATH, '//div[contains(@class, "PublicListContentContainer")]')))
     elements = driver.find_elements_by_xpath(
         '//div[contains(@class, "PublicListContentContainer")]/div')
+    number_tenders = len(elements)
     for el in elements:
-        WebDriverWait(driver, 4).until(EC.presence_of_element_located((By.XPATH, './/a[contains(@class, "MainInfoNumberHeader")]/span')))
-        number = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNumberHeader")]/span')
-        number = number.text
-        name = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNameHeader")]/span')
-        name = name.text
+        WebDriverWait(driver, 2).until(EC.presence_of_element_located((By.XPATH, './/a[contains(@class, "MainInfoNumberHeader")]/span')))
+        try:
+            number = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNumberHeader")]/span')
+            number = number.text
+        except StaleElementReferenceException:
+            time.sleep(2)
+            number = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNumberHeader")]/span')
+            number = number.text
+        try:
+            name = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNameHeader")]/span')
+            name = name.text
+        except StaleElementReferenceException:
+            time.sleep(1)
+            name = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNameHeader")]/span')
+            name = name.text
+
+
         name_url = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNameHeader")]')
         name_url = name_url.get_attribute('href')
         WebDriverWait(driver, 7).until(EC.presence_of_element_located((By.XPATH, './/a[contains(@class, "MainInfoCustomerHeader")]')))
@@ -107,6 +121,7 @@ def parse_page(driver):
                         'tdate': tdate
                         }
         driver.execute_script('window.scrollBy(0, 300)', '')
+    root_logger.info(f'{keyword}: parsing -> {keyword}')
 
 
 def parsing(driver, keywords):

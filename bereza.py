@@ -81,15 +81,30 @@ def parse_page(keyword, driver):
     try:
         WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//article[@class="card p-grid"]')))
         elements = driver.find_elements_by_xpath('//article[@class="card p-grid"]')
+        tenders_on_page = len(elements)
         for el in elements:
-            WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/h3[@id="tradeNumber"]/a')))
-            # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/div[@id="timer"]')))
-            number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
-            number = number.text
-            name = el.find_element_by_xpath('.//p[@id="subject"]')
-            name = name.text
-            timer = el.find_element_by_xpath('.//span[@id="timer"]')
-            timer = (timer.text).replace('\n', '')
+            # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/span[@id="timer"]')))
+            try:
+                number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
+                number = number.text
+            except StaleElementReferenceException:
+                WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, './/h3[@id="tradeNumber"]/a')))
+                number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
+                number = number.text
+            try:
+                name = el.find_element_by_xpath('.//p[@id="subject"]')
+                name = name.text
+            except StaleElementReferenceException:
+                name = el.find_element_by_xpath('.//p[@id="subject"]')
+                name = name.text
+
+            try:
+                timer = el.find_element_by_xpath('.//span[@id="timer"]')
+                timer = (timer.text).replace('\n', '')
+            except StaleElementReferenceException:
+                timer = el.find_element_by_xpath('.//span[@id="timer"]')
+                timer = (timer.text).replace('\n', '')
+                
             customer = el.find_element_by_xpath('.//span[@id="organizerInfoNameLink"]')
             customer = customer.text
             price = el.find_element_by_xpath('.//h1[@id="purchasePrice"]')
@@ -113,10 +128,10 @@ def parse_page(keyword, driver):
                             'info': info
                         }
 
-        root_logger.info(f'parsing OK with keyword: {keyword}')
+        root_logger.info(f'{keyword}: parsing -> {tenders_on_page}')
         searchbox.clear()
     except TimeoutException:
-        root_logger.warning(f'timeout with keyword: {keyword}')
+        root_logger.warning(f'{keyword}: parsing -> timeout')
         searchbox.clear()
 
 def save_results(res):
