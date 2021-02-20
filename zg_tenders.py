@@ -51,7 +51,7 @@ def inDataBase(number):
 def save_tender(number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date):
     with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
-        cur.execute(f"INSERT INTO tenders (number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date) VALUES('{number}', '{name}', '{url}', '{customer}', '{customer_url}', '{price}', '{release_date}', '{refreshing_date}', '{ending_date}');")
+        cur.execute("INSERT INTO tenders (number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date) VALUES(?,?,?,?,?,?,?,?,?);", (number, name, url, customer, customer_url, price, release_date, refreshing_date, ending_date))
 
 
 def set_logger():
