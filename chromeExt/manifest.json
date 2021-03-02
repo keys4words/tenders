@@ -4,8 +4,8 @@
     "version": "1.0",
     "content_scripts": [
         {
-            "matches": ["https://agregatoreat.ru/purchases/new", "https://utp.sberbank-ast.ru/*"],
-            "js": ["sber.js"]
+            "matches": ["https://agregatoreat.ru/purchases/new", "https://utp.sberbank-ast.ru/ttttt*"],
+            "js": ["sber2.js"]
         }
     ]
 }
