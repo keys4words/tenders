@@ -3,6 +3,7 @@ import random, os, logging, time
 from datetime import datetime
 
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -70,7 +71,7 @@ def get_keywords(filename):
 
 def parse_page(keyword, driver):
     delay = random.randint(8, 15)
-    WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-0-input"]')))
+    # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-0-input"]')))
     searchbox = driver.find_element_by_xpath('//input[@id="filterField-0-input"]')
     searchbox.send_keys(keyword)
 
@@ -78,6 +79,8 @@ def parse_page(keyword, driver):
     searchBtn.click()
 
     root_logger = logging.getLogger('bz')
+    wait.until(presence_of_element_located((By.XPATH, '//article[@class="card p-grid"]'))))
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     try:
         WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//article[@class="card p-grid"]')))
         elements = driver.find_elements_by_xpath('//article[@class="card p-grid"]')
@@ -155,9 +158,13 @@ def save_results(res):
     return results_file_name
         
 
-def parsing(keywords):
+def parsing(keywords, driver):
     for keyword in keywords:
+        driver.execute_script("window.scrollTo(0, 0);")
         parse_page(keyword=keyword, driver=driver)
+
+        # TODO: download all row html code with data
+        # source = driver.page_source()
 
         # recursion parsing
         # window_before = driver.window_handles[0]
@@ -197,21 +204,25 @@ def sending_email(filename):
 ############################################################
 res = dict()
 
-driver = webdriver.Chrome()
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+driver = webdriver.Chrome(options=chrome_options)
 driver.maximize_window()
-driver.get(BASE_URL)
+with driver:
+    wait = WebDriverWait(driver, 10)
+    driver.get(BASE_URL)
 
-set_logger()
+    set_logger()
 
-# parsing(get_keywords(TEST))
-parsing(get_keywords(FILE_WITH_KEYWORDS))
+    # parsing(get_keywords(TEST))
+    parsing(get_keywords(FILE_WITH_KEYWORDS), driver)
 
-root_logger = logging.getLogger('bz')
-if len(res)>= 1:
-    sending_email(save_results(res))
-else:
-    root_logger.info('There is NO tenders')
-root_logger.info('='*36)
+    root_logger = logging.getLogger('bz')
+    if len(res)>= 1:
+        sending_email(save_results(res))
+    else:
+        root_logger.info('There is NO tenders')
+    root_logger.info('='*36)
 
 driver.quit()
 # create_db()
