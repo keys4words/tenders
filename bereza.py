@@ -1,6 +1,7 @@
 import sqlite3
 import random, os, logging, time
 from datetime import datetime
+from pprint import pprint
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -15,7 +16,7 @@ from config.conf_zg import from_email, password, to_emails, cc, bcc
 
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-FILE_WITH_KEYWORDS = os.path.join(BASE_DIR, 'keywords', 'bz_keywords.txt')
+FILE_WITH_KEYWORDS = os.path.join(BASE_DIR, 'keywords', 'bz.txt')
 TEST = os.path.join(BASE_DIR, 'keywords', 'test.txt')
 FILE_WITH_REGIONS = os.path.join(BASE_DIR, 'keywords', 'bz_regions.txt')
 BASE_URL = 'https://agregatoreat.ru/purchases/new'
@@ -71,27 +72,31 @@ def get_keywords(filename):
 
 def parse_page(keyword, driver):
     delay = random.randint(8, 15)
-    # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-0-input"]')))
+    WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-0-input"]')))
     searchbox = driver.find_element_by_xpath('//input[@id="filterField-0-input"]')
     searchbox.send_keys(keyword)
 
     searchBtn = driver.find_element_by_xpath('//button[@id="applyFilterButton"]')
     searchBtn.click()
 
+    time.sleep(random.randint(1, 3))
+    article = driver.find_element_by_tag_name('article')
+    isTenders = article.get_attribute("class")
+
     root_logger = logging.getLogger('bz')
-    wait.until(presence_of_element_located((By.XPATH, '//article[@class="card p-grid"]'))))
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    try:
+    
+    if isTenders != 'not-found':
         WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//article[@class="card p-grid"]')))
         elements = driver.find_elements_by_xpath('//article[@class="card p-grid"]')
         tenders_on_page = len(elements)
         for el in elements:
-            # WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/span[@id="timer"]')))
+            driver.execute_script("window.scrollTo(0, 200);")
+            # time.sleep(1)
             try:
                 number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
                 number = number.text
             except StaleElementReferenceException:
-                WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, './/h3[@id="tradeNumber"]/a')))
+                WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, './/h3[@id="tradeNumber"]/a')))
                 number = el.find_element_by_xpath('.//h3[@id="tradeNumber"]/a')
                 number = number.text
             try:
@@ -100,7 +105,6 @@ def parse_page(keyword, driver):
             except StaleElementReferenceException:
                 name = el.find_element_by_xpath('.//p[@id="subject"]')
                 name = name.text
-
             try:
                 timer = el.find_element_by_xpath('.//span[@id="timer"]')
                 timer = (timer.text).replace('\n', '')
@@ -112,6 +116,8 @@ def parse_page(keyword, driver):
             customer = customer.text
             price = el.find_element_by_xpath('.//h1[@id="purchasePrice"]')
             price = price.text
+            price = price.replace(' ', '')
+
             info = el.find_element_by_xpath('.//a[@id="tradeInfoLink"]')
             info = info.get_attribute('href')
 
@@ -133,7 +139,8 @@ def parse_page(keyword, driver):
 
         root_logger.info(f'{keyword}: parsing -> {tenders_on_page}')
         searchbox.clear()
-    except TimeoutException:
+    else:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         root_logger.warning(f'{keyword}: parsing -> timeout')
         searchbox.clear()
 
@@ -205,7 +212,7 @@ def sending_email(filename):
 res = dict()
 
 chrome_options = Options()
-chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--headless')
 driver = webdriver.Chrome(options=chrome_options)
 driver.maximize_window()
 with driver:
@@ -214,11 +221,12 @@ with driver:
 
     set_logger()
 
-    # parsing(get_keywords(TEST))
+    # parsing(get_keywords(TEST), driver)
     parsing(get_keywords(FILE_WITH_KEYWORDS), driver)
 
     root_logger = logging.getLogger('bz')
     if len(res)>= 1:
+        # pprint(res)
         sending_email(save_results(res))
     else:
         root_logger.info('There is NO tenders')
