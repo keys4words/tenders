@@ -1,1 +1,1 @@
-to_emails3 = ['129@rinova.ru']
+to_emails3 = ['104@rinova.ru', '113@rinova.ru']
