@@ -1,4 +1,5 @@
 import requests, random, os, logging, time, re, sqlite3
+from pymongo import MongoClient
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
 from datetime import datetime
@@ -13,6 +14,10 @@ DB_PATH = os.path.join(BASE_DIR, 'db', 'zg.db')
 
 FILE_WITH_INNS = os.path.join(BASE_DIR, 'keywords', 'zg_inns.txt')
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36', 'accept': '*/*'}
+
+client = MongoClient("mongodb://localhost:27017")
+db = client["tenders"]
+zg = db.zg
 
 
 def create_db():

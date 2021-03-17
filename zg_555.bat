@@ -1,1 +1,1 @@
-"D:\USERDATA\Documents\4git\tenders\env\Scripts\python.exe" "D:\USERDATA\Documents\4git\tenders\zakupki_gov.py"
+"D:\USERDATA\Documents\4git\tenders\env\Scripts\python.exe" "D:\USERDATA\Documents\4git\tenders\zg_555.py"
