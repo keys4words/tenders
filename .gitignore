@@ -8,6 +8,7 @@ __pycache__/
 
 # exclude xlsx file in folder 'out'
 out/
+.vscode
 
 # Distribution / packaging
 .Python

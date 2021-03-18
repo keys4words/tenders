@@ -52,6 +52,7 @@ def isInDataBase(number):
 
 def save_tender(number, name, timer, customer, price, info):
     new_tender = {
+        "number": number,
         "name": name,
         'timer': timer,
         'customer': customer,

@@ -142,7 +142,7 @@ def parsing(driver, keywords):
             url = f'https://zakupki.mos.ru/purchase/list?page={page_num}&perPage=50&sortField=relevance&sortDesc=true&filter=%7B%22nameLike%22%3A%22{keyword}%22%2C%22auctionSpecificFilter%22%3A%7B%22stateIdIn%22%3A%5B19000002%5D%7D%2C%22needSpecificFilter%22%3A%7B%22stateIdIn%22%3A%5B20000002%5D%7D%2C%22tenderSpecificFilter%22%3A%7B%22stateIdIn%22%3A%5B5%5D%7D%7D&state=%7B%22currentTab%22%3A1%7D'
             driver.get(url)
             try:
-                parse_page(driver=driver)
+                parse_page(driver=driver, keyword=keyword)
             except TimeoutException:
                 continue
     root_logger.info(f'Parsed ' + str(len(res)) + ' tenders')
