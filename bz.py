@@ -16,9 +16,9 @@ import keyring
 from config.conf_zg import from_email, password, to_emails, cc, bcc
 
 
-client = MongoClient("mongodb://localhost:27017")
-db = client["tenders"]
-bz = db.bz
+# client = MongoClient("mongodb://localhost:27017")
+# db = client["tenders"]
+# bz = db.bz
 
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -42,12 +42,12 @@ def create_db():
         )""")
 
 def isInDataBase(number):
-    # with sqlite3.connect(DB_PATH) as con:
-    #     cur = con.cursor()
-    #     cur.execute(f"SELECT * FROM tenders WHERE number=='{number}'")
-    #     return cur.fetchone()
-    return bz.find_one({
-    "number": number
+    with sqlite3.connect(DB_PATH) as con:
+        cur = con.cursor()
+        cur.execute(f"SELECT * FROM tenders WHERE number=='{number}'")
+        return cur.fetchone()
+    # return bz.find_one({
+    # "number": number
 })
 
 def save_tender(number, name, timer, customer, price, info):
@@ -60,10 +60,10 @@ def save_tender(number, name, timer, customer, price, info):
         'info': info
     }
     
-    bz.insert_one(new_tender)
-    # with sqlite3.connect(DB_PATH) as con:
-    #     cur = con.cursor()
-    #     cur.execute(f"INSERT INTO tenders (number, name, timer, customer, price, info) VALUES('{number}', '{name}', '{timer}', '{customer}', '{price}', '{info}');")
+    # bz.insert_one(new_tender)
+    with sqlite3.connect(DB_PATH) as con:
+        cur = con.cursor()
+        cur.execute(f"INSERT INTO tenders (number, name, timer, customer, price, info) VALUES('{number}', '{name}', '{timer}', '{customer}', '{price}', '{info}');")
 
 
 def set_logger():
