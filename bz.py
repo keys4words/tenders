@@ -48,7 +48,7 @@ def isInDataBase(number):
         return cur.fetchone()
     # return bz.find_one({
     # "number": number
-})
+# })
 
 def save_tender(number, name, timer, customer, price, info):
     new_tender = {
