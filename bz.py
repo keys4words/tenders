@@ -21,7 +21,7 @@ from config.conf_zg import from_email, password, to_emails, cc, bcc
 # bz = db.bz
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-DB_PATH = os.path.join(BASE_DIR, 'db', 'bz.db'
+DB_PATH = os.path.join(BASE_DIR, 'db', 'bz.db')
 FILE_WITH_KEYWORDS = os.path.join(BASE_DIR, 'keywords', 'bz.txt')
 TEST = os.path.join(BASE_DIR, 'keywords', 'test.txt')
 FILE_WITH_REGIONS = os.path.join(BASE_DIR, 'keywords', 'bz_regions.txt')
