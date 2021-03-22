@@ -235,6 +235,7 @@ chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-sh-usage')
 
+
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 chrome_options.add_argument(f'user-agent={user_agent}')
 chrome_options.add_argument('--ignore-certificate-errors')
