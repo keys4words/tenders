@@ -1,8 +1,13 @@
 import sqlite3
 import random, os, logging, time
+import base64
 from datetime import datetime
 from pprint import pprint
 from pymongo import MongoClient
+
+from config.apikey import *
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import (Mail, Attachment, FileContent, FileName, FileType, Disposition, ContentId)
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -225,12 +230,33 @@ def sending_email(filename):
     root_logger = logging.getLogger('bz')
     root_logger.info(f'File was sended to {to_emails}, copy: {cc}, blind copy: {bcc}')
 
+def sending_email_smartgrid(filename):
+    encoded = base64.b64encode(data).decode()
+    message = Mail(
+    from_email=FROM_EMAIL,
+    to_emails=TO_EMAIL,
+    subject='Your File is Ready',
+    html_content='<strong>Attached is Your Scraped File</strong>')
+    attachment = Attachment()
+    attachment.file_content = FileContent(encoded)
+    attachment.file_type = FileType('text/csv')
+    attachment.file_name = FileName('scraped.csv')
+    attachment.disposition = Disposition('attachment')
+    attachment.content_id = ContentId('Example Content ID')
+    message.attachment = attachment
+    try:
+        sg = SendGridAPIClient(SENDGRID_API_KEY)
+        response = sg.send(message)
+        print(response.status_code)
+        print(response.body)
+        print(response.headers)
 
+        
 ############################################################
 res = dict()
 
 chrome_options = Options()
-chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
+# chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-sh-usage')
@@ -239,7 +265,8 @@ chrome_options.add_argument('--disable-dev-sh-usage')
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
 chrome_options.add_argument(f'user-agent={user_agent}')
 chrome_options.add_argument('--ignore-certificate-errors')
-driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+# driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 driver.maximize_window()
 with driver:
     wait = WebDriverWait(driver, 10)
