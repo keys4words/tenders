@@ -5,7 +5,7 @@ from datetime import datetime
 from pprint import pprint
 from pymongo import MongoClient
 
-from config.apikey import *
+from config.conf_bz import sendgrid_api, TO_EMAIL, FROM_EMAIL
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import (Mail, Attachment, FileContent, FileName, FileType, Disposition, ContentId)
 
@@ -245,7 +245,7 @@ def sending_email_smartgrid(filename):
     attachment.content_id = ContentId('Example Content ID')
     message.attachment = attachment
     try:
-        sg = SendGridAPIClient(SENDGRID_API_KEY)
+        sg = SendGridAPIClient(sendgrid_api)
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
