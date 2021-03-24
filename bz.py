@@ -250,6 +250,8 @@ def sending_email_smartgrid(filename):
         print(response.status_code)
         print(response.body)
         print(response.headers)
+    except Exception as e:
+         print(e)
 
         
 ############################################################

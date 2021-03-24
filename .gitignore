@@ -59,6 +59,7 @@ coverage.xml
 *.mo
 *.pot
 
+apikey.py
 # Django stuff:
 
 local_settings.py
