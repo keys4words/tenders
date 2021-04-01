@@ -71,14 +71,20 @@ def parse_page(driver, keyword):
         '//div[contains(@class, "PublicListContentContainer")]/div')
     number_tenders = len(elements)
     for el in elements:
-        WebDriverWait(driver, 2).until(EC.presence_of_element_located((By.XPATH, './/a[contains(@class, "MainInfoNumberHeader")]/span')))
+        WebDriverWait(driver, 4).until(EC.presence_of_element_located((By.XPATH, './/a[contains(@class, "MainInfoNumberHeader")]')))
         try:
             number = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNumberHeader")]/span')
             number = number.text
+            
         except StaleElementReferenceException:
             time.sleep(2)
-            number = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNumberHeader")]/span')
-            number = number.text
+            try:
+                prenumber = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNumberHeader")]')
+                if prenumber:
+                    number = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNumberHeader")]/span')
+                    number = number.text
+            except StaleElementReferenceException:
+                number = '#'
         try:
             name = el.find_element_by_xpath('.//a[contains(@class, "MainInfoNameHeader")]/span')
             name = name.text
