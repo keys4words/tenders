@@ -367,9 +367,9 @@ def sending_email(filename, subject, to_emails):
 set_logger()
 
 # # interation for 113
-# res = dict()
-# parsing_new(get_inns(FILE_WITH_INNS))
-# sending_email(save_results(res=res, fileprefix='_zg_113'), '113 zakupki-gov by INN', to_emails=to_emails)
+res = dict()
+parsing_new(get_inns(FILE_WITH_INNS))
+sending_email(save_results(res=res, fileprefix='_zg_113'), '113 zakupki-gov by INN', to_emails=to_emails)
 
 # iteration for 104
 res = dict()
