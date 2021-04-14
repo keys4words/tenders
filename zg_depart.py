@@ -399,3 +399,4 @@ sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by w
 root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
 # create_db()
+# Get-ChildItem | Where-Object {$_.Name -match '^[0-9]{2}-02-2021_.*'} | foreach {Remove-Item -Path $_.FullName }
