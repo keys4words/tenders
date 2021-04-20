@@ -8898,3 +8898,278 @@
 19-Apr-21 17:00:55 - File D:\USERDATA\Documents\4git\tenders\out\19-04-2021_17-00_bz.xlsx was successfully saved
 19-Apr-21 17:01:02 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
 19-Apr-21 17:01:02 - ====================================
+20-Apr-21 09:17:38 - авсе: parsing -> timeout
+20-Apr-21 09:17:40 - bce: parsing -> timeout
+20-Apr-21 09:17:43 - ВСЕ: parsing -> 1
+20-Apr-21 09:17:45 - агс: parsing -> timeout
+20-Apr-21 09:17:48 - апс: parsing -> 1
+20-Apr-21 09:17:52 - аэрозо: parsing -> 2
+20-Apr-21 09:17:55 - багор: parsing -> timeout
+20-Apr-21 09:17:58 - бот: parsing -> 1
+20-Apr-21 09:18:01 - диэл: parsing -> 4
+20-Apr-21 09:18:02 - топор: parsing -> timeout
+20-Apr-21 09:18:04 - лопата: parsing -> timeout
+20-Apr-21 09:18:07 - водопенн: parsing -> timeout
+20-Apr-21 09:18:11 - гдзк: parsing -> timeout
+20-Apr-21 09:18:12 - гидрант: parsing -> 1
+20-Apr-21 09:18:15 - гидротестер: parsing -> timeout
+20-Apr-21 09:18:19 - головками: parsing -> 3
+20-Apr-21 09:18:22 - закачной: parsing -> timeout
+20-Apr-21 09:18:25 - мотопомпа: parsing -> 1
+20-Apr-21 09:18:27 - ковр: parsing -> 2
+20-Apr-21 09:18:29 - ковер: parsing -> 2
+20-Apr-21 09:18:32 - ножниц: parsing -> 4
+20-Apr-21 09:18:35 - мпп: parsing -> timeout
+20-Apr-21 09:18:39 - огне: parsing -> 9
+20-Apr-21 09:18:41 - овэ: parsing -> timeout
+20-Apr-21 09:18:43 - охранны: parsing -> 4
+20-Apr-21 09:18:46 - песка -поставка -исследования: parsing -> timeout
+20-Apr-21 09:18:49 - пожар: parsing -> 10
+20-Apr-21 09:18:51 - пожаротуше: parsing -> 1
+20-Apr-21 09:18:52 - порошковы: parsing -> 1
+20-Apr-21 09:18:55 - ппо: parsing -> timeout
+20-Apr-21 09:18:58 - противодымный: parsing -> timeout
+20-Apr-21 09:18:59 - противопожарный: parsing -> 1
+20-Apr-21 09:19:00 - рпм: parsing -> timeout
+20-Apr-21 09:19:01 - рпк: parsing -> 1
+20-Apr-21 09:19:05 - рукав: parsing -> 5
+20-Apr-21 09:19:08 - рус: parsing -> 4
+20-Apr-21 09:19:11 - самоспасатель: parsing -> timeout
+20-Apr-21 09:19:13 - ствол: parsing -> 1
+20-Apr-21 09:19:16 - углекислот: parsing -> 1
+20-Apr-21 09:19:19 - шанс: parsing -> timeout
+20-Apr-21 09:19:21 - щпо: parsing -> timeout
+20-Apr-21 09:19:22 - шланг: parsing -> 2
+20-Apr-21 09:19:25 - шпк: parsing -> 1
+20-Apr-21 09:19:27 - эвакуации: parsing -> 1
+20-Apr-21 09:19:28 - эмульсионный: parsing -> timeout
+20-Apr-21 09:19:30 - ярпож: parsing -> timeout
+20-Apr-21 09:19:31 - маск: parsing -> timeout
+20-Apr-21 09:19:35 - перч: parsing -> 10
+20-Apr-21 09:19:38 - кран: parsing -> 8
+20-Apr-21 09:19:41 - клап: parsing -> 7
+20-Apr-21 09:19:42 - диаф: parsing -> timeout
+20-Apr-21 09:19:42 - Parsed 24 tenders
+20-Apr-21 09:19:42 - File D:\USERDATA\Documents\4git\tenders\out\20-04-2021_09-19_bz.xlsx was successfully saved
+20-Apr-21 09:19:48 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+20-Apr-21 09:19:48 - ====================================
+20-Apr-21 12:14:32 - авсе: parsing -> timeout
+20-Apr-21 12:14:35 - bce: parsing -> timeout
+20-Apr-21 12:14:38 - ВСЕ: parsing -> 1
+20-Apr-21 12:14:41 - агс: parsing -> timeout
+20-Apr-21 12:14:43 - апс: parsing -> 2
+20-Apr-21 12:14:45 - аэрозо: parsing -> 1
+20-Apr-21 12:14:47 - багор: parsing -> timeout
+20-Apr-21 12:14:49 - бот: parsing -> 2
+20-Apr-21 12:14:52 - диэл: parsing -> 3
+20-Apr-21 12:14:54 - топор: parsing -> timeout
+20-Apr-21 12:14:57 - лопата: parsing -> 2
+20-Apr-21 12:14:59 - водопенн: parsing -> timeout
+20-Apr-21 12:15:00 - гдзк: parsing -> timeout
+20-Apr-21 12:15:03 - гидрант: parsing -> 1
+20-Apr-21 12:15:04 - гидротестер: parsing -> timeout
+20-Apr-21 12:15:06 - головками: parsing -> 2
+20-Apr-21 12:15:10 - закачной: parsing -> timeout
+20-Apr-21 12:15:11 - мотопомпа: parsing -> timeout
+20-Apr-21 12:15:12 - ковр: parsing -> 2
+20-Apr-21 12:15:13 - ковер: parsing -> 2
+20-Apr-21 12:15:17 - ножниц: parsing -> 3
+20-Apr-21 12:15:20 - мпп: parsing -> timeout
+20-Apr-21 12:15:22 - огне: parsing -> 8
+20-Apr-21 12:15:24 - овэ: parsing -> timeout
+20-Apr-21 12:15:25 - охранны: parsing -> 3
+20-Apr-21 12:15:27 - песка -поставка -исследования: parsing -> timeout
+20-Apr-21 12:15:32 - пожар: parsing -> 10
+20-Apr-21 12:15:33 - пожаротуше: parsing -> 1
+20-Apr-21 12:15:34 - порошковы: parsing -> timeout
+20-Apr-21 12:15:35 - ппо: parsing -> timeout
+20-Apr-21 12:15:38 - противодымный: parsing -> timeout
+20-Apr-21 12:15:42 - противопожарный: parsing -> 2
+20-Apr-21 12:15:43 - рпм: parsing -> timeout
+20-Apr-21 12:15:44 - рпк: parsing -> timeout
+20-Apr-21 12:15:47 - рукав: parsing -> 3
+20-Apr-21 12:15:49 - рус: parsing -> timeout
+20-Apr-21 12:15:52 - самоспасатель: parsing -> timeout
+20-Apr-21 12:15:53 - ствол: parsing -> timeout
+20-Apr-21 12:15:55 - углекислот: parsing -> timeout
+20-Apr-21 12:15:56 - шанс: parsing -> timeout
+20-Apr-21 12:15:57 - щпо: parsing -> timeout
+20-Apr-21 12:15:58 - шланг: parsing -> 2
+20-Apr-21 12:16:00 - шпк: parsing -> timeout
+20-Apr-21 12:16:01 - эвакуации: parsing -> 2
+20-Apr-21 12:16:04 - эмульсионный: parsing -> timeout
+20-Apr-21 12:16:06 - ярпож: parsing -> timeout
+20-Apr-21 12:16:08 - маск: parsing -> 2
+20-Apr-21 12:16:10 - перч: parsing -> 10
+20-Apr-21 12:16:14 - кран: parsing -> 7
+20-Apr-21 12:16:17 - клап: parsing -> 9
+20-Apr-21 12:16:21 - диаф: parsing -> timeout
+20-Apr-21 12:16:21 - Parsed 35 tenders
+20-Apr-21 12:16:21 - File D:\USERDATA\Documents\4git\tenders\out\20-04-2021_12-16_bz.xlsx was successfully saved
+20-Apr-21 12:16:28 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+20-Apr-21 12:16:28 - ====================================
+20-Apr-21 13:35:43 - авсе: parsing -> timeout
+20-Apr-21 13:35:46 - bce: parsing -> timeout
+20-Apr-21 13:35:49 - ВСЕ: parsing -> 1
+20-Apr-21 13:35:52 - агс: parsing -> timeout
+20-Apr-21 13:35:53 - апс: parsing -> timeout
+20-Apr-21 13:35:57 - аэрозо: parsing -> 2
+20-Apr-21 13:36:00 - багор: parsing -> timeout
+20-Apr-21 13:36:04 - бот: parsing -> 3
+20-Apr-21 13:36:07 - диэл: parsing -> 1
+20-Apr-21 13:36:09 - топор: parsing -> timeout
+20-Apr-21 13:36:11 - лопата: parsing -> timeout
+20-Apr-21 13:36:13 - водопенн: parsing -> timeout
+20-Apr-21 13:36:15 - гдзк: parsing -> timeout
+20-Apr-21 13:36:17 - гидрант: parsing -> 1
+20-Apr-21 13:36:18 - гидротестер: parsing -> timeout
+20-Apr-21 13:36:22 - головками: parsing -> 3
+20-Apr-21 13:36:24 - закачной: parsing -> timeout
+20-Apr-21 13:36:25 - мотопомпа: parsing -> timeout
+20-Apr-21 13:36:29 - ковр: parsing -> 4
+20-Apr-21 13:36:32 - ковер: parsing -> 2
+20-Apr-21 13:36:34 - ножниц: parsing -> 3
+20-Apr-21 13:36:35 - мпп: parsing -> timeout
+20-Apr-21 13:36:37 - огне: parsing -> 5
+20-Apr-21 13:36:38 - овэ: parsing -> timeout
+20-Apr-21 13:36:39 - охранны: parsing -> 3
+20-Apr-21 13:36:43 - песка -поставка -исследования: parsing -> timeout
+20-Apr-21 13:36:47 - пожар: parsing -> 10
+20-Apr-21 13:36:49 - пожаротуше: parsing -> 1
+20-Apr-21 13:36:50 - порошковы: parsing -> timeout
+20-Apr-21 13:36:52 - ппо: parsing -> timeout
+20-Apr-21 13:36:55 - противодымный: parsing -> timeout
+20-Apr-21 13:36:57 - противопожарный: parsing -> 3
+20-Apr-21 13:37:00 - рпм: parsing -> timeout
+20-Apr-21 13:37:02 - рпк: parsing -> timeout
+20-Apr-21 13:37:06 - рукав: parsing -> 1
+20-Apr-21 13:37:09 - рус: parsing -> 1
+20-Apr-21 13:37:11 - самоспасатель: parsing -> timeout
+20-Apr-21 13:37:12 - ствол: parsing -> timeout
+20-Apr-21 13:37:13 - углекислот: parsing -> timeout
+20-Apr-21 13:37:16 - шанс: parsing -> timeout
+20-Apr-21 13:37:18 - щпо: parsing -> timeout
+20-Apr-21 13:37:19 - шланг: parsing -> 2
+20-Apr-21 13:37:20 - шпк: parsing -> timeout
+20-Apr-21 13:37:23 - эвакуации: parsing -> 2
+20-Apr-21 13:37:27 - эмульсионный: parsing -> timeout
+20-Apr-21 13:37:28 - ярпож: parsing -> timeout
+20-Apr-21 13:37:31 - маск: parsing -> 2
+20-Apr-21 13:37:35 - перч: parsing -> 10
+20-Apr-21 13:37:38 - кран: parsing -> 5
+20-Apr-21 13:37:43 - клап: parsing -> 9
+20-Apr-21 13:37:46 - диаф: parsing -> timeout
+20-Apr-21 13:37:46 - Parsed 22 tenders
+20-Apr-21 13:37:46 - File D:\USERDATA\Documents\4git\tenders\out\20-04-2021_13-37_bz.xlsx was successfully saved
+20-Apr-21 13:37:53 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+20-Apr-21 13:37:53 - ====================================
+20-Apr-21 15:25:14 - авсе: parsing -> 1
+20-Apr-21 15:25:16 - bce: parsing -> timeout
+20-Apr-21 15:25:19 - ВСЕ: parsing -> 1
+20-Apr-21 15:25:22 - агс: parsing -> timeout
+20-Apr-21 15:25:24 - апс: parsing -> timeout
+20-Apr-21 15:25:27 - аэрозо: parsing -> 2
+20-Apr-21 15:25:31 - багор: parsing -> timeout
+20-Apr-21 15:25:34 - бот: parsing -> 1
+20-Apr-21 15:25:37 - диэл: parsing -> 2
+20-Apr-21 15:25:39 - топор: parsing -> timeout
+20-Apr-21 15:25:41 - лопата: parsing -> timeout
+20-Apr-21 15:25:44 - водопенн: parsing -> timeout
+20-Apr-21 15:25:45 - гдзк: parsing -> timeout
+20-Apr-21 15:25:46 - гидрант: parsing -> 1
+20-Apr-21 15:25:47 - гидротестер: parsing -> timeout
+20-Apr-21 15:25:50 - головками: parsing -> 4
+20-Apr-21 15:25:52 - закачной: parsing -> timeout
+20-Apr-21 15:25:54 - мотопомпа: parsing -> timeout
+20-Apr-21 15:25:58 - ковр: parsing -> 4
+20-Apr-21 15:26:01 - ковер: parsing -> 3
+20-Apr-21 15:26:03 - ножниц: parsing -> 4
+20-Apr-21 15:26:04 - мпп: parsing -> timeout
+20-Apr-21 15:26:09 - огне: parsing -> 8
+20-Apr-21 15:26:10 - овэ: parsing -> timeout
+20-Apr-21 15:26:14 - охранны: parsing -> 6
+20-Apr-21 15:26:15 - песка -поставка -исследования: parsing -> timeout
+20-Apr-21 15:26:19 - пожар: parsing -> 10
+20-Apr-21 15:26:20 - пожаротуше: parsing -> 1
+20-Apr-21 15:26:24 - порошковы: parsing -> 2
+20-Apr-21 15:26:26 - ппо: parsing -> timeout
+20-Apr-21 15:26:28 - противодымный: parsing -> timeout
+20-Apr-21 15:26:30 - противопожарный: parsing -> 3
+20-Apr-21 15:26:32 - рпм: parsing -> timeout
+20-Apr-21 15:26:35 - рпк: parsing -> timeout
+20-Apr-21 15:26:37 - рукав: parsing -> 1
+20-Apr-21 15:26:38 - рус: parsing -> timeout
+20-Apr-21 15:26:40 - самоспасатель: parsing -> timeout
+20-Apr-21 15:26:41 - ствол: parsing -> timeout
+20-Apr-21 15:26:43 - углекислот: parsing -> 1
+20-Apr-21 15:26:46 - шанс: parsing -> timeout
+20-Apr-21 15:26:47 - щпо: parsing -> timeout
+20-Apr-21 15:26:51 - шланг: parsing -> 5
+20-Apr-21 15:26:53 - шпк: parsing -> timeout
+20-Apr-21 15:26:56 - эвакуации: parsing -> 2
+20-Apr-21 15:26:58 - эмульсионный: parsing -> timeout
+20-Apr-21 15:27:00 - ярпож: parsing -> timeout
+20-Apr-21 15:27:03 - маск: parsing -> 1
+20-Apr-21 15:27:07 - перч: parsing -> 10
+20-Apr-21 15:27:11 - кран: parsing -> 10
+20-Apr-21 15:27:13 - клап: parsing -> 6
+20-Apr-21 15:27:16 - диаф: parsing -> timeout
+20-Apr-21 15:27:16 - Parsed 31 tenders
+20-Apr-21 15:27:16 - File D:\USERDATA\Documents\4git\tenders\out\20-04-2021_15-27_bz.xlsx was successfully saved
+20-Apr-21 15:27:22 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+20-Apr-21 15:27:22 - ====================================
+20-Apr-21 16:32:15 - авсе: parsing -> 1
+20-Apr-21 16:32:17 - bce: parsing -> timeout
+20-Apr-21 16:32:20 - ВСЕ: parsing -> 1
+20-Apr-21 16:32:21 - агс: parsing -> timeout
+20-Apr-21 16:32:23 - апс: parsing -> timeout
+20-Apr-21 16:32:24 - аэрозо: parsing -> 2
+20-Apr-21 16:32:25 - багор: parsing -> timeout
+20-Apr-21 16:32:28 - бот: parsing -> 2
+20-Apr-21 16:32:29 - диэл: parsing -> 3
+20-Apr-21 16:32:31 - топор: parsing -> timeout
+20-Apr-21 16:32:33 - лопата: parsing -> 1
+20-Apr-21 16:32:35 - водопенн: parsing -> timeout
+20-Apr-21 16:32:36 - гдзк: parsing -> timeout
+20-Apr-21 16:32:38 - гидрант: parsing -> 1
+20-Apr-21 16:32:41 - гидротестер: parsing -> timeout
+20-Apr-21 16:32:45 - головками: parsing -> 4
+20-Apr-21 16:32:46 - закачной: parsing -> timeout
+20-Apr-21 16:32:49 - мотопомпа: parsing -> timeout
+20-Apr-21 16:32:52 - ковр: parsing -> 4
+20-Apr-21 16:32:55 - ковер: parsing -> 3
+20-Apr-21 16:32:58 - ножниц: parsing -> 3
+20-Apr-21 16:32:59 - мпп: parsing -> timeout
+20-Apr-21 16:33:01 - огне: parsing -> 7
+20-Apr-21 16:33:04 - овэ: parsing -> timeout
+20-Apr-21 16:33:07 - охранны: parsing -> 5
+20-Apr-21 16:33:09 - песка -поставка -исследования: parsing -> timeout
+20-Apr-21 16:33:12 - пожар: parsing -> 10
+20-Apr-21 16:33:15 - пожаротуше: parsing -> 1
+20-Apr-21 16:33:17 - порошковы: parsing -> 2
+20-Apr-21 16:33:19 - ппо: parsing -> timeout
+20-Apr-21 16:33:22 - противодымный: parsing -> timeout
+20-Apr-21 16:33:25 - противопожарный: parsing -> 4
+20-Apr-21 16:33:27 - рпм: parsing -> timeout
+20-Apr-21 16:33:29 - рпк: parsing -> timeout
+20-Apr-21 16:33:32 - рукав: parsing -> 2
+20-Apr-21 16:33:35 - рус: parsing -> timeout
+20-Apr-21 16:33:37 - самоспасатель: parsing -> timeout
+20-Apr-21 16:33:38 - ствол: parsing -> 1
+20-Apr-21 16:33:39 - углекислот: parsing -> 1
+20-Apr-21 16:33:41 - шанс: parsing -> timeout
+20-Apr-21 16:33:44 - щпо: parsing -> timeout
+20-Apr-21 16:33:45 - шланг: parsing -> 5
+20-Apr-21 16:33:47 - шпк: parsing -> timeout
+20-Apr-21 16:33:48 - эвакуации: parsing -> 1
+20-Apr-21 16:33:50 - эмульсионный: parsing -> timeout
+20-Apr-21 16:33:53 - ярпож: parsing -> timeout
+20-Apr-21 16:33:55 - маск: parsing -> 1
+20-Apr-21 16:34:00 - перч: parsing -> 10
+20-Apr-21 16:34:02 - кран: parsing -> 10
+20-Apr-21 16:34:06 - клап: parsing -> 5
+20-Apr-21 16:34:08 - диаф: parsing -> timeout
+20-Apr-21 16:34:08 - Parsed 8 tenders
+20-Apr-21 16:34:08 - File D:\USERDATA\Documents\4git\tenders\out\20-04-2021_16-34_bz.xlsx was successfully saved
+20-Apr-21 16:34:16 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+20-Apr-21 16:34:16 - ====================================
