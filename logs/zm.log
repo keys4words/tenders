@@ -4130,3 +4130,65 @@
 25-May-21 09:24:24 - Parsed 96 tenders
 25-May-21 09:24:24 - File D:\USERDATA\Documents\4git\tenders\out\25-05-2021_09-24_zm.xlsx was saved
 25-May-21 09:24:30 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+27-May-21 09:50:07 - авсе: parsing -> авсе
+27-May-21 09:50:08 - parsing OK with keyword: авсе
+27-May-21 09:50:11 - агс: parsing -> агс
+27-May-21 09:50:11 - parsing OK with keyword: агс
+27-May-21 09:50:12 - апс: parsing -> апс
+27-May-21 09:50:12 - parsing OK with keyword: апс
+27-May-21 09:50:17 - timeout with keyword: аэрозоль
+27-May-21 09:50:23 - timeout with keyword: багор
+27-May-21 09:50:28 - timeout with keyword: бот
+27-May-21 09:50:33 - timeout with keyword: водопенный
+27-May-21 09:50:39 - timeout with keyword: гдзр
+27-May-21 09:50:40 - гидрант: parsing -> гидрант
+27-May-21 09:50:40 - parsing OK with keyword: гидрант
+27-May-21 09:50:46 - timeout with keyword: гидротестер
+27-May-21 09:50:51 - timeout with keyword: диэл
+27-May-21 09:50:56 - timeout with keyword: закачной
+27-May-21 09:51:01 - timeout with keyword: ковер
+27-May-21 09:51:06 - timeout with keyword: ковр
+27-May-21 09:51:12 - timeout with keyword: меланти
+27-May-21 09:51:17 - timeout with keyword: мотопомпа
+27-May-21 09:51:22 - timeout with keyword: мпп
+27-May-21 09:51:28 - огнетушитель: parsing -> огнетушитель
+27-May-21 09:51:28 - parsing OK with keyword: огнетушитель
+27-May-21 09:51:34 - timeout with keyword: овэ
+27-May-21 09:51:36 - оп-: parsing -> оп-
+27-May-21 09:51:36 - parsing OK with keyword: оп-
+27-May-21 09:51:39 - охранно: parsing -> охранно
+27-May-21 09:51:39 - parsing OK with keyword: охранно
+27-May-21 09:51:45 - timeout with keyword: перч
+27-May-21 09:51:54 - пожарный: parsing -> пожарный
+27-May-21 09:51:54 - parsing OK with keyword: пожарный
+27-May-21 09:51:56 - пожаротушение: parsing -> пожаротушение
+27-May-21 09:51:56 - parsing OK with keyword: пожаротушение
+27-May-21 09:51:57 - порошковый: parsing -> порошковый
+27-May-21 09:51:57 - parsing OK with keyword: порошковый
+27-May-21 09:52:03 - timeout with keyword: ппо
+27-May-21 09:52:08 - timeout with keyword: противодымный
+27-May-21 09:52:12 - противопожарный: parsing -> противопожарный
+27-May-21 09:52:12 - parsing OK with keyword: противопожарный
+27-May-21 09:52:17 - timeout with keyword: рпм
+27-May-21 09:52:18 - рпк: parsing -> рпк
+27-May-21 09:52:18 - parsing OK with keyword: рпк
+27-May-21 09:52:21 - рукав: parsing -> рукав
+27-May-21 09:52:21 - parsing OK with keyword: рукав
+27-May-21 09:52:26 - timeout with keyword: русинтэк
+27-May-21 09:52:31 - timeout with keyword: самоспасатель
+27-May-21 09:52:33 - ствол: parsing -> ствол
+27-May-21 09:52:33 - parsing OK with keyword: ствол
+27-May-21 09:52:38 - timeout with keyword: углекислотный
+27-May-21 09:52:43 - timeout with keyword: фторпав
+27-May-21 09:52:48 - timeout with keyword: шанс
+27-May-21 09:52:54 - timeout with keyword: щпо
+27-May-21 09:52:56 - шланг: parsing -> шланг
+27-May-21 09:52:56 - parsing OK with keyword: шланг
+27-May-21 09:53:01 - timeout with keyword: шпк
+27-May-21 09:53:03 - эвакуации: parsing -> эвакуации
+27-May-21 09:53:03 - parsing OK with keyword: эвакуации
+27-May-21 09:53:08 - timeout with keyword: эмульсионный
+27-May-21 09:53:13 - timeout with keyword: ярпож
+27-May-21 09:53:13 - Parsed 104 tenders
+27-May-21 09:53:13 - File D:\USERDATA\Documents\4git\tenders\out\27-05-2021_09-53_zm.xlsx was saved
+27-May-21 09:53:20 - File was sended to ['123@di01.ru', '139@rinova.ru', '125@di01.ru', '119@rinova.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
