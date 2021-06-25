@@ -5058,3 +5058,75 @@
 22-Jun-21 10:24:54 - Parsed 145 tenders
 22-Jun-21 10:24:55 - File D:\USERDATA\Documents\4git\tenders\out\22-06-2021_10-24_zm.xlsx was saved
 22-Jun-21 10:25:02 - File was sended to ['123@di01.ru', '139@rinova.ru', '119@rinova.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+25-Jun-21 10:35:16 - timeout with keyword: авсе
+25-Jun-21 10:35:21 - timeout with keyword: агс
+25-Jun-21 10:35:24 - апс: parsing -> апс
+25-Jun-21 10:35:24 - parsing OK with keyword: апс
+25-Jun-21 10:35:29 - timeout with keyword: аэрозоль
+25-Jun-21 10:35:34 - timeout with keyword: багор
+25-Jun-21 10:35:39 - timeout with keyword: бот
+25-Jun-21 10:35:45 - timeout with keyword: водопенный
+25-Jun-21 10:35:50 - timeout with keyword: гдзр
+25-Jun-21 10:35:55 - timeout with keyword: гидрант
+25-Jun-21 10:36:00 - timeout with keyword: гидротестер
+25-Jun-21 10:36:05 - timeout with keyword: диэл
+25-Jun-21 10:36:11 - timeout with keyword: закачной
+25-Jun-21 10:43:24 - timeout with keyword: авсе
+25-Jun-21 10:43:30 - timeout with keyword: агс
+25-Jun-21 10:43:32 - апс: parsing -> апс
+25-Jun-21 10:43:32 - parsing OK with keyword: апс
+25-Jun-21 10:43:37 - timeout with keyword: аэрозоль
+25-Jun-21 10:43:42 - timeout with keyword: багор
+25-Jun-21 10:43:47 - timeout with keyword: бот
+25-Jun-21 10:43:52 - timeout with keyword: водопенный
+25-Jun-21 10:43:58 - timeout with keyword: гдзр
+25-Jun-21 10:44:03 - timeout with keyword: гидрант
+25-Jun-21 10:44:08 - timeout with keyword: гидротестер
+25-Jun-21 10:44:14 - timeout with keyword: диэл
+25-Jun-21 10:44:19 - timeout with keyword: закачной
+25-Jun-21 10:44:20 - ковер: parsing -> ковер
+25-Jun-21 10:44:20 - parsing OK with keyword: ковер
+25-Jun-21 10:44:26 - timeout with keyword: ковр
+25-Jun-21 10:44:31 - timeout with keyword: меланти
+25-Jun-21 10:44:36 - timeout with keyword: мотопомпа
+25-Jun-21 10:44:41 - timeout with keyword: мпп
+25-Jun-21 10:44:48 - огнетушитель: parsing -> огнетушитель
+25-Jun-21 10:44:48 - parsing OK with keyword: огнетушитель
+25-Jun-21 10:44:53 - timeout with keyword: овэ
+25-Jun-21 10:44:55 - оп-: parsing -> оп-
+25-Jun-21 10:44:55 - parsing OK with keyword: оп-
+25-Jun-21 10:45:02 - охранно: parsing -> охранно
+25-Jun-21 10:45:02 - parsing OK with keyword: охранно
+25-Jun-21 10:45:07 - timeout with keyword: перч
+25-Jun-21 10:45:17 - пожарный: parsing -> пожарный
+25-Jun-21 10:45:17 - parsing OK with keyword: пожарный
+25-Jun-21 10:45:19 - пожаротушение: parsing -> пожаротушение
+25-Jun-21 10:45:19 - parsing OK with keyword: пожаротушение
+25-Jun-21 10:45:20 - порошковый: parsing -> порошковый
+25-Jun-21 10:45:20 - parsing OK with keyword: порошковый
+25-Jun-21 10:45:25 - timeout with keyword: ппо
+25-Jun-21 10:45:31 - timeout with keyword: противодымный
+25-Jun-21 10:45:36 - противопожарный: parsing -> противопожарный
+25-Jun-21 10:45:36 - parsing OK with keyword: противопожарный
+25-Jun-21 10:45:42 - timeout with keyword: рпм
+25-Jun-21 10:45:47 - timeout with keyword: рпк
+25-Jun-21 10:45:48 - рукав: parsing -> рукав
+25-Jun-21 10:45:48 - parsing OK with keyword: рукав
+25-Jun-21 10:45:54 - timeout with keyword: русинтэк
+25-Jun-21 10:45:59 - timeout with keyword: самоспасатель
+25-Jun-21 10:46:04 - timeout with keyword: ствол
+25-Jun-21 10:46:09 - timeout with keyword: углекислотный
+25-Jun-21 10:46:14 - timeout with keyword: фторпав
+25-Jun-21 10:46:16 - шанс: parsing -> шанс
+25-Jun-21 10:46:16 - parsing OK with keyword: шанс
+25-Jun-21 10:46:21 - timeout with keyword: щпо
+25-Jun-21 10:46:23 - шланг: parsing -> шланг
+25-Jun-21 10:46:23 - parsing OK with keyword: шланг
+25-Jun-21 10:46:28 - timeout with keyword: шпк
+25-Jun-21 10:46:30 - эвакуации: parsing -> эвакуации
+25-Jun-21 10:46:30 - parsing OK with keyword: эвакуации
+25-Jun-21 10:46:36 - timeout with keyword: эмульсионный
+25-Jun-21 10:46:41 - timeout with keyword: ярпож
+25-Jun-21 10:46:41 - Parsed 139 tenders
+25-Jun-21 10:46:41 - File D:\USERDATA\Documents\4git\tenders\out\25-06-2021_10-46_zm.xlsx was saved
+25-Jun-21 10:46:48 - File was sended to ['123@di01.ru', '139@rinova.ru', '119@rinova.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru

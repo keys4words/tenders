@@ -95,8 +95,8 @@ def get_keywords(filename):
 
 def parse_page(keyword, driver):
     delay = random.randint(8, 15)
-    WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-0-input"]')))
-    searchbox = driver.find_element_by_xpath('//input[@id="filterField-0-input"]')
+    WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.XPATH, '//input[@id="filterField-1-input"]')))
+    searchbox = driver.find_element_by_xpath('//input[@id="filterField-1-input"]')
     searchbox.send_keys(keyword)
 
     searchBtn = driver.find_element_by_xpath('//button[@id="applyFilterButton"]')
