@@ -222,7 +222,7 @@ def sending_email(filename):
     yag.send(
         to=to_emails,
         subject="Berezka Tenders",
-        cc=cc,
+        # cc=cc,
         bcc=bcc,
         contents=contents,
         # attachments=filename,
