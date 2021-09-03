@@ -379,7 +379,7 @@ sending_email(save_results(res=res, fileprefix='_zg_104'), '104 zakupki-gov by I
 # # iteration for 129
 res = dict()
 parsing_new(get_inns(FILE_WITH_INNS_129))
-sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by INN', to_emails=to_emails3)
+sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by INN', to_emails=to_emails2)
 
 # interation for 113
 res = dict()
@@ -394,7 +394,7 @@ sending_email(save_results(res=res, fileprefix='_zg_104'), '104 zakupki-gov by w
 # iteration for 129 
 res = dict()
 parsing_new(get_inns(FILE_WITH_KW_129))
-sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by words', to_emails=to_emails3)
+sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by words', to_emails=to_emails)
 
 root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
