@@ -96,6 +96,7 @@ def parsing(inns):
                                    ).parent.find_next_sibling()
                     name = name.text.strip().replace('\n', '')
                     # print(f'inn#{inn} number is {number}')
+                    last_customer, last_customer_url = '', ''
                     try:
                         customer = el.find(text=re.compile(
                             "Заказчик")).parent.find_next_sibling().a
@@ -107,8 +108,19 @@ def parsing(inns):
                             last_customer = customer
                             last_customer_url = customer_url
                     except AttributeError:
-                        customer = last_customer
-                        customer_url = last_customer_url
+                        try:
+                            customer = el.find(text=re.compile(
+                                "Организация")).parent.find_next_sibling().a
+                            if customer:
+                                customer_url = customer.get('href')
+                                if 'https' not in customer_url:
+                                    customer_url = BASE_URL + customer_url
+                                customer = customer.text.strip().replace('\n', '')
+                                last_customer = customer
+                                last_customer_url = customer_url
+                        except AttributeError:
+                            customer = last_customer
+                            customer_url = last_customer_url
 
                     price = el.find('div', class_="price-block__value")
                     price = price.text.strip().replace('\n', '').replace('\xa0', '')
