@@ -374,7 +374,7 @@ sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov by I
 # # interation for 113
 res = dict()
 parsing_new(get_inns(FILE_WITH_INNS))
-sending_email(save_results(res=res, fileprefix='_zg_113'), '113 zakupki-gov by INN', to_emails=to_emails2)
+sending_email(save_results(res=res, fileprefix='_zg_113'), '113 zakupki-gov by INN', to_emails=to_emails)
 
 # iteration for 104
 res = dict()
