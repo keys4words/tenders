@@ -6234,3 +6234,676 @@
 01-Dec-21 09:58:17 - File D:\USERDATA\Documents\4git\tenders\out\01-12-2021_09-58_zg.xlsx was successfully saved
 01-Dec-21 09:58:27 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
 01-Dec-21 09:58:27 - ==============================================
+02-Dec-21 09:00:19 - Parsed 4 tenders for customer with INN #7712036754
+02-Dec-21 09:00:21 - Parsed 23 tenders for customer with INN #7714030726
+02-Dec-21 09:00:23 - Parsed 27 tenders for customer with INN #7733231361
+02-Dec-21 09:00:24 - Parsed 6 tenders for customer with INN #7714029600
+02-Dec-21 09:00:28 - Parsed 50 tenders for customer with INN #5032292612
+02-Dec-21 09:00:30 - Parsed 7 tenders for customer with INN #5001086137
+02-Dec-21 09:00:31 - Parsed 14 tenders for customer with INN #7706016118
+02-Dec-21 09:00:35 - Parsed 50 tenders for customer with INN #7723011906
+02-Dec-21 09:00:38 - Parsed 50 tenders for customer with INN #7706061801
+02-Dec-21 09:00:40 - 0 active tenders for customer with INN #7706562710
+02-Dec-21 09:00:41 - 0 active tenders for customer with INN #7718115610
+02-Dec-21 09:00:43 - 0 active tenders for customer with INN #5041012269
+02-Dec-21 09:00:48 - Parsed 50 tenders for customer with INN #7719555477
+02-Dec-21 09:00:49 - 0 active tenders for customer with INN #7718126549
+02-Dec-21 09:00:50 - Parsed 1 tenders for customer with INN #3800000206
+02-Dec-21 09:00:52 - Parsed 3 tenders for customer with INN #7703518529
+02-Dec-21 09:00:54 - Parsed 3 tenders for customer with INN #7734374725
+02-Dec-21 09:00:55 - Parsed 4 tenders for customer with INN #7706433263
+02-Dec-21 09:00:57 - 0 active tenders for customer with INN #5024118547
+02-Dec-21 09:00:58 - Parsed 7 tenders for customer with INN #7703363868
+02-Dec-21 09:01:00 - Parsed 4 tenders for customer with INN #5009003774
+02-Dec-21 09:01:00 - ====================================
+02-Dec-21 09:01:00 - File D:\USERDATA\Documents\4git\tenders\out\02-12-2021_09-01_zg.xlsx was successfully saved
+02-Dec-21 09:01:08 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+02-Dec-21 09:01:08 - ==============================================
+06-Dec-21 09:00:20 - Parsed 3 tenders for customer with INN #7712036754
+06-Dec-21 09:00:28 - Parsed 27 tenders for customer with INN #7714030726
+06-Dec-21 09:00:35 - Parsed 20 tenders for customer with INN #7733231361
+06-Dec-21 09:00:39 - Parsed 1 tenders for customer with INN #7714029600
+06-Dec-21 09:00:46 - Parsed 50 tenders for customer with INN #5032292612
+06-Dec-21 09:00:51 - Parsed 6 tenders for customer with INN #5001086137
+06-Dec-21 09:00:54 - Parsed 12 tenders for customer with INN #7706016118
+06-Dec-21 09:01:01 - Parsed 50 tenders for customer with INN #7723011906
+06-Dec-21 09:01:10 - Parsed 50 tenders for customer with INN #7706061801
+06-Dec-21 09:01:13 - 0 active tenders for customer with INN #7706562710
+06-Dec-21 09:01:16 - 0 active tenders for customer with INN #7718115610
+06-Dec-21 09:01:19 - 0 active tenders for customer with INN #5041012269
+06-Dec-21 09:01:28 - Parsed 50 tenders for customer with INN #7719555477
+06-Dec-21 09:01:32 - 0 active tenders for customer with INN #7718126549
+06-Dec-21 09:01:36 - Parsed 1 tenders for customer with INN #3800000206
+06-Dec-21 09:01:39 - Parsed 3 tenders for customer with INN #7703518529
+06-Dec-21 09:01:42 - Parsed 1 tenders for customer with INN #7734374725
+06-Dec-21 09:01:46 - Parsed 3 tenders for customer with INN #7706433263
+06-Dec-21 09:01:49 - 0 active tenders for customer with INN #5024118547
+06-Dec-21 09:01:52 - Parsed 6 tenders for customer with INN #7703363868
+06-Dec-21 09:01:56 - Parsed 4 tenders for customer with INN #5009003774
+06-Dec-21 09:01:56 - ====================================
+06-Dec-21 09:01:56 - File D:\USERDATA\Documents\4git\tenders\out\06-12-2021_09-01_zg.xlsx was successfully saved
+06-Dec-21 09:02:03 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+06-Dec-21 09:02:03 - ==============================================
+07-Dec-21 09:00:20 - Parsed 3 tenders for customer with INN #7712036754
+07-Dec-21 09:00:33 - Parsed 23 tenders for customer with INN #7714030726
+07-Dec-21 09:00:37 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7733231361&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:41 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7714029600&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:45 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=5032292612&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=5001086137&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7706016118&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7723011906&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7706061801&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7706562710&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7718115610&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=5041012269&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7719555477&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7718126549&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=3800000206&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7703518529&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7734374725&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7706433263&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=5024118547&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=7703363868&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - page https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString=5009003774&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber=1&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&currencyIdGeneral=-1 is not available
+07-Dec-21 09:00:49 - ====================================
+07-Dec-21 09:00:49 - File D:\USERDATA\Documents\4git\tenders\out\07-12-2021_09-00_zg.xlsx was successfully saved
+07-Dec-21 09:00:57 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+07-Dec-21 09:00:57 - ==============================================
+08-Dec-21 09:00:20 - Parsed 1 tenders for customer with INN #7712036754
+08-Dec-21 09:00:27 - Parsed 24 tenders for customer with INN #7714030726
+08-Dec-21 09:00:34 - Parsed 26 tenders for customer with INN #7733231361
+08-Dec-21 09:00:38 - 0 active tenders for customer with INN #7714029600
+08-Dec-21 09:00:43 - Parsed 50 tenders for customer with INN #5032292612
+08-Dec-21 09:00:47 - Parsed 6 tenders for customer with INN #5001086137
+08-Dec-21 09:00:50 - Parsed 4 tenders for customer with INN #7706016118
+08-Dec-21 09:00:55 - Parsed 50 tenders for customer with INN #7723011906
+08-Dec-21 09:01:04 - Parsed 50 tenders for customer with INN #7706061801
+08-Dec-21 09:01:07 - 0 active tenders for customer with INN #7706562710
+08-Dec-21 09:01:11 - 0 active tenders for customer with INN #7718115610
+08-Dec-21 09:01:14 - Parsed 1 tenders for customer with INN #5041012269
+08-Dec-21 09:01:20 - Parsed 50 tenders for customer with INN #7719555477
+08-Dec-21 09:01:23 - 0 active tenders for customer with INN #7718126549
+08-Dec-21 09:01:28 - Parsed 4 tenders for customer with INN #3800000206
+08-Dec-21 09:01:31 - Parsed 5 tenders for customer with INN #7703518529
+08-Dec-21 09:01:34 - 0 active tenders for customer with INN #7734374725
+08-Dec-21 09:01:38 - Parsed 3 tenders for customer with INN #7706433263
+08-Dec-21 09:01:41 - 0 active tenders for customer with INN #5024118547
+08-Dec-21 09:01:45 - Parsed 4 tenders for customer with INN #7703363868
+08-Dec-21 09:01:49 - Parsed 5 tenders for customer with INN #5009003774
+08-Dec-21 09:01:49 - ====================================
+08-Dec-21 09:01:49 - File D:\USERDATA\Documents\4git\tenders\out\08-12-2021_09-01_zg.xlsx was successfully saved
+08-Dec-21 09:01:57 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+08-Dec-21 09:01:57 - ==============================================
+10-Dec-21 09:00:21 - Parsed 2 tenders for customer with INN #7712036754
+10-Dec-21 09:00:28 - Parsed 22 tenders for customer with INN #7714030726
+10-Dec-21 09:00:35 - Parsed 32 tenders for customer with INN #7733231361
+10-Dec-21 09:00:38 - 0 active tenders for customer with INN #7714029600
+10-Dec-21 09:00:43 - Parsed 50 tenders for customer with INN #5032292612
+10-Dec-21 09:00:47 - Parsed 2 tenders for customer with INN #5001086137
+10-Dec-21 09:00:53 - Parsed 2 tenders for customer with INN #7706016118
+10-Dec-21 09:01:01 - Parsed 50 tenders for customer with INN #7723011906
+10-Dec-21 09:01:11 - Parsed 50 tenders for customer with INN #7706061801
+10-Dec-21 09:01:15 - 0 active tenders for customer with INN #7706562710
+10-Dec-21 09:01:18 - 0 active tenders for customer with INN #7718115610
+10-Dec-21 09:01:21 - Parsed 2 tenders for customer with INN #5041012269
+10-Dec-21 09:01:27 - Parsed 50 tenders for customer with INN #7719555477
+10-Dec-21 09:01:30 - 0 active tenders for customer with INN #7718126549
+10-Dec-21 09:01:33 - Parsed 3 tenders for customer with INN #3800000206
+10-Dec-21 09:01:36 - Parsed 3 tenders for customer with INN #7703518529
+10-Dec-21 09:01:38 - 0 active tenders for customer with INN #7734374725
+10-Dec-21 09:01:42 - Parsed 6 tenders for customer with INN #7706433263
+10-Dec-21 09:01:45 - 0 active tenders for customer with INN #5024118547
+10-Dec-21 09:01:48 - Parsed 1 tenders for customer with INN #7703363868
+10-Dec-21 09:01:52 - Parsed 5 tenders for customer with INN #5009003774
+10-Dec-21 09:01:52 - ====================================
+10-Dec-21 09:01:52 - File D:\USERDATA\Documents\4git\tenders\out\10-12-2021_09-01_zg.xlsx was successfully saved
+10-Dec-21 09:02:00 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+10-Dec-21 09:02:00 - ==============================================
+13-Dec-21 09:00:16 - Parsed 2 tenders for customer with INN #7712036754
+13-Dec-21 09:00:21 - Parsed 17 tenders for customer with INN #7714030726
+13-Dec-21 09:00:26 - Parsed 33 tenders for customer with INN #7733231361
+13-Dec-21 09:00:30 - 0 active tenders for customer with INN #7714029600
+13-Dec-21 09:00:35 - Parsed 50 tenders for customer with INN #5032292612
+13-Dec-21 09:00:38 - Parsed 2 tenders for customer with INN #5001086137
+13-Dec-21 09:00:41 - Parsed 2 tenders for customer with INN #7706016118
+13-Dec-21 09:00:47 - Parsed 50 tenders for customer with INN #7723011906
+13-Dec-21 09:00:54 - Parsed 50 tenders for customer with INN #7706061801
+13-Dec-21 09:00:57 - 0 active tenders for customer with INN #7706562710
+13-Dec-21 09:01:00 - 0 active tenders for customer with INN #7718115610
+13-Dec-21 09:01:02 - Parsed 2 tenders for customer with INN #5041012269
+13-Dec-21 09:01:07 - Parsed 50 tenders for customer with INN #7719555477
+13-Dec-21 09:01:10 - 0 active tenders for customer with INN #7718126549
+13-Dec-21 09:01:13 - Parsed 3 tenders for customer with INN #3800000206
+13-Dec-21 09:01:16 - Parsed 3 tenders for customer with INN #7703518529
+13-Dec-21 09:01:19 - 0 active tenders for customer with INN #7734374725
+13-Dec-21 09:01:21 - Parsed 6 tenders for customer with INN #7706433263
+13-Dec-21 09:01:24 - 0 active tenders for customer with INN #5024118547
+13-Dec-21 09:01:27 - Parsed 2 tenders for customer with INN #7703363868
+13-Dec-21 09:01:30 - Parsed 5 tenders for customer with INN #5009003774
+13-Dec-21 09:01:30 - ====================================
+13-Dec-21 09:01:30 - File D:\USERDATA\Documents\4git\tenders\out\13-12-2021_09-01_zg.xlsx was successfully saved
+13-Dec-21 09:01:38 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+13-Dec-21 09:01:38 - ==============================================
+14-Dec-21 09:00:21 - Parsed 2 tenders for customer with INN #7712036754
+14-Dec-21 09:00:26 - Parsed 15 tenders for customer with INN #7714030726
+14-Dec-21 09:00:31 - Parsed 27 tenders for customer with INN #7733231361
+14-Dec-21 09:00:35 - 0 active tenders for customer with INN #7714029600
+14-Dec-21 09:00:41 - Parsed 50 tenders for customer with INN #5032292612
+14-Dec-21 09:00:43 - Parsed 2 tenders for customer with INN #5001086137
+14-Dec-21 09:00:46 - Parsed 1 tenders for customer with INN #7706016118
+14-Dec-21 09:00:52 - Parsed 50 tenders for customer with INN #7723011906
+14-Dec-21 09:00:57 - Parsed 50 tenders for customer with INN #7706061801
+14-Dec-21 09:01:00 - 0 active tenders for customer with INN #7706562710
+14-Dec-21 09:01:02 - 0 active tenders for customer with INN #7718115610
+14-Dec-21 09:01:05 - Parsed 2 tenders for customer with INN #5041012269
+14-Dec-21 09:01:08 - Parsed 50 tenders for customer with INN #7719555477
+14-Dec-21 09:01:11 - 0 active tenders for customer with INN #7718126549
+14-Dec-21 09:01:14 - Parsed 3 tenders for customer with INN #3800000206
+14-Dec-21 09:01:17 - Parsed 3 tenders for customer with INN #7703518529
+14-Dec-21 09:01:19 - 0 active tenders for customer with INN #7734374725
+14-Dec-21 09:01:22 - Parsed 6 tenders for customer with INN #7706433263
+14-Dec-21 09:01:25 - 0 active tenders for customer with INN #5024118547
+14-Dec-21 09:01:29 - Parsed 1 tenders for customer with INN #7703363868
+14-Dec-21 09:01:31 - Parsed 4 tenders for customer with INN #5009003774
+14-Dec-21 09:01:31 - ====================================
+14-Dec-21 09:01:32 - File D:\USERDATA\Documents\4git\tenders\out\14-12-2021_09-01_zg.xlsx was successfully saved
+14-Dec-21 09:01:40 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+14-Dec-21 09:01:40 - ==============================================
+15-Dec-21 09:00:17 - Parsed 2 tenders for customer with INN #7712036754
+15-Dec-21 09:00:23 - Parsed 11 tenders for customer with INN #7714030726
+15-Dec-21 09:00:29 - Parsed 27 tenders for customer with INN #7733231361
+15-Dec-21 09:00:33 - 0 active tenders for customer with INN #7714029600
+15-Dec-21 09:00:40 - Parsed 50 tenders for customer with INN #5032292612
+15-Dec-21 09:00:45 - 0 active tenders for customer with INN #5001086137
+15-Dec-21 09:00:48 - Parsed 1 tenders for customer with INN #7706016118
+15-Dec-21 09:00:53 - Parsed 50 tenders for customer with INN #7723011906
+15-Dec-21 09:01:00 - Parsed 50 tenders for customer with INN #7706061801
+15-Dec-21 09:01:03 - 0 active tenders for customer with INN #7706562710
+15-Dec-21 09:01:06 - 0 active tenders for customer with INN #7718115610
+15-Dec-21 09:01:09 - Parsed 2 tenders for customer with INN #5041012269
+15-Dec-21 09:01:14 - Parsed 50 tenders for customer with INN #7719555477
+15-Dec-21 09:01:19 - 0 active tenders for customer with INN #7718126549
+15-Dec-21 09:01:22 - Parsed 3 tenders for customer with INN #3800000206
+15-Dec-21 09:01:26 - 0 active tenders for customer with INN #7703518529
+15-Dec-21 09:01:28 - 0 active tenders for customer with INN #7734374725
+15-Dec-21 09:01:31 - Parsed 5 tenders for customer with INN #7706433263
+15-Dec-21 09:01:34 - 0 active tenders for customer with INN #5024118547
+15-Dec-21 09:01:37 - Parsed 1 tenders for customer with INN #7703363868
+15-Dec-21 09:01:40 - Parsed 5 tenders for customer with INN #5009003774
+15-Dec-21 09:01:40 - ====================================
+15-Dec-21 09:01:40 - File D:\USERDATA\Documents\4git\tenders\out\15-12-2021_09-01_zg.xlsx was successfully saved
+15-Dec-21 09:01:47 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+15-Dec-21 09:01:47 - ==============================================
+16-Dec-21 09:00:16 - Parsed 2 tenders for customer with INN #7712036754
+16-Dec-21 09:00:21 - Parsed 6 tenders for customer with INN #7714030726
+16-Dec-21 09:00:26 - Parsed 25 tenders for customer with INN #7733231361
+16-Dec-21 09:00:29 - Parsed 1 tenders for customer with INN #7714029600
+16-Dec-21 09:00:34 - Parsed 50 tenders for customer with INN #5032292612
+16-Dec-21 09:00:37 - 0 active tenders for customer with INN #5001086137
+16-Dec-21 09:00:40 - Parsed 4 tenders for customer with INN #7706016118
+16-Dec-21 09:00:45 - Parsed 50 tenders for customer with INN #7723011906
+16-Dec-21 09:00:51 - Parsed 50 tenders for customer with INN #7706061801
+16-Dec-21 09:00:53 - 0 active tenders for customer with INN #7706562710
+16-Dec-21 09:00:56 - 0 active tenders for customer with INN #7718115610
+16-Dec-21 09:00:59 - Parsed 1 tenders for customer with INN #5041012269
+16-Dec-21 09:01:04 - Parsed 50 tenders for customer with INN #7719555477
+16-Dec-21 09:01:07 - 0 active tenders for customer with INN #7718126549
+16-Dec-21 09:01:10 - Parsed 2 tenders for customer with INN #3800000206
+16-Dec-21 09:01:13 - 0 active tenders for customer with INN #7703518529
+16-Dec-21 09:01:16 - 0 active tenders for customer with INN #7734374725
+16-Dec-21 09:01:19 - Parsed 6 tenders for customer with INN #7706433263
+16-Dec-21 09:01:21 - 0 active tenders for customer with INN #5024118547
+16-Dec-21 09:01:24 - Parsed 1 tenders for customer with INN #7703363868
+16-Dec-21 09:01:26 - Parsed 2 tenders for customer with INN #5009003774
+16-Dec-21 09:01:26 - ====================================
+16-Dec-21 09:01:26 - File D:\USERDATA\Documents\4git\tenders\out\16-12-2021_09-01_zg.xlsx was successfully saved
+16-Dec-21 09:01:33 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+16-Dec-21 09:01:33 - ==============================================
+17-Dec-21 09:00:16 - Parsed 2 tenders for customer with INN #7712036754
+17-Dec-21 09:00:21 - Parsed 3 tenders for customer with INN #7714030726
+17-Dec-21 09:00:27 - Parsed 24 tenders for customer with INN #7733231361
+17-Dec-21 09:00:31 - Parsed 1 tenders for customer with INN #7714029600
+17-Dec-21 09:00:37 - Parsed 50 tenders for customer with INN #5032292612
+17-Dec-21 09:00:41 - 0 active tenders for customer with INN #5001086137
+17-Dec-21 09:00:44 - Parsed 9 tenders for customer with INN #7706016118
+17-Dec-21 09:00:48 - Parsed 50 tenders for customer with INN #7723011906
+17-Dec-21 09:00:55 - Parsed 50 tenders for customer with INN #7706061801
+17-Dec-21 09:00:58 - 0 active tenders for customer with INN #7706562710
+17-Dec-21 09:01:01 - 0 active tenders for customer with INN #7718115610
+17-Dec-21 09:01:04 - Parsed 1 tenders for customer with INN #5041012269
+17-Dec-21 09:01:09 - Parsed 50 tenders for customer with INN #7719555477
+17-Dec-21 09:01:12 - 0 active tenders for customer with INN #7718126549
+17-Dec-21 09:01:15 - Parsed 4 tenders for customer with INN #3800000206
+17-Dec-21 09:01:18 - 0 active tenders for customer with INN #7703518529
+17-Dec-21 09:01:21 - 0 active tenders for customer with INN #7734374725
+17-Dec-21 09:01:23 - Parsed 4 tenders for customer with INN #7706433263
+17-Dec-21 09:01:26 - 0 active tenders for customer with INN #5024118547
+17-Dec-21 09:01:29 - Parsed 2 tenders for customer with INN #7703363868
+17-Dec-21 09:01:32 - Parsed 2 tenders for customer with INN #5009003774
+17-Dec-21 09:01:32 - ====================================
+17-Dec-21 09:01:32 - File D:\USERDATA\Documents\4git\tenders\out\17-12-2021_09-01_zg.xlsx was successfully saved
+17-Dec-21 09:01:40 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+17-Dec-21 09:01:40 - ==============================================
+20-Dec-21 09:00:20 - Parsed 2 tenders for customer with INN #7712036754
+20-Dec-21 09:00:24 - Parsed 4 tenders for customer with INN #7714030726
+20-Dec-21 09:00:29 - Parsed 16 tenders for customer with INN #7733231361
+20-Dec-21 09:00:33 - Parsed 1 tenders for customer with INN #7714029600
+20-Dec-21 09:00:37 - Parsed 50 tenders for customer with INN #5032292612
+20-Dec-21 09:00:40 - 0 active tenders for customer with INN #5001086137
+20-Dec-21 09:00:43 - Parsed 11 tenders for customer with INN #7706016118
+20-Dec-21 09:00:47 - Parsed 50 tenders for customer with INN #7723011906
+20-Dec-21 09:00:53 - Parsed 50 tenders for customer with INN #7706061801
+20-Dec-21 09:00:56 - 0 active tenders for customer with INN #7706562710
+20-Dec-21 09:00:59 - 0 active tenders for customer with INN #7718115610
+20-Dec-21 09:01:01 - 0 active tenders for customer with INN #5041012269
+20-Dec-21 09:01:04 - Parsed 50 tenders for customer with INN #7719555477
+20-Dec-21 09:01:07 - 0 active tenders for customer with INN #7718126549
+20-Dec-21 09:01:10 - Parsed 8 tenders for customer with INN #3800000206
+20-Dec-21 09:01:13 - 0 active tenders for customer with INN #7703518529
+20-Dec-21 09:01:16 - 0 active tenders for customer with INN #7734374725
+20-Dec-21 09:01:19 - Parsed 4 tenders for customer with INN #7706433263
+20-Dec-21 09:01:22 - 0 active tenders for customer with INN #5024118547
+20-Dec-21 09:01:24 - Parsed 1 tenders for customer with INN #7703363868
+20-Dec-21 09:01:27 - Parsed 2 tenders for customer with INN #5009003774
+20-Dec-21 09:01:27 - ====================================
+20-Dec-21 09:01:27 - File D:\USERDATA\Documents\4git\tenders\out\20-12-2021_09-01_zg.xlsx was successfully saved
+20-Dec-21 09:01:35 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+20-Dec-21 09:01:35 - ==============================================
+22-Dec-21 09:00:14 - Parsed 2 tenders for customer with INN #7712036754
+22-Dec-21 09:00:19 - Parsed 4 tenders for customer with INN #7714030726
+22-Dec-21 09:00:24 - Parsed 14 tenders for customer with INN #7733231361
+22-Dec-21 09:00:28 - Parsed 1 tenders for customer with INN #7714029600
+22-Dec-21 09:00:38 - Parsed 50 tenders for customer with INN #5032292612
+22-Dec-21 09:00:42 - Parsed 2 tenders for customer with INN #5001086137
+22-Dec-21 09:00:45 - Parsed 12 tenders for customer with INN #7706016118
+22-Dec-21 09:00:50 - Parsed 50 tenders for customer with INN #7723011906
+22-Dec-21 09:00:57 - Parsed 50 tenders for customer with INN #7706061801
+22-Dec-21 09:01:00 - Parsed 2 tenders for customer with INN #7706562710
+22-Dec-21 09:01:02 - 0 active tenders for customer with INN #7718115610
+22-Dec-21 09:01:05 - 0 active tenders for customer with INN #5041012269
+22-Dec-21 09:01:13 - Parsed 50 tenders for customer with INN #7719555477
+22-Dec-21 09:01:16 - 0 active tenders for customer with INN #7718126549
+22-Dec-21 09:01:19 - Parsed 11 tenders for customer with INN #3800000206
+22-Dec-21 09:01:21 - 0 active tenders for customer with INN #7703518529
+22-Dec-21 09:01:24 - 0 active tenders for customer with INN #7734374725
+22-Dec-21 09:01:27 - Parsed 4 tenders for customer with INN #7706433263
+22-Dec-21 09:01:30 - 0 active tenders for customer with INN #5024118547
+22-Dec-21 09:01:32 - Parsed 1 tenders for customer with INN #7703363868
+22-Dec-21 09:01:35 - Parsed 1 tenders for customer with INN #5009003774
+22-Dec-21 09:01:35 - ====================================
+22-Dec-21 09:01:35 - File D:\USERDATA\Documents\4git\tenders\out\22-12-2021_09-01_zg.xlsx was successfully saved
+22-Dec-21 09:01:43 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+22-Dec-21 09:01:43 - ==============================================
+23-Dec-21 09:00:16 - Parsed 2 tenders for customer with INN #7712036754
+23-Dec-21 09:00:21 - Parsed 3 tenders for customer with INN #7714030726
+23-Dec-21 09:00:26 - Parsed 14 tenders for customer with INN #7733231361
+23-Dec-21 09:00:31 - Parsed 1 tenders for customer with INN #7714029600
+23-Dec-21 09:00:36 - Parsed 50 tenders for customer with INN #5032292612
+23-Dec-21 09:00:40 - Parsed 2 tenders for customer with INN #5001086137
+23-Dec-21 09:00:44 - Parsed 19 tenders for customer with INN #7706016118
+23-Dec-21 09:00:47 - Parsed 50 tenders for customer with INN #7723011906
+23-Dec-21 09:00:54 - Parsed 50 tenders for customer with INN #7706061801
+23-Dec-21 09:00:57 - Parsed 2 tenders for customer with INN #7706562710
+23-Dec-21 09:00:59 - 0 active tenders for customer with INN #7718115610
+23-Dec-21 09:01:02 - 0 active tenders for customer with INN #5041012269
+23-Dec-21 09:01:07 - Parsed 50 tenders for customer with INN #7719555477
+23-Dec-21 09:01:10 - 0 active tenders for customer with INN #7718126549
+23-Dec-21 09:01:13 - Parsed 12 tenders for customer with INN #3800000206
+23-Dec-21 09:01:15 - 0 active tenders for customer with INN #7703518529
+23-Dec-21 09:01:18 - 0 active tenders for customer with INN #7734374725
+23-Dec-21 09:01:20 - Parsed 4 tenders for customer with INN #7706433263
+23-Dec-21 09:01:23 - 0 active tenders for customer with INN #5024118547
+23-Dec-21 09:01:25 - Parsed 1 tenders for customer with INN #7703363868
+23-Dec-21 09:01:28 - Parsed 1 tenders for customer with INN #5009003774
+23-Dec-21 09:01:28 - ====================================
+23-Dec-21 09:01:28 - File D:\USERDATA\Documents\4git\tenders\out\23-12-2021_09-01_zg.xlsx was successfully saved
+23-Dec-21 09:01:35 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+23-Dec-21 09:01:35 - ==============================================
+10-Jan-22 09:00:29 - Parsed 1 tenders for customer with INN #7712036754
+10-Jan-22 09:00:40 - Parsed 5 tenders for customer with INN #7714030726
+10-Jan-22 09:00:51 - Parsed 10 tenders for customer with INN #7733231361
+10-Jan-22 09:00:58 - Parsed 2 tenders for customer with INN #7714029600
+10-Jan-22 09:01:16 - Parsed 50 tenders for customer with INN #5032292612
+10-Jan-22 09:01:21 - Parsed 1 tenders for customer with INN #5001086137
+10-Jan-22 09:01:31 - Parsed 21 tenders for customer with INN #7706016118
+10-Jan-22 09:01:45 - Parsed 50 tenders for customer with INN #7723011906
+10-Jan-22 09:02:00 - Parsed 50 tenders for customer with INN #7706061801
+10-Jan-22 09:02:05 - Parsed 7 tenders for customer with INN #7706562710
+10-Jan-22 09:02:09 - 0 active tenders for customer with INN #7718115610
+10-Jan-22 09:02:13 - Parsed 2 tenders for customer with INN #5041012269
+10-Jan-22 09:02:24 - Parsed 50 tenders for customer with INN #7719555477
+10-Jan-22 09:02:27 - 0 active tenders for customer with INN #7718126549
+10-Jan-22 09:02:31 - Parsed 4 tenders for customer with INN #3800000206
+10-Jan-22 09:02:34 - 0 active tenders for customer with INN #7703518529
+10-Jan-22 09:02:37 - 0 active tenders for customer with INN #7734374725
+10-Jan-22 09:02:40 - 0 active tenders for customer with INN #7706433263
+10-Jan-22 09:02:44 - 0 active tenders for customer with INN #5024118547
+10-Jan-22 09:02:47 - 0 active tenders for customer with INN #7703363868
+10-Jan-22 09:02:51 - 0 active tenders for customer with INN #5009003774
+10-Jan-22 09:02:51 - ====================================
+10-Jan-22 09:02:51 - File D:\USERDATA\Documents\4git\tenders\out\10-01-2022_09-02_zg.xlsx was successfully saved
+10-Jan-22 09:02:59 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+10-Jan-22 09:02:59 - ==============================================
+11-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+11-Jan-22 09:00:18 - Parsed 5 tenders for customer with INN #7714030726
+11-Jan-22 09:00:21 - Parsed 10 tenders for customer with INN #7733231361
+11-Jan-22 09:00:24 - Parsed 2 tenders for customer with INN #7714029600
+11-Jan-22 09:00:28 - Parsed 50 tenders for customer with INN #5032292612
+11-Jan-22 09:00:30 - Parsed 1 tenders for customer with INN #5001086137
+11-Jan-22 09:00:33 - Parsed 13 tenders for customer with INN #7706016118
+11-Jan-22 09:00:36 - Parsed 50 tenders for customer with INN #7723011906
+11-Jan-22 09:00:41 - Parsed 50 tenders for customer with INN #7706061801
+11-Jan-22 09:00:43 - Parsed 7 tenders for customer with INN #7706562710
+11-Jan-22 09:00:45 - 0 active tenders for customer with INN #7718115610
+11-Jan-22 09:00:48 - Parsed 2 tenders for customer with INN #5041012269
+11-Jan-22 09:00:52 - Parsed 50 tenders for customer with INN #7719555477
+11-Jan-22 09:00:54 - 0 active tenders for customer with INN #7718126549
+11-Jan-22 09:00:57 - 0 active tenders for customer with INN #3800000206
+11-Jan-22 09:01:00 - 0 active tenders for customer with INN #7703518529
+11-Jan-22 09:01:03 - 0 active tenders for customer with INN #7734374725
+11-Jan-22 09:01:05 - 0 active tenders for customer with INN #7706433263
+11-Jan-22 09:01:08 - 0 active tenders for customer with INN #5024118547
+11-Jan-22 09:01:10 - 0 active tenders for customer with INN #7703363868
+11-Jan-22 09:01:13 - 0 active tenders for customer with INN #5009003774
+11-Jan-22 09:01:13 - ====================================
+11-Jan-22 09:01:13 - File D:\USERDATA\Documents\4git\tenders\out\11-01-2022_09-01_zg.xlsx was successfully saved
+11-Jan-22 09:01:20 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+11-Jan-22 09:01:20 - ==============================================
+12-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+12-Jan-22 09:00:19 - Parsed 4 tenders for customer with INN #7714030726
+12-Jan-22 09:00:23 - Parsed 10 tenders for customer with INN #7733231361
+12-Jan-22 09:00:25 - Parsed 2 tenders for customer with INN #7714029600
+12-Jan-22 09:00:29 - Parsed 50 tenders for customer with INN #5032292612
+12-Jan-22 09:00:32 - 0 active tenders for customer with INN #5001086137
+12-Jan-22 09:00:36 - Parsed 9 tenders for customer with INN #7706016118
+12-Jan-22 09:00:39 - Parsed 47 tenders for customer with INN #7723011906
+12-Jan-22 09:00:45 - Parsed 50 tenders for customer with INN #7706061801
+12-Jan-22 09:00:47 - Parsed 7 tenders for customer with INN #7706562710
+12-Jan-22 09:00:50 - 0 active tenders for customer with INN #7718115610
+12-Jan-22 09:00:53 - Parsed 2 tenders for customer with INN #5041012269
+12-Jan-22 09:00:57 - Parsed 50 tenders for customer with INN #7719555477
+12-Jan-22 09:00:59 - 0 active tenders for customer with INN #7718126549
+12-Jan-22 09:01:02 - 0 active tenders for customer with INN #3800000206
+12-Jan-22 09:01:04 - 0 active tenders for customer with INN #7703518529
+12-Jan-22 09:01:07 - 0 active tenders for customer with INN #7734374725
+12-Jan-22 09:01:09 - Parsed 1 tenders for customer with INN #7706433263
+12-Jan-22 09:01:12 - 0 active tenders for customer with INN #5024118547
+12-Jan-22 09:01:15 - 0 active tenders for customer with INN #7703363868
+12-Jan-22 09:01:18 - 0 active tenders for customer with INN #5009003774
+12-Jan-22 09:01:18 - ====================================
+12-Jan-22 09:01:18 - File D:\USERDATA\Documents\4git\tenders\out\12-01-2022_09-01_zg.xlsx was successfully saved
+12-Jan-22 09:01:26 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+12-Jan-22 09:01:26 - ==============================================
+13-Jan-22 09:00:22 - 0 active tenders for customer with INN #7712036754
+13-Jan-22 09:00:26 - Parsed 3 tenders for customer with INN #7714030726
+13-Jan-22 09:00:31 - Parsed 9 tenders for customer with INN #7733231361
+13-Jan-22 09:00:34 - Parsed 2 tenders for customer with INN #7714029600
+13-Jan-22 09:00:39 - Parsed 50 tenders for customer with INN #5032292612
+13-Jan-22 09:00:42 - 0 active tenders for customer with INN #5001086137
+13-Jan-22 09:00:44 - Parsed 6 tenders for customer with INN #7706016118
+13-Jan-22 09:00:48 - Parsed 41 tenders for customer with INN #7723011906
+13-Jan-22 09:00:54 - Parsed 50 tenders for customer with INN #7706061801
+13-Jan-22 09:00:56 - Parsed 7 tenders for customer with INN #7706562710
+13-Jan-22 09:01:00 - 0 active tenders for customer with INN #7718115610
+13-Jan-22 09:01:03 - Parsed 2 tenders for customer with INN #5041012269
+13-Jan-22 09:01:08 - Parsed 50 tenders for customer with INN #7719555477
+13-Jan-22 09:01:11 - 0 active tenders for customer with INN #7718126549
+13-Jan-22 09:01:13 - 0 active tenders for customer with INN #3800000206
+13-Jan-22 09:01:16 - 0 active tenders for customer with INN #7703518529
+13-Jan-22 09:01:19 - 0 active tenders for customer with INN #7734374725
+13-Jan-22 09:01:22 - Parsed 1 tenders for customer with INN #7706433263
+13-Jan-22 09:01:25 - 0 active tenders for customer with INN #5024118547
+13-Jan-22 09:01:27 - 0 active tenders for customer with INN #7703363868
+13-Jan-22 09:01:30 - 0 active tenders for customer with INN #5009003774
+13-Jan-22 09:01:30 - ====================================
+13-Jan-22 09:01:30 - File D:\USERDATA\Documents\4git\tenders\out\13-01-2022_09-01_zg.xlsx was successfully saved
+13-Jan-22 09:01:38 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+13-Jan-22 09:01:38 - ==============================================
+14-Jan-22 09:00:16 - 0 active tenders for customer with INN #7712036754
+14-Jan-22 09:00:21 - Parsed 2 tenders for customer with INN #7714030726
+14-Jan-22 09:00:26 - Parsed 9 tenders for customer with INN #7733231361
+14-Jan-22 09:00:31 - 0 active tenders for customer with INN #7714029600
+14-Jan-22 09:00:35 - Parsed 50 tenders for customer with INN #5032292612
+14-Jan-22 09:00:39 - 0 active tenders for customer with INN #5001086137
+14-Jan-22 09:00:42 - Parsed 5 tenders for customer with INN #7706016118
+14-Jan-22 09:00:46 - Parsed 40 tenders for customer with INN #7723011906
+14-Jan-22 09:00:53 - Parsed 50 tenders for customer with INN #7706061801
+14-Jan-22 09:00:55 - Parsed 7 tenders for customer with INN #7706562710
+14-Jan-22 09:00:58 - 0 active tenders for customer with INN #7718115610
+14-Jan-22 09:01:01 - Parsed 2 tenders for customer with INN #5041012269
+14-Jan-22 09:01:06 - Parsed 50 tenders for customer with INN #7719555477
+14-Jan-22 09:01:08 - 0 active tenders for customer with INN #7718126549
+14-Jan-22 09:01:11 - 0 active tenders for customer with INN #3800000206
+14-Jan-22 09:01:14 - 0 active tenders for customer with INN #7703518529
+14-Jan-22 09:01:17 - 0 active tenders for customer with INN #7734374725
+14-Jan-22 09:01:20 - Parsed 1 tenders for customer with INN #7706433263
+14-Jan-22 09:01:23 - 0 active tenders for customer with INN #5024118547
+14-Jan-22 09:01:26 - 0 active tenders for customer with INN #7703363868
+14-Jan-22 09:01:28 - 0 active tenders for customer with INN #5009003774
+14-Jan-22 09:01:28 - ====================================
+14-Jan-22 09:01:28 - File D:\USERDATA\Documents\4git\tenders\out\14-01-2022_09-01_zg.xlsx was successfully saved
+14-Jan-22 09:01:35 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+14-Jan-22 09:01:35 - ==============================================
+17-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+17-Jan-22 09:00:20 - Parsed 2 tenders for customer with INN #7714030726
+17-Jan-22 09:00:24 - Parsed 9 tenders for customer with INN #7733231361
+17-Jan-22 09:00:27 - 0 active tenders for customer with INN #7714029600
+17-Jan-22 09:00:32 - Parsed 50 tenders for customer with INN #5032292612
+17-Jan-22 09:00:36 - 0 active tenders for customer with INN #5001086137
+17-Jan-22 09:00:38 - Parsed 4 tenders for customer with INN #7706016118
+17-Jan-22 09:00:42 - Parsed 34 tenders for customer with INN #7723011906
+17-Jan-22 09:00:51 - Parsed 50 tenders for customer with INN #7706061801
+17-Jan-22 09:00:54 - Parsed 7 tenders for customer with INN #7706562710
+17-Jan-22 09:00:57 - 0 active tenders for customer with INN #7718115610
+17-Jan-22 09:01:00 - Parsed 2 tenders for customer with INN #5041012269
+17-Jan-22 09:01:04 - Parsed 50 tenders for customer with INN #7719555477
+17-Jan-22 09:01:07 - 0 active tenders for customer with INN #7718126549
+17-Jan-22 09:01:10 - 0 active tenders for customer with INN #3800000206
+17-Jan-22 09:01:13 - 0 active tenders for customer with INN #7703518529
+17-Jan-22 09:01:15 - 0 active tenders for customer with INN #7734374725
+17-Jan-22 09:01:18 - Parsed 1 tenders for customer with INN #7706433263
+17-Jan-22 09:01:21 - 0 active tenders for customer with INN #5024118547
+17-Jan-22 09:01:23 - 0 active tenders for customer with INN #7703363868
+17-Jan-22 09:01:27 - 0 active tenders for customer with INN #5009003774
+17-Jan-22 09:01:27 - ====================================
+17-Jan-22 09:01:27 - File D:\USERDATA\Documents\4git\tenders\out\17-01-2022_09-01_zg.xlsx was successfully saved
+17-Jan-22 09:01:35 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+17-Jan-22 09:01:35 - ==============================================
+20-Jan-22 09:00:21 - 0 active tenders for customer with INN #7712036754
+20-Jan-22 09:00:27 - Parsed 1 tenders for customer with INN #7714030726
+20-Jan-22 09:00:32 - Parsed 1 tenders for customer with INN #7733231361
+20-Jan-22 09:00:36 - 0 active tenders for customer with INN #7714029600
+20-Jan-22 09:00:44 - Parsed 50 tenders for customer with INN #5032292612
+20-Jan-22 09:00:47 - 0 active tenders for customer with INN #5001086137
+20-Jan-22 09:00:50 - Parsed 3 tenders for customer with INN #7706016118
+20-Jan-22 09:00:54 - Parsed 30 tenders for customer with INN #7723011906
+20-Jan-22 09:01:08 - Parsed 50 tenders for customer with INN #7706061801
+20-Jan-22 09:01:11 - Parsed 3 tenders for customer with INN #7706562710
+20-Jan-22 09:01:14 - 0 active tenders for customer with INN #7718115610
+20-Jan-22 09:01:17 - 0 active tenders for customer with INN #5041012269
+20-Jan-22 09:01:27 - Parsed 50 tenders for customer with INN #7719555477
+20-Jan-22 09:01:30 - 0 active tenders for customer with INN #7718126549
+20-Jan-22 09:01:33 - 0 active tenders for customer with INN #3800000206
+20-Jan-22 09:01:36 - 0 active tenders for customer with INN #7703518529
+20-Jan-22 09:01:39 - 0 active tenders for customer with INN #7734374725
+20-Jan-22 09:01:42 - 0 active tenders for customer with INN #7706433263
+20-Jan-22 09:01:45 - 0 active tenders for customer with INN #5024118547
+20-Jan-22 09:01:48 - 0 active tenders for customer with INN #7703363868
+20-Jan-22 09:01:51 - 0 active tenders for customer with INN #5009003774
+20-Jan-22 09:01:51 - ====================================
+20-Jan-22 09:01:51 - File D:\USERDATA\Documents\4git\tenders\out\20-01-2022_09-01_zg.xlsx was successfully saved
+20-Jan-22 09:01:59 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+20-Jan-22 09:01:59 - ==============================================
+21-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+21-Jan-22 09:00:20 - Parsed 1 tenders for customer with INN #7714030726
+21-Jan-22 09:00:25 - Parsed 1 tenders for customer with INN #7733231361
+21-Jan-22 09:00:31 - 0 active tenders for customer with INN #7714029600
+21-Jan-22 09:00:36 - Parsed 50 tenders for customer with INN #5032292612
+21-Jan-22 09:00:39 - 0 active tenders for customer with INN #5001086137
+21-Jan-22 09:00:44 - Parsed 3 tenders for customer with INN #7706016118
+21-Jan-22 09:00:48 - Parsed 30 tenders for customer with INN #7723011906
+21-Jan-22 09:00:54 - Parsed 50 tenders for customer with INN #7706061801
+21-Jan-22 09:00:57 - Parsed 3 tenders for customer with INN #7706562710
+21-Jan-22 09:00:59 - 0 active tenders for customer with INN #7718115610
+21-Jan-22 09:01:02 - 0 active tenders for customer with INN #5041012269
+21-Jan-22 09:01:06 - Parsed 50 tenders for customer with INN #7719555477
+21-Jan-22 09:01:10 - 0 active tenders for customer with INN #7718126549
+21-Jan-22 09:01:13 - 0 active tenders for customer with INN #3800000206
+21-Jan-22 09:01:16 - 0 active tenders for customer with INN #7703518529
+21-Jan-22 09:01:19 - 0 active tenders for customer with INN #7734374725
+21-Jan-22 09:01:22 - 0 active tenders for customer with INN #7706433263
+21-Jan-22 09:01:25 - 0 active tenders for customer with INN #5024118547
+21-Jan-22 09:01:28 - 0 active tenders for customer with INN #7703363868
+21-Jan-22 09:01:31 - 0 active tenders for customer with INN #5009003774
+21-Jan-22 09:01:31 - ====================================
+21-Jan-22 09:01:31 - File D:\USERDATA\Documents\4git\tenders\out\21-01-2022_09-01_zg.xlsx was successfully saved
+21-Jan-22 09:01:38 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+21-Jan-22 09:01:38 - ==============================================
+25-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+25-Jan-22 09:00:20 - Parsed 1 tenders for customer with INN #7714030726
+25-Jan-22 09:00:24 - 0 active tenders for customer with INN #7733231361
+25-Jan-22 09:00:29 - 0 active tenders for customer with INN #7714029600
+25-Jan-22 09:00:35 - Parsed 50 tenders for customer with INN #5032292612
+25-Jan-22 09:00:39 - Parsed 2 tenders for customer with INN #5001086137
+25-Jan-22 09:00:41 - Parsed 3 tenders for customer with INN #7706016118
+25-Jan-22 09:00:46 - Parsed 26 tenders for customer with INN #7723011906
+25-Jan-22 09:00:54 - Parsed 50 tenders for customer with INN #7706061801
+25-Jan-22 09:00:57 - Parsed 3 tenders for customer with INN #7706562710
+25-Jan-22 09:01:00 - 0 active tenders for customer with INN #7718115610
+25-Jan-22 09:01:03 - 0 active tenders for customer with INN #5041012269
+25-Jan-22 09:01:09 - Parsed 50 tenders for customer with INN #7719555477
+25-Jan-22 09:01:12 - 0 active tenders for customer with INN #7718126549
+25-Jan-22 09:01:15 - 0 active tenders for customer with INN #3800000206
+25-Jan-22 09:01:18 - 0 active tenders for customer with INN #7703518529
+25-Jan-22 09:01:21 - 0 active tenders for customer with INN #7734374725
+25-Jan-22 09:01:24 - Parsed 1 tenders for customer with INN #7706433263
+25-Jan-22 09:01:27 - 0 active tenders for customer with INN #5024118547
+25-Jan-22 09:01:29 - 0 active tenders for customer with INN #7703363868
+25-Jan-22 09:01:32 - 0 active tenders for customer with INN #5009003774
+25-Jan-22 09:01:32 - ====================================
+25-Jan-22 09:01:32 - File D:\USERDATA\Documents\4git\tenders\out\25-01-2022_09-01_zg.xlsx was successfully saved
+25-Jan-22 09:01:40 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+25-Jan-22 09:01:40 - ==============================================
+26-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+26-Jan-22 09:00:20 - Parsed 1 tenders for customer with INN #7714030726
+26-Jan-22 09:00:25 - 0 active tenders for customer with INN #7733231361
+26-Jan-22 09:00:30 - 0 active tenders for customer with INN #7714029600
+26-Jan-22 09:00:37 - Parsed 50 tenders for customer with INN #5032292612
+26-Jan-22 09:00:41 - Parsed 2 tenders for customer with INN #5001086137
+26-Jan-22 09:00:44 - Parsed 3 tenders for customer with INN #7706016118
+26-Jan-22 09:00:48 - Parsed 24 tenders for customer with INN #7723011906
+26-Jan-22 09:00:54 - Parsed 50 tenders for customer with INN #7706061801
+26-Jan-22 09:00:57 - 0 active tenders for customer with INN #7706562710
+26-Jan-22 09:01:00 - 0 active tenders for customer with INN #7718115610
+26-Jan-22 09:01:03 - 0 active tenders for customer with INN #5041012269
+26-Jan-22 09:01:08 - Parsed 50 tenders for customer with INN #7719555477
+26-Jan-22 09:01:11 - 0 active tenders for customer with INN #7718126549
+26-Jan-22 09:01:14 - 0 active tenders for customer with INN #3800000206
+26-Jan-22 09:01:17 - 0 active tenders for customer with INN #7703518529
+26-Jan-22 09:01:19 - 0 active tenders for customer with INN #7734374725
+26-Jan-22 09:01:22 - Parsed 1 tenders for customer with INN #7706433263
+26-Jan-22 09:01:25 - 0 active tenders for customer with INN #5024118547
+26-Jan-22 09:01:28 - 0 active tenders for customer with INN #7703363868
+26-Jan-22 09:01:31 - 0 active tenders for customer with INN #5009003774
+26-Jan-22 09:01:31 - ====================================
+26-Jan-22 09:01:31 - File D:\USERDATA\Documents\4git\tenders\out\26-01-2022_09-01_zg.xlsx was successfully saved
+26-Jan-22 09:01:38 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+26-Jan-22 09:01:38 - ==============================================
+28-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+28-Jan-22 09:00:21 - Parsed 2 tenders for customer with INN #7714030726
+28-Jan-22 09:00:26 - 0 active tenders for customer with INN #7733231361
+28-Jan-22 09:00:31 - 0 active tenders for customer with INN #7714029600
+28-Jan-22 09:00:37 - Parsed 50 tenders for customer with INN #5032292612
+28-Jan-22 09:00:41 - Parsed 2 tenders for customer with INN #5001086137
+28-Jan-22 09:00:44 - Parsed 2 tenders for customer with INN #7706016118
+28-Jan-22 09:00:47 - Parsed 18 tenders for customer with INN #7723011906
+28-Jan-22 09:00:54 - Parsed 50 tenders for customer with INN #7706061801
+28-Jan-22 09:00:57 - 0 active tenders for customer with INN #7706562710
+28-Jan-22 09:01:00 - 0 active tenders for customer with INN #7718115610
+28-Jan-22 09:01:03 - 0 active tenders for customer with INN #5041012269
+28-Jan-22 09:01:08 - Parsed 50 tenders for customer with INN #7719555477
+28-Jan-22 09:01:11 - 0 active tenders for customer with INN #7718126549
+28-Jan-22 09:01:14 - 0 active tenders for customer with INN #3800000206
+28-Jan-22 09:01:17 - 0 active tenders for customer with INN #7703518529
+28-Jan-22 09:01:20 - 0 active tenders for customer with INN #7734374725
+28-Jan-22 09:01:23 - Parsed 1 tenders for customer with INN #7706433263
+28-Jan-22 09:01:26 - 0 active tenders for customer with INN #5024118547
+28-Jan-22 09:01:29 - 0 active tenders for customer with INN #7703363868
+28-Jan-22 09:01:32 - 0 active tenders for customer with INN #5009003774
+28-Jan-22 09:01:32 - ====================================
+28-Jan-22 09:01:32 - File D:\USERDATA\Documents\4git\tenders\out\28-01-2022_09-01_zg.xlsx was successfully saved
+28-Jan-22 09:01:40 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+28-Jan-22 09:01:40 - ==============================================
+31-Jan-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+31-Jan-22 09:00:20 - Parsed 3 tenders for customer with INN #7714030726
+31-Jan-22 09:00:23 - Parsed 1 tenders for customer with INN #7733231361
+31-Jan-22 09:00:26 - 0 active tenders for customer with INN #7714029600
+31-Jan-22 09:00:30 - Parsed 50 tenders for customer with INN #5032292612
+31-Jan-22 09:00:33 - Parsed 3 tenders for customer with INN #5001086137
+31-Jan-22 09:00:36 - Parsed 2 tenders for customer with INN #7706016118
+31-Jan-22 09:00:40 - Parsed 19 tenders for customer with INN #7723011906
+31-Jan-22 09:00:45 - Parsed 50 tenders for customer with INN #7706061801
+31-Jan-22 09:00:48 - 0 active tenders for customer with INN #7706562710
+31-Jan-22 09:00:51 - 0 active tenders for customer with INN #7718115610
+31-Jan-22 09:00:54 - 0 active tenders for customer with INN #5041012269
+31-Jan-22 09:00:58 - Parsed 49 tenders for customer with INN #7719555477
+31-Jan-22 09:01:01 - 0 active tenders for customer with INN #7718126549
+31-Jan-22 09:01:04 - 0 active tenders for customer with INN #3800000206
+31-Jan-22 09:01:07 - Parsed 1 tenders for customer with INN #7703518529
+31-Jan-22 09:01:09 - 0 active tenders for customer with INN #7734374725
+31-Jan-22 09:01:12 - Parsed 1 tenders for customer with INN #7706433263
+31-Jan-22 09:01:15 - 0 active tenders for customer with INN #5024118547
+31-Jan-22 09:01:18 - 0 active tenders for customer with INN #7703363868
+31-Jan-22 09:01:21 - 0 active tenders for customer with INN #5009003774
+31-Jan-22 09:01:21 - ====================================
+31-Jan-22 09:01:21 - File D:\USERDATA\Documents\4git\tenders\out\31-01-2022_09-01_zg.xlsx was successfully saved
+31-Jan-22 09:01:29 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+31-Jan-22 09:01:29 - ==============================================
+01-Feb-22 09:00:15 - 0 active tenders for customer with INN #7712036754
+01-Feb-22 09:00:20 - Parsed 2 tenders for customer with INN #7714030726
+01-Feb-22 09:00:25 - Parsed 1 tenders for customer with INN #7733231361
+01-Feb-22 09:00:30 - 0 active tenders for customer with INN #7714029600
+01-Feb-22 09:00:35 - Parsed 50 tenders for customer with INN #5032292612
+01-Feb-22 09:00:39 - Parsed 2 tenders for customer with INN #5001086137
+01-Feb-22 09:00:42 - Parsed 1 tenders for customer with INN #7706016118
+01-Feb-22 09:00:45 - Parsed 20 tenders for customer with INN #7723011906
+01-Feb-22 09:00:52 - Parsed 50 tenders for customer with INN #7706061801
+01-Feb-22 09:00:55 - 0 active tenders for customer with INN #7706562710
+01-Feb-22 09:00:58 - 0 active tenders for customer with INN #7718115610
+01-Feb-22 09:01:01 - 0 active tenders for customer with INN #5041012269
+01-Feb-22 09:01:06 - Parsed 48 tenders for customer with INN #7719555477
+01-Feb-22 09:01:10 - 0 active tenders for customer with INN #7718126549
+01-Feb-22 09:01:13 - 0 active tenders for customer with INN #3800000206
+01-Feb-22 09:01:16 - Parsed 1 tenders for customer with INN #7703518529
+01-Feb-22 09:01:19 - 0 active tenders for customer with INN #7734374725
+01-Feb-22 09:01:21 - Parsed 1 tenders for customer with INN #7706433263
+01-Feb-22 09:01:24 - 0 active tenders for customer with INN #5024118547
+01-Feb-22 09:01:27 - Parsed 1 tenders for customer with INN #7703363868
+01-Feb-22 09:01:30 - 0 active tenders for customer with INN #5009003774
+01-Feb-22 09:01:30 - ====================================
+01-Feb-22 09:01:30 - File D:\USERDATA\Documents\4git\tenders\out\01-02-2022_09-01_zg.xlsx was successfully saved
+01-Feb-22 09:01:38 - File was sended to ['555@rinova.ru', '119@rinova.ru'], blind copy: 105@di01.ru
+01-Feb-22 09:01:38 - ==============================================
+02-Feb-22 11:53:40 - 0 active tenders for customer with INN #7712036754
+02-Feb-22 11:53:44 - Parsed 5 tenders for customer with INN #7714030726
+02-Feb-22 11:53:47 - Parsed 1 tenders for customer with INN #7733231361
+02-Feb-22 11:53:50 - 0 active tenders for customer with INN #7714029600
+02-Feb-22 11:53:57 - Parsed 50 tenders for customer with INN #5032292612
+02-Feb-22 11:54:00 - Parsed 2 tenders for customer with INN #5001086137
+02-Feb-22 11:54:02 - Parsed 1 tenders for customer with INN #7706016118
+02-Feb-22 11:54:06 - Parsed 23 tenders for customer with INN #7723011906
+02-Feb-22 11:54:11 - Parsed 50 tenders for customer with INN #7706061801
+02-Feb-22 11:54:14 - 0 active tenders for customer with INN #7706562710
+02-Feb-22 11:54:17 - 0 active tenders for customer with INN #7718115610
+02-Feb-22 11:54:20 - 0 active tenders for customer with INN #5041012269
+02-Feb-22 11:54:26 - Parsed 50 tenders for customer with INN #7719555477
+02-Feb-22 11:54:29 - 0 active tenders for customer with INN #7718126549
+02-Feb-22 11:54:32 - 0 active tenders for customer with INN #3800000206
+02-Feb-22 11:54:34 - Parsed 1 tenders for customer with INN #7703518529
+02-Feb-22 11:54:37 - 0 active tenders for customer with INN #7734374725
+02-Feb-22 11:54:40 - 0 active tenders for customer with INN #7706433263
+02-Feb-22 11:54:43 - 0 active tenders for customer with INN #5024118547
+02-Feb-22 11:54:46 - Parsed 1 tenders for customer with INN #7703363868
+02-Feb-22 11:54:49 - 0 active tenders for customer with INN #5009003774
+02-Feb-22 11:54:49 - ====================================
+02-Feb-22 11:54:49 - File D:\USERDATA\Documents\4git\tenders\out\02-02-2022_11-54_zg.xlsx was successfully saved
