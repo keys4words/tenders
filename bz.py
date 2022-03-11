@@ -129,10 +129,10 @@ def parse_page(keyword, driver):
                 name = el.find_element_by_xpath('.//p[@id="subject"]')
                 name = name.text
             try:
-                timer = el.find_element_by_xpath('.//span[@id="timer"]')
+                timer = el.find_element_by_xpath('.//span[@class="timer"]')
                 timer = (timer.text).replace('\n', '')
             except StaleElementReferenceException:
-                timer = el.find_element_by_xpath('.//span[@id="timer"]')
+                timer = el.find_element_by_xpath('.//span[@class="timer"]')
                 timer = (timer.text).replace('\n', '')
                 
             customer = el.find_element_by_xpath('.//span[@id="organizerInfoNameLink"]')
