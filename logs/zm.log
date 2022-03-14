@@ -11506,3 +11506,17 @@
 11-Mar-22 14:33:53 - Parsed 87 tenders
 11-Mar-22 14:33:53 - File D:\USERDATA\Documents\4git\tenders\out\11-03-2022_14-33_zm.xlsx was saved
 11-Mar-22 14:33:55 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+14-Mar-22 09:50:11 - авсе: parsing -> авсе
+14-Mar-22 09:50:11 - parsing OK with keyword: авсе
+14-Mar-22 09:50:16 - timeout with keyword: агс
+14-Mar-22 09:50:18 - апс: parsing -> апс
+14-Mar-22 09:50:18 - parsing OK with keyword: апс
+14-Mar-22 09:50:23 - timeout with keyword: аэрозоль
+14-Mar-22 09:50:29 - timeout with keyword: багор
+14-Mar-22 09:50:34 - timeout with keyword: бот
+14-Mar-22 09:50:39 - timeout with keyword: водопенный
+14-Mar-22 09:50:44 - timeout with keyword: гдзр
+14-Mar-22 09:50:49 - timeout with keyword: гидрант
+14-Mar-22 09:50:54 - timeout with keyword: гидротестер
+14-Mar-22 09:50:59 - timeout with keyword: диэл
+14-Mar-22 09:51:04 - timeout with keyword: закачной
