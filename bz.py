@@ -136,7 +136,10 @@ def parse_page(keyword, driver):
                 timer = (timer.text).replace('\n', '')
                 
             customer = el.find_element_by_xpath('.//span[@id="organizerInfoNameLink"]')
-            customer = customer.text
+            try:
+                customer = customer.text
+            except Exception:
+                customer = " "
             price = el.find_element_by_xpath('.//h1[@id="purchasePrice"]')
             price = price.text
             price = price.replace(' ', '')
