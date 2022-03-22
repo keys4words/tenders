@@ -330,7 +330,7 @@ set_logger()
 # # iteration for 129
 res = dict()
 parsing_new(get_inns(FILE_WITH_INNS_129))
-sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov REQUEST by INN', to_emails=to_emails2)
+sending_email(save_results(res=res, fileprefix='_zg_129'), '129 zakupki-gov REQUEST by INN', to_emails=to_emails)
 
 # # # interation for 113
 res = dict()
@@ -340,7 +340,7 @@ sending_email(save_results(res=res, fileprefix='_zg_113'), '113 zakupki-gov REQU
 # iteration for 104
 res = dict()
 parsing_new(get_inns(FILE_WITH_INNS_104))
-sending_email(save_results(res=res, fileprefix='_zg_104'), '104 zakupki-gov REQUEST by INN', to_emails=to_emails2)
+sending_email(save_results(res=res, fileprefix='_zg_104'), '104 zakupki-gov REQUEST by INN', to_emails=to_emails)
 
 root_logger = logging.getLogger('zg_req')
 root_logger.info('='*46)
