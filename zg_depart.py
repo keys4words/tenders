@@ -186,7 +186,7 @@ def parse_page(url):
                     }
                 else:
                     pass
-            root_logger.info(f'Parsed {str(len(elements))} tenders for customer')
+            root_logger.info(f'Parsed {str(len(elements))} tenders for customer by ')
         else:
             root_logger.warning(f'0 active tenders for customer')
     else:
@@ -365,9 +365,9 @@ parsing_new(get_inns(FILE_WITH_INNS))
 sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN', to_emails=to_emails)
 
 # # iteration for 113, 104, 129
-res = dict()
-parsing_new(get_inns(FILE_WITH_KW))
-sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by words', to_emails=to_emails)
+# res = dict()
+# parsing_new(get_inns(FILE_WITH_KW))
+# sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by words', to_emails=to_emails)
 
 root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
