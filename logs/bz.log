@@ -67241,3 +67241,55 @@
 22-Mar-22 09:56:25 - авсе: parsing -> 4
 22-Mar-22 09:56:27 - bce: parsing -> timeout
 22-Mar-22 09:56:29 - ВСЕ: parsing -> 10
+22-Mar-22 09:56:31 - агс: parsing -> timeout
+22-Mar-22 09:56:35 - апс: parsing -> 7
+22-Mar-22 09:56:39 - аэрозо: parsing -> 10
+22-Mar-22 09:56:41 - багор: parsing -> 1
+22-Mar-22 09:56:45 - бот: parsing -> 10
+22-Mar-22 09:56:47 - диэл: parsing -> 2
+22-Mar-22 09:56:51 - топор: parsing -> 4
+22-Mar-22 09:56:53 - лопата: parsing -> 10
+22-Mar-22 09:56:54 - водопенн: parsing -> timeout
+22-Mar-22 09:56:56 - гдзк: parsing -> timeout
+22-Mar-22 09:56:57 - гидрант: parsing -> 3
+22-Mar-22 09:56:58 - гидротестер: parsing -> timeout
+22-Mar-22 09:57:00 - головками: parsing -> 3
+22-Mar-22 09:57:02 - закачной: parsing -> 1
+22-Mar-22 09:57:05 - мотопомпа: parsing -> timeout
+22-Mar-22 09:57:07 - ковр: parsing -> 10
+22-Mar-22 09:57:11 - ковер: parsing -> 2
+22-Mar-22 09:57:14 - ножниц: parsing -> 10
+22-Mar-22 09:57:17 - мпп: parsing -> timeout
+22-Mar-22 09:57:20 - огне: parsing -> 10
+22-Mar-22 09:57:23 - овэ: parsing -> timeout
+22-Mar-22 09:57:27 - охранны: parsing -> 10
+22-Mar-22 09:57:29 - песка -поставка -исследования: parsing -> timeout
+22-Mar-22 09:57:33 - пожар: parsing -> 10
+22-Mar-22 09:57:35 - пожаротуше: parsing -> 3
+22-Mar-22 09:57:37 - порошковы: parsing -> 4
+22-Mar-22 09:57:40 - ппо: parsing -> timeout
+22-Mar-22 09:57:42 - противодымный: parsing -> timeout
+22-Mar-22 09:57:45 - противопожарный: parsing -> 10
+22-Mar-22 09:57:46 - рпм: parsing -> timeout
+22-Mar-22 09:57:47 - рпк: parsing -> 2
+22-Mar-22 09:57:51 - рукав: parsing -> 10
+22-Mar-22 09:57:53 - рус: parsing -> 10
+22-Mar-22 09:57:56 - самоспасатель: parsing -> 2
+22-Mar-22 09:57:58 - ствол: parsing -> 1
+22-Mar-22 09:58:02 - углекислот: parsing -> 4
+22-Mar-22 09:58:05 - шанс: parsing -> timeout
+22-Mar-22 09:58:07 - щпо: parsing -> timeout
+22-Mar-22 09:58:10 - шланг: parsing -> 10
+22-Mar-22 09:58:13 - шпк: parsing -> timeout
+22-Mar-22 09:58:16 - эвакуации: parsing -> 10
+22-Mar-22 09:58:18 - эмульсионный: parsing -> 1
+22-Mar-22 09:58:21 - ярпож: parsing -> 1
+22-Mar-22 09:58:23 - маск: parsing -> 10
+22-Mar-22 09:58:25 - перч: parsing -> 10
+22-Mar-22 09:58:30 - кран: parsing -> 10
+22-Mar-22 09:58:34 - клап: parsing -> 10
+22-Mar-22 09:58:35 - диаф: parsing -> timeout
+22-Mar-22 09:58:35 - Parsed 3 tenders
+22-Mar-22 09:58:35 - File D:\USERDATA\Documents\4git\tenders\out\22-03-2022_09-58_bz.xlsx was successfully saved
+22-Mar-22 09:58:42 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+22-Mar-22 09:58:42 - ====================================
