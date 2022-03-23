@@ -1,4 +1,6 @@
 import requests, random, os, logging, time, re, sqlite3
+
+from fake_headers import Headers
 from dateutil import relativedelta as dr
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
@@ -13,10 +15,12 @@ BASE_URL = 'https://zakupki.gov.ru'
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DB_PATH = os.path.join(BASE_DIR, 'db', 'zg_department.db')
 
-FILE_WITH_INNS = os.path.join(BASE_DIR, 'inn', 'zg_unite.txt')
+FILE_WITH_INN_PART1 = os.path.join(BASE_DIR, 'inn', 'zg_unite1.txt')
+FILE_WITH_INN_PART2 = os.path.join(BASE_DIR, 'inn', 'zg_unite2.txt')
 FILE_WITH_KW = os.path.join(BASE_DIR, 'keywords', 'zg_unite.txt')
 
-HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36', 'accept': '*/*'}
+HEADERS = Headers(headers=True).generate()
+#{'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36', 'accept': '*/*'}
 
 
 def create_db():
@@ -359,12 +363,17 @@ def sending_email(filename, subject, to_emails):
 # main thread
 set_logger()
 
-# # iteration for 129, 113, 104
+# # iteration for INN part1
 # res = dict()
-# parsing_new(get_inns(FILE_WITH_INNS))
-# sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN', to_emails=to_emails)
+# parsing_new(get_inns(FILE_WITH_INN_PART1))
+# sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN part1', to_emails=to_emails)
 
-# # iteration for 113, 104, 129
+# # iteration for INN part2
+# res = dict()
+# parsing_new(get_inns(FILE_WITH_INN_PART2))
+# sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN part2', to_emails=to_emails)
+
+# # iteration for KW
 res = dict()
 parsing_new(get_inns(FILE_WITH_KW))
 sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by words', to_emails=to_emails)
