@@ -67458,3 +67458,23 @@
 22-Mar-22 14:22:37 - File D:\USERDATA\Documents\4git\tenders\out\22-03-2022_14-22_bz.xlsx was successfully saved
 22-Mar-22 14:23:00 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
 22-Mar-22 14:23:01 - ====================================
+23-Mar-22 14:02:33 - авсе: parsing -> 3
+23-Mar-22 14:02:34 - bce: parsing -> timeout
+23-Mar-22 14:02:39 - ВСЕ: parsing -> 10
+23-Mar-22 14:02:41 - агс: parsing -> timeout
+23-Mar-22 14:02:43 - апс: parsing -> 4
+23-Mar-22 14:02:48 - аэрозо: parsing -> 10
+23-Mar-22 14:02:51 - багор: parsing -> timeout
+23-Mar-22 14:02:54 - бот: parsing -> 10
+23-Mar-22 14:02:58 - диэл: parsing -> 4
+23-Mar-22 14:03:00 - топор: parsing -> 4
+23-Mar-22 14:03:03 - лопата: parsing -> 10
+23-Mar-22 14:03:04 - водопенн: parsing -> timeout
+23-Mar-22 14:03:08 - гдзк: parsing -> 1
+23-Mar-22 14:03:10 - гидрант: parsing -> 2
+23-Mar-22 14:03:13 - гидротестер: parsing -> timeout
+23-Mar-22 14:03:15 - головками: parsing -> 2
+23-Mar-22 14:03:17 - закачной: parsing -> 1
+23-Mar-22 14:03:19 - мотопомпа: parsing -> timeout
+23-Mar-22 14:03:23 - ковр: parsing -> 10
+23-Mar-22 14:03:27 - ковер: parsing -> timeout
