@@ -67478,3 +67478,58 @@
 23-Mar-22 14:03:19 - мотопомпа: parsing -> timeout
 23-Mar-22 14:03:23 - ковр: parsing -> 10
 23-Mar-22 14:03:27 - ковер: parsing -> timeout
+23-Mar-22 16:11:13 - авсе: parsing -> 4
+23-Mar-22 16:11:16 - bce: parsing -> timeout
+23-Mar-22 16:11:20 - ВСЕ: parsing -> 10
+23-Mar-22 16:11:22 - агс: parsing -> timeout
+23-Mar-22 16:11:23 - апс: parsing -> 3
+23-Mar-22 16:11:28 - аэрозо: parsing -> 10
+23-Mar-22 16:11:31 - багор: parsing -> timeout
+23-Mar-22 16:11:34 - бот: parsing -> 10
+23-Mar-22 16:11:36 - диэл: parsing -> 2
+23-Mar-22 16:11:38 - топор: parsing -> 3
+23-Mar-22 16:11:42 - лопата: parsing -> 10
+23-Mar-22 16:11:46 - водопенн: parsing -> timeout
+23-Mar-22 16:11:47 - гдзк: parsing -> 1
+23-Mar-22 16:11:50 - гидрант: parsing -> 2
+23-Mar-22 16:11:51 - гидротестер: parsing -> timeout
+23-Mar-22 16:11:54 - головками: parsing -> 3
+23-Mar-22 16:11:57 - закачной: parsing -> 1
+23-Mar-22 16:11:58 - мотопомпа: parsing -> timeout
+23-Mar-22 16:12:02 - ковр: parsing -> 10
+23-Mar-22 16:12:04 - ковер: parsing -> 1
+23-Mar-22 16:12:09 - ножниц: parsing -> 10
+23-Mar-22 16:12:10 - мпп: parsing -> timeout
+23-Mar-22 16:12:12 - огне: parsing -> 10
+23-Mar-22 16:12:15 - овэ: parsing -> timeout
+23-Mar-22 16:12:18 - охранны: parsing -> 10
+23-Mar-22 16:12:20 - песка -поставка -исследования: parsing -> timeout
+23-Mar-22 16:12:23 - пожар: parsing -> 10
+23-Mar-22 16:12:26 - пожаротуше: parsing -> 3
+23-Mar-22 16:12:31 - порошковы: parsing -> 10
+23-Mar-22 16:12:35 - ппо: parsing -> timeout
+23-Mar-22 16:12:37 - противодымный: parsing -> timeout
+23-Mar-22 16:12:40 - противопожарный: parsing -> 10
+23-Mar-22 16:12:41 - рпм: parsing -> timeout
+23-Mar-22 16:12:44 - рпк: parsing -> 1
+23-Mar-22 16:12:48 - рукав: parsing -> 10
+23-Mar-22 16:12:52 - рус: parsing -> 10
+23-Mar-22 16:12:53 - самоспасатель: parsing -> timeout
+23-Mar-22 16:12:55 - ствол: parsing -> 2
+23-Mar-22 16:12:58 - углекислот: parsing -> 3
+23-Mar-22 16:13:01 - шанс: parsing -> timeout
+23-Mar-22 16:13:04 - щпо: parsing -> timeout
+23-Mar-22 16:13:08 - шланг: parsing -> 10
+23-Mar-22 16:13:10 - шпк: parsing -> timeout
+23-Mar-22 16:13:14 - эвакуации: parsing -> 10
+23-Mar-22 16:13:17 - эмульсионный: parsing -> timeout
+23-Mar-22 16:13:19 - ярпож: parsing -> timeout
+23-Mar-22 16:13:24 - маск: parsing -> 10
+23-Mar-22 16:13:28 - перч: parsing -> 10
+23-Mar-22 16:13:32 - кран: parsing -> 10
+23-Mar-22 16:13:36 - клап: parsing -> 10
+23-Mar-22 16:13:38 - диаф: parsing -> timeout
+23-Mar-22 16:13:38 - Parsed 126 tenders
+23-Mar-22 16:13:38 - File /home/keys4/Documents/tenders/out/23-03-2022_16-13_bz.xlsx was successfully saved
+23-Mar-22 16:13:42 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+23-Mar-22 16:13:42 - ====================================
