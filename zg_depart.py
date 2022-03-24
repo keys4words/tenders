@@ -365,17 +365,17 @@ set_logger()
 # # iteration for INN part1
 # res = dict()
 # parsing_new(get_inns(FILE_WITH_INN_PART1))
-# sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN part1', to_emails=to_emails)
+# sending_email(save_results(res=res, fileprefix='_zg_inn_part1'), 'zakupki-gov by INN part1', to_emails=to_emails)
 
 # # iteration for INN part2
-res = dict()
-parsing_new(get_inns(FILE_WITH_INN_PART2))
-sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN part2', to_emails=to_emails)
+# res = dict()
+# parsing_new(get_inns(FILE_WITH_INN_PART2))
+# sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
 
 # # iteration for KW
-# res = dict()
-# parsing_new(get_inns(FILE_WITH_KW))
-# sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by words', to_emails=to_emails)
+res = dict()
+parsing_new(get_inns(FILE_WITH_KW))
+sending_email(save_results(res=res, fileprefix='_zg_kw'), 'zakupki-gov by words', to_emails=to_emails)
 
 root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
