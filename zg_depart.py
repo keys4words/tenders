@@ -39,6 +39,7 @@ def create_db():
 
 
 def inDataBase(number):
+    # print(f"fetch from db tender with number {number}")
     with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute(f"SELECT * FROM tenders WHERE number=='{number}'")
@@ -107,7 +108,7 @@ def url_updater(page_num, inn, minus_words):
     return updated_url
 
 
-def parse_page(url):
+def parse_page(url, inn):
     root_logger = logging.getLogger('zg_tenders')
     res = dict()
     resp = requests.get(url=url, headers=HEADERS)
@@ -189,11 +190,13 @@ def parse_page(url):
                     }
                 else:
                     pass
-            root_logger.info(f'Parsed {str(len(elements))} tenders for customer by ')
+            root_logger.info(f'Parsed {str(len(elements))} tenders for customer by inn {inn}')
         else:
             root_logger.warning(f'0 active tenders for customer')
     else:
         root_logger.warning(f'page {url} is not available')
+    # print("res in parse_page func")
+    # print(res)
     return res
 
 
@@ -202,11 +205,11 @@ def parsing_new(inns):
         page_num = 0
         url = url_updater(page_num, inn, minus_words)
         while is_next_page(url):
-            res.update(parse_page(url))
+            res.update(parse_page(url, inn))
             page_num += 1
             url = url_updater(page_num, inn, minus_words)
         else:
-            res.update(parse_page(url))
+            res.update(parse_page(url, inn))
 
 
 
@@ -371,12 +374,15 @@ elif sys.argv[1] == "2":
     # iteration for INN part2
     res = dict()
     try:
+        inns = get_inns(FILE_WITH_INN_PART2)
         parsing_new(get_inns(FILE_WITH_INN_PART2))
     except ConnectionError:
         if not bool(res):
-            sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+            print(res)
+            # sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
         
-    sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+    # sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+    print(res)
 elif sys.argv[1] == "3":
     # # iteration for KW
     res = dict()
