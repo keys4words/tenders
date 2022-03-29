@@ -1,0 +1,143 @@
+25-Mar-22 11:25:10 - timeout with keyword: авсе
+25-Mar-22 11:25:16 - timeout with keyword: агс
+25-Mar-22 11:25:17 - апс: parsing -> апс
+25-Mar-22 11:25:17 - parsing OK with keyword: апс
+25-Mar-22 11:25:22 - timeout with keyword: аэрозоль
+25-Mar-22 11:25:28 - timeout with keyword: багор
+25-Mar-22 11:25:33 - timeout with keyword: бот
+25-Mar-22 11:25:39 - timeout with keyword: водопенный
+25-Mar-22 11:25:44 - timeout with keyword: гдзр
+25-Mar-22 11:25:45 - гидрант: parsing -> гидрант
+25-Mar-22 11:25:45 - parsing OK with keyword: гидрант
+25-Mar-22 11:25:51 - timeout with keyword: гидротестер
+25-Mar-22 11:25:56 - timeout with keyword: диэл
+25-Mar-22 11:26:01 - timeout with keyword: закачной
+25-Mar-22 11:26:07 - timeout with keyword: ковер
+25-Mar-22 11:26:12 - timeout with keyword: ковр
+25-Mar-22 11:26:18 - timeout with keyword: меланти
+25-Mar-22 11:26:23 - timeout with keyword: мотопомпа
+25-Mar-22 11:26:28 - timeout with keyword: мпп
+25-Mar-22 11:26:32 - огнетушитель: parsing -> огнетушитель
+25-Mar-22 11:26:32 - parsing OK with keyword: огнетушитель
+25-Mar-22 11:26:37 - timeout with keyword: овэ
+25-Mar-22 11:26:39 - оп-: parsing -> оп-
+25-Mar-22 11:26:39 - parsing OK with keyword: оп-
+28-Mar-22 09:49:57 - timeout with keyword: авсе
+28-Mar-22 09:50:03 - timeout with keyword: агс
+28-Mar-22 09:50:05 - апс: parsing -> апс
+28-Mar-22 09:50:05 - parsing OK with keyword: апс
+28-Mar-22 09:50:10 - timeout with keyword: аэрозоль
+28-Mar-22 09:50:15 - timeout with keyword: багор
+28-Mar-22 09:50:21 - timeout with keyword: бот
+28-Mar-22 09:50:26 - timeout with keyword: водопенный
+28-Mar-22 09:50:32 - timeout with keyword: гдзр
+28-Mar-22 09:50:34 - гидрант: parsing -> гидрант
+28-Mar-22 09:50:34 - parsing OK with keyword: гидрант
+28-Mar-22 09:50:39 - timeout with keyword: гидротестер
+28-Mar-22 09:50:45 - timeout with keyword: диэл
+28-Mar-22 09:50:50 - timeout with keyword: закачной
+28-Mar-22 09:50:55 - timeout with keyword: ковер
+28-Mar-22 09:51:01 - timeout with keyword: ковр
+28-Mar-22 09:51:06 - timeout with keyword: меланти
+28-Mar-22 09:51:11 - timeout with keyword: мотопомпа
+28-Mar-22 09:51:17 - timeout with keyword: мпп
+28-Mar-22 09:51:21 - огнетушитель: parsing -> огнетушитель
+28-Mar-22 09:51:21 - parsing OK with keyword: огнетушитель
+28-Mar-22 09:51:26 - timeout with keyword: овэ
+28-Mar-22 09:51:27 - оп-: parsing -> оп-
+28-Mar-22 09:51:27 - parsing OK with keyword: оп-
+28-Mar-22 09:51:33 - охранно: parsing -> охранно
+28-Mar-22 09:51:33 - parsing OK with keyword: охранно
+28-Mar-22 09:51:38 - timeout with keyword: перч
+28-Mar-22 09:51:47 - пожарный: parsing -> пожарный
+28-Mar-22 09:51:47 - parsing OK with keyword: пожарный
+28-Mar-22 09:51:49 - пожаротушение: parsing -> пожаротушение
+28-Mar-22 09:51:49 - parsing OK with keyword: пожаротушение
+28-Mar-22 09:51:50 - порошковый: parsing -> порошковый
+28-Mar-22 09:51:50 - parsing OK with keyword: порошковый
+28-Mar-22 09:51:55 - timeout with keyword: ппо
+28-Mar-22 09:52:01 - timeout with keyword: противодымный
+28-Mar-22 09:52:06 - противопожарный: parsing -> противопожарный
+28-Mar-22 09:52:06 - parsing OK with keyword: противопожарный
+28-Mar-22 09:52:11 - timeout with keyword: рпм
+28-Mar-22 09:52:13 - рпк: parsing -> рпк
+28-Mar-22 09:52:13 - parsing OK with keyword: рпк
+28-Mar-22 09:52:16 - рукав: parsing -> рукав
+28-Mar-22 09:52:16 - parsing OK with keyword: рукав
+28-Mar-22 09:52:21 - timeout with keyword: русинтэк
+28-Mar-22 09:52:23 - самоспасатель: parsing -> самоспасатель
+28-Mar-22 09:52:23 - parsing OK with keyword: самоспасатель
+28-Mar-22 09:52:24 - ствол: parsing -> ствол
+28-Mar-22 09:52:24 - parsing OK with keyword: ствол
+28-Mar-22 09:52:30 - timeout with keyword: углекислотный
+28-Mar-22 09:52:35 - timeout with keyword: фторпав
+28-Mar-22 09:52:40 - timeout with keyword: шанс
+28-Mar-22 09:52:45 - timeout with keyword: щпо
+28-Mar-22 09:52:47 - шланг: parsing -> шланг
+28-Mar-22 09:52:47 - parsing OK with keyword: шланг
+28-Mar-22 09:52:52 - timeout with keyword: шпк
+28-Mar-22 09:52:55 - эвакуации: parsing -> эвакуации
+28-Mar-22 09:52:55 - parsing OK with keyword: эвакуации
+28-Mar-22 09:53:00 - timeout with keyword: эмульсионный
+28-Mar-22 09:53:06 - timeout with keyword: ярпож
+28-Mar-22 09:53:06 - Parsed 123 tenders
+28-Mar-22 09:53:06 - File /home/keys4/Documents/tenders/out/28-03-2022_09-53_zm.xlsx was saved
+28-Mar-22 09:53:09 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+29-Mar-22 09:34:18 - timeout with keyword: авсе
+29-Mar-22 09:34:23 - timeout with keyword: агс
+29-Mar-22 09:34:26 - апс: parsing -> апс
+29-Mar-22 09:34:26 - parsing OK with keyword: апс
+29-Mar-22 09:34:31 - timeout with keyword: аэрозоль
+29-Mar-22 09:34:36 - timeout with keyword: багор
+29-Mar-22 09:34:41 - timeout with keyword: бот
+29-Mar-22 09:34:47 - timeout with keyword: водопенный
+29-Mar-22 09:34:52 - timeout with keyword: гдзр
+29-Mar-22 09:34:54 - гидрант: parsing -> гидрант
+29-Mar-22 09:34:54 - parsing OK with keyword: гидрант
+29-Mar-22 09:35:00 - timeout with keyword: гидротестер
+29-Mar-22 09:35:05 - timeout with keyword: диэл
+29-Mar-22 09:35:10 - timeout with keyword: закачной
+29-Mar-22 09:35:16 - timeout with keyword: ковер
+29-Mar-22 09:35:21 - timeout with keyword: ковр
+29-Mar-22 09:35:26 - timeout with keyword: меланти
+29-Mar-22 09:35:31 - timeout with keyword: мотопомпа
+29-Mar-22 09:35:34 - timeout with keyword: мпп
+29-Mar-22 09:35:42 - огнетушитель: parsing -> огнетушитель
+29-Mar-22 09:35:42 - parsing OK with keyword: огнетушитель
+29-Mar-22 09:35:47 - timeout with keyword: овэ
+29-Mar-22 09:35:49 - оп-: parsing -> оп-
+29-Mar-22 09:35:49 - parsing OK with keyword: оп-
+29-Mar-22 09:35:55 - охранно: parsing -> охранно
+29-Mar-22 09:35:55 - parsing OK with keyword: охранно
+29-Mar-22 09:36:06 - timeout with keyword: перч
+29-Mar-22 09:36:18 - пожарный: parsing -> пожарный
+29-Mar-22 09:36:18 - parsing OK with keyword: пожарный
+29-Mar-22 09:36:23 - пожарный: parsing -> пожарный
+29-Mar-22 09:36:25 - пожаротушение: parsing -> пожаротушение
+29-Mar-22 09:36:25 - parsing OK with keyword: пожаротушение
+29-Mar-22 09:36:27 - timeout with keyword: порошковый
+29-Mar-22 09:36:33 - timeout with keyword: ппо
+29-Mar-22 09:36:35 - timeout with keyword: противодымный
+29-Mar-22 09:36:41 - timeout with keyword: противопожарный
+29-Mar-22 09:36:46 - timeout with keyword: рпм
+29-Mar-22 09:36:48 - рпк: parsing -> рпк
+29-Mar-22 09:36:48 - parsing OK with keyword: рпк
+29-Mar-22 09:36:51 - рукав: parsing -> рукав
+29-Mar-22 09:36:51 - parsing OK with keyword: рукав
+29-Mar-22 09:36:56 - timeout with keyword: русинтэк
+29-Mar-22 09:36:58 - самоспасатель: parsing -> самоспасатель
+29-Mar-22 09:36:58 - parsing OK with keyword: самоспасатель
+29-Mar-22 09:37:00 - timeout with keyword: ствол
+29-Mar-22 09:37:06 - timeout with keyword: углекислотный
+29-Mar-22 09:37:11 - timeout with keyword: фторпав
+29-Mar-22 09:37:16 - timeout with keyword: шанс
+29-Mar-22 09:37:22 - timeout with keyword: щпо
+29-Mar-22 09:37:24 - шланг: parsing -> шланг
+29-Mar-22 09:37:24 - parsing OK with keyword: шланг
+29-Mar-22 09:37:26 - timeout with keyword: шпк
+29-Mar-22 09:37:29 - timeout with keyword: эвакуации
+29-Mar-22 09:37:34 - timeout with keyword: эмульсионный
+29-Mar-22 09:37:39 - timeout with keyword: ярпож
+29-Mar-22 09:37:39 - Parsed 149 tenders
+29-Mar-22 09:37:40 - File /home/keys4/Documents/tenders/out/29-03-2022_09-37_zm.xlsx was saved
+29-Mar-22 09:37:42 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru

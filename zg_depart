@@ -1,3 +1,25 @@
 #!/bin/bash
 source .env/bin/activate
-python zg_depart.py
+
+max_retry=3
+counter=0
+until python zg_depart.py 1
+do
+    sleep 1
+    [[ counter -eq $max_retry ]] && echo "Failed!" && exit 1 echo "Trying again. Try #$counter"
+    ((counter++))
+done
+
+until python zg_depart.py 2
+do
+    sleep 1
+    [[ counter -eq $max_retry ]] && echo "Failed!" && exit 1 echo "Trying again. Try #$counter"
+    ((counter++))
+done
+
+until python zg_depart.py 3
+do
+    sleep 1
+    [[ counter -eq $max_retry ]] && echo "Failed!" && exit 1 echo "Trying again. Try #$counter"
+    ((counter++))
+done
