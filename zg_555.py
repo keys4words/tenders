@@ -72,7 +72,7 @@ def get_html(url, params=None):
     return resp
 
 
-def parsing(inns):
+def parsing(inns, useDB):
     root_logger = logging.getLogger('zg')
     for inn in inns:
         page_num = 1
@@ -133,31 +133,43 @@ def parsing(inns):
                     ending_date = el.find(text=re.compile(
                         "Окончание подачи заявок")).parent.find_next_sibling()
                     ending_date = ending_date.text
-                    if not inDataBase(number):
-                        save_tender(number=number,
-                            name=name,
-                            url=tender_url,
-                            customer=customer,
-                            customer_url=customer_url,
-                            price=price,
-                            release_date=release_date,
-                            refreshing_date=refreshing_date,
-                            ending_date=ending_date
-                            )
-                        
-                        res[number] = {
-                            'name': name,
-                            'url': tender_url,
-                            'customer': customer,
-                            'customer_url': customer_url,
-                            'price': price,
-                            'release_date': release_date,
-                            'refreshing_date': refreshing_date,
-                            'ending_date': ending_date
-                        }
+                    if useDB:
+                        if not inDataBase(number):
+                            save_tender(number=number,
+                                name=name,
+                                url=tender_url,
+                                customer=customer,
+                                customer_url=customer_url,
+                                price=price,
+                                release_date=release_date,
+                                refreshing_date=refreshing_date,
+                                ending_date=ending_date
+                                )
+                            
+                            res[number] = {
+                                'name': name,
+                                'url': tender_url,
+                                'customer': customer,
+                                'customer_url': customer_url,
+                                'price': price,
+                                'release_date': release_date,
+                                'refreshing_date': refreshing_date,
+                                'ending_date': ending_date
+                            }
 
+                        else:
+                            pass
                     else:
-                        pass
+                        res[number] = {
+                                'name': name,
+                                'url': tender_url,
+                                'customer': customer,
+                                'customer_url': customer_url,
+                                'price': price,
+                                'release_date': release_date,
+                                'refreshing_date': refreshing_date,
+                                'ending_date': ending_date
+                            }
                 root_logger.info(
                     f'Parsed {str(len(elements))} tenders for customer with INN #{inn}')
             else:
@@ -220,7 +232,7 @@ res = dict()
 
 set_logger()
 
-parsing(get_inns(FILE_WITH_INNS))
+parsing(get_inns(FILE_WITH_INNS), True)
 # print(res)
 sending_email(save_results(res))
 

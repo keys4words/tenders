@@ -108,7 +108,7 @@ def url_updater(page_num, inn, minus_words):
     return updated_url
 
 
-def parse_page(url, inn):
+def parse_page(url, inn, useDB):
     root_logger = logging.getLogger('zg_tenders')
     res = dict()
     resp = requests.get(url=url, headers=HEADERS)
@@ -166,30 +166,42 @@ def parse_page(url, inn):
                     "Обновлено")).parent.find_next_sibling()
                 refreshing_date = refreshing_date.text
                 
-                if not inDataBase(number):
-                    save_tender(
-                        number=number,
-                        name=name,
-                        url=tender_url,
-                        customer=customer,
-                        customer_url=customer_url,
-                        price=price,
-                        release_date=release_date,
-                        refreshing_date=refreshing_date,
-                        ending_date=ending_date
-                        )
-                    res[number] = {
-                        'name': name,
-                        'url': tender_url,
-                        'customer': customer,
-                        'customer_url': customer_url,
-                        'price': price,
-                        'release_date': release_date,
-                        'refreshing_date': refreshing_date,
-                        'ending_date': ending_date
-                    }
+                if useDB:
+                    if not inDataBase(number):
+                        save_tender(
+                            number=number,
+                            name=name,
+                            url=tender_url,
+                            customer=customer,
+                            customer_url=customer_url,
+                            price=price,
+                            release_date=release_date,
+                            refreshing_date=refreshing_date,
+                            ending_date=ending_date
+                            )
+                        res[number] = {
+                            'name': name,
+                            'url': tender_url,
+                            'customer': customer,
+                            'customer_url': customer_url,
+                            'price': price,
+                            'release_date': release_date,
+                            'refreshing_date': refreshing_date,
+                            'ending_date': ending_date
+                        }
+                    else:
+                        pass
                 else:
-                    pass
+                    res[number] = {
+                            'name': name,
+                            'url': tender_url,
+                            'customer': customer,
+                            'customer_url': customer_url,
+                            'price': price,
+                            'release_date': release_date,
+                            'refreshing_date': refreshing_date,
+                            'ending_date': ending_date
+                        }
             root_logger.info(f'Parsed {str(len(elements))} tenders for customer by inn {inn}')
         else:
             root_logger.warning(f'0 active tenders for customer')
@@ -205,11 +217,11 @@ def parsing_new(inns):
         page_num = 0
         url = url_updater(page_num, inn, minus_words)
         while is_next_page(url):
-            res.update(parse_page(url, inn))
+            res.update(parse_page(url, inn, False))
             page_num += 1
             url = url_updater(page_num, inn, minus_words)
         else:
-            res.update(parse_page(url, inn))
+            res.update(parse_page(url, inn, False))
 
 
 
@@ -370,6 +382,7 @@ if sys.argv[1] == "1":
     res = dict()
     parsing_new(get_inns(FILE_WITH_INN_PART1))
     sending_email(save_results(res=res, fileprefix='_zg_inn_part1'), 'zakupki-gov by INN part1', to_emails=to_emails)
+    # save_results(res=res, fileprefix='_zg_inn_part1')
 elif sys.argv[1] == "2":
     # iteration for INN part2
     res = dict()
@@ -378,16 +391,17 @@ elif sys.argv[1] == "2":
         parsing_new(get_inns(FILE_WITH_INN_PART2))
     except ConnectionError:
         if not bool(res):
-            print(res)
-            # sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+            sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+            # save_results(res=res, fileprefix='_zg_inn_part2')
         
-    # sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
-    print(res)
+    sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+    # save_results(res=res, fileprefix='_zg_inn_part2')
 elif sys.argv[1] == "3":
     # # iteration for KW
     res = dict()
     parsing_new(get_inns(FILE_WITH_KW))
     sending_email(save_results(res=res, fileprefix='_zg_kw'), 'zakupki-gov by words', to_emails=to_emails)
+    # save_results(res=res, fileprefix='_zg_kw')
 else:
     print('default: '+sys.argv[1])
 
