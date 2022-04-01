@@ -132,7 +132,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-
-config/conf_113*
-config/conf_zg*
