@@ -67863,3 +67863,66 @@
 29-Mar-22 11:35:30 - File /home/keys4/Documents/tenders/out/29-03-2022_11-35_bz.xlsx was successfully saved
 29-Mar-22 11:35:32 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
 29-Mar-22 11:35:32 - ====================================
+31-Mar-22 09:39:11 - авсе: parsing -> 1
+31-Mar-22 09:39:12 - bce: parsing -> timeout
+31-Mar-22 09:39:16 - ВСЕ: parsing -> 10
+31-Mar-22 09:39:17 - агс: parsing -> timeout
+31-Mar-22 09:39:21 - апс: parsing -> 3
+31-Mar-22 09:39:25 - аэрозо: parsing -> 10
+31-Mar-22 09:39:28 - багор: parsing -> 1
+31-Mar-22 09:39:33 - бот: parsing -> 10
+31-Mar-22 09:39:37 - диэл: parsing -> 9
+31-Mar-22 09:39:38 - топор: parsing -> 3
+31-Mar-22 09:39:43 - лопата: parsing -> 10
+31-Mar-22 09:39:44 - водопенн: parsing -> timeout
+31-Mar-22 09:39:46 - гдзк: parsing -> timeout
+31-Mar-22 09:39:50 - гидрант: parsing -> 4
+31-Mar-22 09:39:53 - гидротестер: parsing -> timeout
+31-Mar-22 09:39:56 - головками: parsing -> 5
+31-Mar-22 09:39:59 - закачной: parsing -> timeout
+31-Mar-22 09:40:03 - мотопомпа: parsing -> 1
+31-Mar-22 09:40:08 - ковр: parsing -> 10
+31-Mar-22 09:40:10 - ковер: parsing -> 2
+31-Mar-22 09:40:16 - ножниц: parsing -> 10
+31-Mar-22 09:40:20 - мпп: parsing -> 2
+31-Mar-22 09:40:25 - огне: parsing -> 10
+31-Mar-22 09:40:29 - овэ: parsing -> timeout
+31-Mar-22 09:40:34 - охранны: parsing -> 10
+31-Mar-22 09:40:36 - песка -поставка -исследования: parsing -> timeout
+31-Mar-22 09:40:41 - пожар: parsing -> 10
+31-Mar-22 09:40:44 - пожаротуше: parsing -> 5
+31-Mar-22 09:40:47 - порошковы: parsing -> 3
+31-Mar-22 09:40:49 - ппо: parsing -> timeout
+31-Mar-22 09:40:50 - противодымный: parsing -> timeout
+31-Mar-22 09:40:54 - противопожарный: parsing -> 10
+31-Mar-22 09:40:57 - рпм: parsing -> timeout
+31-Mar-22 09:40:59 - рпк: parsing -> timeout
+31-Mar-22 09:41:02 - рукав: parsing -> 10
+31-Mar-22 09:41:06 - рус: parsing -> 10
+31-Mar-22 09:41:08 - самоспасатель: parsing -> 1
+31-Mar-22 09:41:10 - ствол: parsing -> 1
+31-Mar-22 09:41:11 - углекислот: parsing -> 2
+31-Mar-22 09:41:13 - шанс: parsing -> 1
+31-Mar-22 09:41:16 - щпо: parsing -> timeout
+31-Mar-22 09:41:21 - шланг: parsing -> 10
+31-Mar-22 09:41:24 - шпк: parsing -> timeout
+31-Mar-22 09:41:30 - эвакуации: parsing -> 10
+31-Mar-22 09:41:33 - эмульсионный: parsing -> 1
+31-Mar-22 09:41:37 - ярпож: parsing -> timeout
+31-Mar-22 09:41:41 - маск: parsing -> 10
+31-Mar-22 09:41:46 - перч: parsing -> 10
+31-Mar-22 09:41:50 - кран: parsing -> 10
+31-Mar-22 09:41:56 - клап: parsing -> 10
+31-Mar-22 09:41:57 - диаф: parsing -> 2
+31-Mar-22 09:41:57 - Parsed 158 tenders
+31-Mar-22 09:41:57 - File /home/keys4/Documents/tenders/out/31-03-2022_09-41_bz.xlsx was successfully saved
+31-Mar-22 09:41:59 - File was sended to ['119@rinova.ru', '125@di01.ru', '123@di01.ru'], copy: 142@di01.ru, blind copy: 105@di01.ru
+31-Mar-22 09:41:59 - ====================================
+31-Mar-22 13:35:32 - авсе: parsing -> 2
+31-Mar-22 13:35:34 - bce: parsing -> timeout
+31-Mar-22 13:35:39 - ВСЕ: parsing -> 10
+31-Mar-22 13:35:41 - агс: parsing -> timeout
+31-Mar-22 13:35:44 - апс: parsing -> 5
+31-Mar-22 13:35:49 - аэрозо: parsing -> 10
+31-Mar-22 13:35:51 - багор: parsing -> 2
+31-Mar-22 13:35:56 - бот: parsing -> 10

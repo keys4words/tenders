@@ -1,3 +1,5 @@
+#!/home/keys4/Documents/tenders/.env/bin/python
+
 import requests, sys, os, logging, time, re, sqlite3
 
 from fake_headers import Headers
@@ -217,11 +219,11 @@ def parsing_new(inns):
         page_num = 0
         url = url_updater(page_num, inn, minus_words)
         while is_next_page(url):
-            res.update(parse_page(url, inn, False))
+            res.update(parse_page(url, inn, True))
             page_num += 1
             url = url_updater(page_num, inn, minus_words)
         else:
-            res.update(parse_page(url, inn, False))
+            res.update(parse_page(url, inn, True))
 
 
 
@@ -402,10 +404,10 @@ elif sys.argv[1] == "3":
     parsing_new(get_inns(FILE_WITH_KW))
     sending_email(save_results(res=res, fileprefix='_zg_kw'), 'zakupki-gov by words', to_emails=to_emails)
     # save_results(res=res, fileprefix='_zg_kw')
+elif sys.argv[1] == "db":
+    create_db()
 else:
     print('default: '+sys.argv[1])
 
 root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
-# create_db()
-# Get-ChildItem | Where-Object {$_.Name -match '^[0-9]{2}-02-2021_.*'} | foreach {Remove-Item -Path $_.FullName }

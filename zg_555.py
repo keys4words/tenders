@@ -1,3 +1,5 @@
+#!/home/keys4/Documents/tenders/.env/bin/python
+
 import requests, random, os, logging, time, re, sqlite3
 from pymongo import MongoClient
 from bs4 import BeautifulSoup
