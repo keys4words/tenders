@@ -1,4 +1,8 @@
-import requests, random, os, logging, time, re, sqlite3
+#!/home/keys4/Documents/tenders/.env/bin/python
+
+import requests, sys, os, logging, time, re, sqlite3
+
+from fake_headers import Headers
 from dateutil import relativedelta as dr
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
@@ -13,11 +17,12 @@ BASE_URL = 'https://zakupki.gov.ru'
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 DB_PATH = os.path.join(BASE_DIR, 'db', 'zg_department.db')
 
-FILE_WITH_INNS = os.path.join(BASE_DIR, 'inn', 'zg_unite.txt')
+FILE_WITH_INN_PART1 = os.path.join(BASE_DIR, 'inn', 'zg_unite1.txt')
+FILE_WITH_INN_PART2 = os.path.join(BASE_DIR, 'inn', 'zg_unite2.txt')
 FILE_WITH_KW = os.path.join(BASE_DIR, 'keywords', 'zg_unite.txt')
 
 HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36', 'accept': '*/*'}
-
+# Headers(headers=True).generate()
 
 def create_db():
     with sqlite3.connect(DB_PATH) as con:
@@ -36,6 +41,7 @@ def create_db():
 
 
 def inDataBase(number):
+    # print(f"fetch from db tender with number {number}")
     with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         cur.execute(f"SELECT * FROM tenders WHERE number=='{number}'")
@@ -104,7 +110,7 @@ def url_updater(page_num, inn, minus_words):
     return updated_url
 
 
-def parse_page(url):
+def parse_page(url, inn, useDB):
     root_logger = logging.getLogger('zg_tenders')
     res = dict()
     resp = requests.get(url=url, headers=HEADERS)
@@ -162,35 +168,49 @@ def parse_page(url):
                     "Обновлено")).parent.find_next_sibling()
                 refreshing_date = refreshing_date.text
                 
-                if not inDataBase(number):
-                    save_tender(
-                        number=number,
-                        name=name,
-                        url=tender_url,
-                        customer=customer,
-                        customer_url=customer_url,
-                        price=price,
-                        release_date=release_date,
-                        refreshing_date=refreshing_date,
-                        ending_date=ending_date
-                        )
-                    res[number] = {
-                        'name': name,
-                        'url': tender_url,
-                        'customer': customer,
-                        'customer_url': customer_url,
-                        'price': price,
-                        'release_date': release_date,
-                        'refreshing_date': refreshing_date,
-                        'ending_date': ending_date
-                    }
+                if useDB:
+                    if not inDataBase(number):
+                        save_tender(
+                            number=number,
+                            name=name,
+                            url=tender_url,
+                            customer=customer,
+                            customer_url=customer_url,
+                            price=price,
+                            release_date=release_date,
+                            refreshing_date=refreshing_date,
+                            ending_date=ending_date
+                            )
+                        res[number] = {
+                            'name': name,
+                            'url': tender_url,
+                            'customer': customer,
+                            'customer_url': customer_url,
+                            'price': price,
+                            'release_date': release_date,
+                            'refreshing_date': refreshing_date,
+                            'ending_date': ending_date
+                        }
+                    else:
+                        pass
                 else:
-                    pass
-            root_logger.info(f'Parsed {str(len(elements))} tenders for customer by ')
+                    res[number] = {
+                            'name': name,
+                            'url': tender_url,
+                            'customer': customer,
+                            'customer_url': customer_url,
+                            'price': price,
+                            'release_date': release_date,
+                            'refreshing_date': refreshing_date,
+                            'ending_date': ending_date
+                        }
+            root_logger.info(f'Parsed {str(len(elements))} tenders for customer by inn {inn}')
         else:
             root_logger.warning(f'0 active tenders for customer')
     else:
         root_logger.warning(f'page {url} is not available')
+    # print("res in parse_page func")
+    # print(res)
     return res
 
 
@@ -199,11 +219,11 @@ def parsing_new(inns):
         page_num = 0
         url = url_updater(page_num, inn, minus_words)
         while is_next_page(url):
-            res.update(parse_page(url))
+            res.update(parse_page(url, inn, True))
             page_num += 1
             url = url_updater(page_num, inn, minus_words)
         else:
-            res.update(parse_page(url))
+            res.update(parse_page(url, inn, True))
 
 
 
@@ -213,10 +233,10 @@ def parsing(inns):
         page_num = 1
         if len(minus_words) == 0:
             url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&search-filter=%D0%94%D0%B0%D1%82%D0%B5+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceFromGeneral=50000&currencyIdGeneral=-1'
-        elif 'министерство обороны' in inn:
-            filter_by_close_tender = 'placingWayList=ZA44%2CZAP44%2CZAE44&'
-            excluding_words_list = '%7C'.join(minus_words)
-            url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&priceFromGeneral=50000&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&{filter_by_close_tender}contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
+        # elif 'министерство обороны' in inn:
+        #     filter_by_close_tender = 'placingWayList=ZA44%2CZAP44%2CZAE44&'
+        #     excluding_words_list = '%7C'.join(minus_words)
+        #     url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&priceFromGeneral=50000&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&{filter_by_close_tender}contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
         else:
             excluding_words_list = '%7C'.join(minus_words)
             url = f'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?searchString={inn}&morphology=on&pageNumber={page_num}&sortDirection=false&recordsPerPage=_50&showLotsInfoHidden=false&exclTextHidden={excluding_words_list}%7C&sortBy=UPDATE_DATE&fz44=on&fz223=on&af=on&priceContractAdvantages44IdNameHidden=%7B%7D&priceContractAdvantages94IdNameHidden=%7B%7D&priceFromGeneral=50000&currencyIdGeneral=-1&selectedSubjectsIdNameHidden=%7B%7D&OrderPlacementSmallBusinessSubject=on&OrderPlacementRnpData=on&OrderPlacementExecutionRequirement=on&orderPlacement94_0=0&orderPlacement94_1=0&orderPlacement94_2=0&contractPriceCurrencyId=-1&budgetLevelIdNameHidden=%7B%7D&nonBudgetTypesIdNameHidden=%7B%7D'
@@ -359,17 +379,35 @@ def sending_email(filename, subject, to_emails):
 # main thread
 set_logger()
 
-# # iteration for 129, 113, 104
-# res = dict()
-# parsing_new(get_inns(FILE_WITH_INNS))
-# sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by INN', to_emails=to_emails)
-
-# # iteration for 113, 104, 129
-res = dict()
-parsing_new(get_inns(FILE_WITH_KW))
-sending_email(save_results(res=res, fileprefix='_zg_113'), 'zakupki-gov by words', to_emails=to_emails)
+if sys.argv[1] == "1":
+    # # iteration for INN part1
+    res = dict()
+    parsing_new(get_inns(FILE_WITH_INN_PART1))
+    sending_email(save_results(res=res, fileprefix='_zg_inn_part1'), 'zakupki-gov by INN part1', to_emails=to_emails)
+    # save_results(res=res, fileprefix='_zg_inn_part1')
+elif sys.argv[1] == "2":
+    # iteration for INN part2
+    res = dict()
+    try:
+        inns = get_inns(FILE_WITH_INN_PART2)
+        parsing_new(get_inns(FILE_WITH_INN_PART2))
+    except ConnectionError:
+        if not bool(res):
+            sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+            # save_results(res=res, fileprefix='_zg_inn_part2')
+        
+    sending_email(save_results(res=res, fileprefix='_zg_inn_part2'), 'zakupki-gov by INN part2', to_emails=to_emails)
+    # save_results(res=res, fileprefix='_zg_inn_part2')
+elif sys.argv[1] == "3":
+    # # iteration for KW
+    res = dict()
+    parsing_new(get_inns(FILE_WITH_KW))
+    sending_email(save_results(res=res, fileprefix='_zg_kw'), 'zakupki-gov by words', to_emails=to_emails)
+    # save_results(res=res, fileprefix='_zg_kw')
+elif sys.argv[1] == "db":
+    create_db()
+else:
+    print('default: '+sys.argv[1])
 
 root_logger = logging.getLogger('zg_tenders')
 root_logger.info('='*46)
-# create_db()
-# Get-ChildItem | Where-Object {$_.Name -match '^[0-9]{2}-02-2021_.*'} | foreach {Remove-Item -Path $_.FullName }

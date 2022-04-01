@@ -1,3 +1,5 @@
+#!/home/keys4/Documents/tenders/.env/bin/python
+
 import sqlite3
 import random, os, logging, time
 import base64
