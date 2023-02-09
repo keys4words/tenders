@@ -169,7 +169,7 @@ def sending_email(filename):
     yag.send(
         to=to_emails,
         subject="Zakupki Mos",
-        cc=cc,
+        # cc=cc,
         bcc=bcc,
         contents=contents,
         # attachments=filename,

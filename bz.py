@@ -5,7 +5,7 @@ import random, os, logging, time
 import base64
 from datetime import datetime
 from pprint import pprint
-from pymongo import MongoClient
+# from pymongo import MongoClient
 
 from config.conf_bz import sendgrid_api, TO_EMAIL, FROM_EMAIL
 from sendgrid import SendGridAPIClient
@@ -19,7 +19,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, StaleElementReferenceException, ElementClickInterceptedException, ElementNotInteractableException
 from openpyxl import Workbook
 import yagmail
-import keyring
+# import keyring
 from config.conf_zg import from_email, password, to_emails, cc, bcc
 
 
@@ -227,13 +227,13 @@ def sending_email(filename):
     yag.send(
         to=to_emails,
         subject="Berezka Tenders",
-        cc=cc,
+        # cc=cc,
         bcc=bcc,
         contents=contents,
         # attachments=filename,
     )
     root_logger = logging.getLogger('bz')
-    root_logger.info(f'File was sended to {to_emails}, copy: {cc}, blind copy: {bcc}')
+    root_logger.info(f'File was sended to {to_emails}, blind copy: {bcc}')
 
 def sending_email_smartgrid(filename):
     encoded = base64.b64encode(data).decode()
