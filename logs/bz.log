@@ -67926,3 +67926,29 @@
 31-Mar-22 13:35:49 - аэрозо: parsing -> 10
 31-Mar-22 13:35:51 - багор: parsing -> 2
 31-Mar-22 13:35:56 - бот: parsing -> 10
+11-Feb-23 11:06:28 - авсе: parsing -> 6
+11-Feb-23 11:06:32 - огнетушител: parsing -> 10
+11-Feb-23 11:06:32 - Parsed 15 tenders
+11-Feb-23 11:06:32 - ====================================
+11-Feb-23 11:09:05 - авсе: parsing -> 6
+11-Feb-23 11:09:08 - bce: parsing -> timeout
+11-Feb-23 11:09:14 - ВСЕ: parsing -> 10
+11-Feb-23 11:09:18 - агс: parsing -> timeout
+11-Feb-23 11:09:24 - апс: parsing -> 7
+11-Feb-23 11:09:28 - аэрозо: parsing -> 10
+11-Feb-23 11:09:30 - багор: parsing -> timeout
+11-Feb-23 11:09:34 - бот: parsing -> 3
+11-Feb-23 11:18:01 - авсе: parsing -> 6
+11-Feb-23 11:18:03 - bce: parsing -> timeout
+11-Feb-23 11:18:08 - ВСЕ: parsing -> 10
+11-Feb-23 11:18:12 - закачной: parsing -> 2
+11-Feb-23 11:18:17 - огнетушител: parsing -> 10
+11-Feb-23 11:18:19 - овэ: parsing -> timeout
+11-Feb-23 11:18:24 - порошковы: parsing -> 8
+11-Feb-23 11:18:27 - углекислот: parsing -> 3
+11-Feb-23 11:18:31 - эмульсионный: parsing -> timeout
+11-Feb-23 11:18:33 - ярпож: parsing -> timeout
+11-Feb-23 11:18:33 - Parsed 9 tenders
+11-Feb-23 11:18:33 - File C:\Users\user\Documents\tenders\out\11-02-2023_11-18_bz.xlsx was successfully saved
+11-Feb-23 11:18:35 - File was sended to ['105@rinova.ru'], blind copy: 105@di01.ru
+11-Feb-23 11:18:35 - ====================================
